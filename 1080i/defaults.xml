@@ -5,12 +5,12 @@
         <posy>0</posy>
         <aspectratio>stretch</aspectratio>
         <texture>-</texture>
-        <fadetime>400</fadetime>
+        <fadetime>50</fadetime>
         <colorkey>0</colorkey>
     </default>
     <default type="multiimage">
         <aspectratio align="center">scale</aspectratio>
-        <fadetime>800</fadetime>
+        <fadetime>50</fadetime>
         <include>FullscreenDimensions</include>
         <timeperimage>7000</timeperimage>
         <randomize>true</randomize>

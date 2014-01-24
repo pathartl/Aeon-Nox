@@ -53,7 +53,7 @@
                         <height>673</height>
                         <aspectratio aligny="top">scale</aspectratio>
                         <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-                        <fadetime>600</fadetime>
+                        <fadetime>50</fadetime>
                     </control>
                     <control type="image">
                         <width>1260</width>
@@ -61,7 +61,7 @@
                         <aspectratio>keep</aspectratio>
                         <texture background="true">$INFO[ListItem.Icon]</texture>
                         <visible>IsEmpty(ListItem.Art(fanart))</visible>
-                        <fadetime>600</fadetime>
+                        <fadetime>50</fadetime>
                     </control>
                     <control type="image">
                         <posx>1141</posx>
@@ -327,7 +327,7 @@
                     <height>610</height>
                     <aspectratio aligny="top" align="right">keep</aspectratio>
                     <texture>$VAR[ListPosterVar]</texture>
-                    <fadetime>200</fadetime>
+                    <fadetime>50</fadetime>
                     <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                     <bordersize>7</bordersize>
                 </control>
@@ -352,7 +352,7 @@
                 <ondown>550</ondown>
                 <pagecontrol>60</pagecontrol>
                 <viewtype label="$LOCALIZE[31233]">list</viewtype>
-                <scrolltime tween="quadratic">200</scrolltime>
+                <scrolltime tween="quadratic">0</scrolltime>
                 <visible>![!IsEmpty(Skin.String(DisablePanelVL)) + Window.IsActive(videos)]</visible>
                 <itemlayout height="103" width="570" condition="![Skin.HasSetting(panellogo) + [Container.Content(movies) | Container.Content(tvshows)]]">
                     <control type="label">
@@ -385,7 +385,7 @@
                         <height>103</height>
                         <texture border="8">views/tripanel/listselect_fo.png</texture>
                         <include>PanelGlowFade</include>
-                        <animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(550)">Conditional</animation>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(550)">Conditional</animation>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     </control>
                     <control type="label">
@@ -421,7 +421,7 @@
                         <height>174</height>
                         <texture border="8">views/tripanel/listselect_fo.png</texture>
                         <include>PanelGlowFade</include>
-                        <animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(550)">Conditional</animation>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(550)">Conditional</animation>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     </control>
                     <include>PanelLogoLayout</include>
@@ -442,7 +442,7 @@
                 <width>1850</width>
                 <height>960</height>
                 <texture>settings/settings_intframe_top.png</texture>
-                <animation effect="fade" start="100" end="0" time="40" condition="Player.HasVideo">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="0" condition="Player.HasVideo">Conditional</animation>
                 <visible>![Skin.HasSetting(panelinfo) + Container.Content(movies)]</visible>
             </control>
         </control>

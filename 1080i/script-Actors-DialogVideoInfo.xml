@@ -28,8 +28,8 @@
             <ondown>9000</ondown>
         </control>
         <control type="group">
-            <animation effect="slide" start="-729,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
-            <animation effect="slide" end="-729,0" time="320" tween="quadratic">WindowClose</animation>
+            <animation effect="slide" start="-729,0" end="0,0" time="0" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" end="-729,0" time="0" tween="quadratic">WindowClose</animation>
             <control type="image">
                 <width>729</width>
                 <height>1080</height>
@@ -45,16 +45,16 @@
                 <width>40</width>
                 <height>1080</height>
                 <texture>common/topbar_down.png</texture>
-                <animation effect="fade" time="320" delay="408">Visible</animation>
-                <animation effect="fade" time="80">Hidden</animation>
+                <animation effect="fade" time="0" delay="408">Visible</animation>
+                <animation effect="fade" time="0">Hidden</animation>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <include>TopbarPulseAnimationRight</include>
                 <visible>!Skin.HasSetting(DisableGlowbar)</visible>
             </control>
         </control>
         <control type="group">
-            <animation effect="slide" start="1192,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
-            <animation effect="slide" end="1192,0" time="320" tween="quadratic">WindowClose</animation>
+            <animation effect="slide" start="1192,0" end="0,0" time="0" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" end="1192,0" time="0" tween="quadratic">WindowClose</animation>
             <control type="image">
                 <posx>729</posx>
                 <width>1192</width>
@@ -167,7 +167,7 @@
                     <height>57</height>
                     <aspectratio>keep</aspectratio>
                     <texture fallback="flags/rating/info/MPAA_NR_Certificate_US.png">$VAR[RatingFlagVar,flags/rating/info/,.png]</texture>
-                    <animation effect="fade" time="200">VisibleChange</animation>
+                    <animation effect="fade" time="0">VisibleChange</animation>
                     <colordiffuse>grey</colordiffuse>
                 </control>
                 <control type="label">
@@ -431,7 +431,7 @@
                 <onright>9000</onright>
                 <onup>150</onup>
                 <ondown>9000</ondown>
-                <scrolltime>200</scrolltime>
+                <scrolltime>0</scrolltime>
                 <orientation>vertical</orientation>
                 <itemlayout height="35" width="645">
                     <control type="label">
@@ -497,7 +497,7 @@
                 <height>304</height>
                 <aspectratio align="center">scale</aspectratio>
                 <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-                <animation effect="zoom" start="1072,606,540,304" end="0,0,1920,1080" time="640" tween="cubic" condition="!IsEmpty(Window(home).Property(ActorFanartZoom))">Conditional</animation>
+                <animation effect="zoom" start="1072,606,540,304" end="0,0,1920,1080" time="0" tween="cubic" condition="!IsEmpty(Window(home).Property(ActorFanartZoom))">Conditional</animation>
                 <visible>!IsEmpty(ListItem.Art(fanart)) + [Control.HasFocus(20) | Control.HasFocus(5055)]</visible>
             </control>
         </control>

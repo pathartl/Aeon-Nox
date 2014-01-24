@@ -10,17 +10,17 @@
         <control type="image">
             <texture>common/bgcolor.png</texture>
             <include>FullscreenDimensions</include>
-            <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+            <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
             <visible>!IsEmpty(Window(home).Property(quicknavsetup))</visible>
             <include>Animation_VisibleChange400</include>
-            <animation effect="fade" end="100" time="560">WindowOpen</animation>
-            <animation effect="fade" start="100" end="0" time="240">WindowClose</animation>
+            <animation effect="fade" end="100" time="0">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
         </control>
         <control type="group">
-            <animation effect="slide" start="0,-730" end="0,-473" time="400" tween="cubic" delay="160">WindowOpen</animation>
-            <animation effect="slide" end="0,-730" start="0,-473" time="400" tween="cubic" delay="160">WindowClose</animation>
-            <animation effect="slide" end="0,100" time="400" tween="cubic" delay="160" condition="Player.HasMedia">Conditional</animation>
-            <animation effect="slide" end="0,-473" time="400" tween="cubic" delay="160" condition="Window.IsActive(1154)">Conditional</animation>
+            <animation effect="slide" start="0,-730" end="0,-473" time="0" tween="cubic" delay="160">WindowOpen</animation>
+            <animation effect="slide" end="0,-730" start="0,-473" time="0" tween="cubic" delay="160">WindowClose</animation>
+            <animation effect="slide" end="0,100" time="0" tween="cubic" delay="160" condition="Player.HasMedia">Conditional</animation>
+            <animation effect="slide" end="0,-473" time="0" tween="cubic" delay="160" condition="Window.IsActive(1154)">Conditional</animation>
             <!--         <control type="button" id="451">
             
             <posx>-30</posx>
@@ -41,7 +41,7 @@
                     <width>1920</width>
                     <height>630</height>
                     <texture flipy="true">views/lowlist_panelback.png</texture>
-                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+                    <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
                 </control>
                 <control type="group">
                     <posy>355</posy>
@@ -165,7 +165,7 @@
             </control>
         </control>
         <control type="button">
-            <animation effect="slide" end="0,100" time="400" tween="cubic" delay="160" condition="Player.HasMedia">Conditional</animation>
+            <animation effect="slide" end="0,100" time="0" tween="cubic" delay="160" condition="Player.HasMedia">Conditional</animation>
             <include>HiddenObject</include>
             <hitrect x="0" y="200" w="1920" h="945" />
             <onfocus>Dialog.Close(playercontrols)</onfocus>
@@ -177,8 +177,8 @@
         <!--         <control type="group">
             <posx>100</posx>
             <posy>-450</posy>
-            <animation effect="slide" start="700,0" end="0,0" time="500" tween="cubic" delay="1000">WindowOpen</animation>
-            <animation effect="slide" end="700,0" time="500" tween="cubic">WindowClose</animation>
+            <animation effect="slide" start="700,0" end="0,0" time="0" tween="cubic" delay="1000">WindowOpen</animation>
+            <animation effect="slide" end="700,0" time="0" tween="cubic">WindowClose</animation>
             <include>NextTracksList</include>
         </control> -->
     </controls>

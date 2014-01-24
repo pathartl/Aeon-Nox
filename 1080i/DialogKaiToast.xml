@@ -20,7 +20,7 @@
                 <height>110</height>
                 <aspectratio aligny="top">keep</aspectratio>
                 <texture>dialogs/exclamation.png</texture>
-                <animation effect="fade" start="50" time="800" condition="true" pulse="true">Conditional</animation>
+                <animation effect="fade" start="50" time="0" condition="true" pulse="false">Conditional</animation>
             </control>
             <control type="label" id="401">
                 <posx>158</posx>

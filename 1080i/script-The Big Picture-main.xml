@@ -31,7 +31,7 @@
             <texture>loader.gif</texture>
             <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
             <visible>!IntegerGreaterThan(Container(100).NumPages,0) | ![Container(100).OnNext | Container(100).OnPrevious]</visible>
-            <animation effect="fade" time="160" delay="400" reversible="false">Visible</animation>
+            <animation effect="fade" time="0" delay="400" reversible="false">Visible</animation>
         </control>
         <control type="wraplist" id="100">
             <description>List of Images</description>
@@ -39,7 +39,7 @@
             <posy>0</posy>
             <width>1920</width>
             <height>1080</height>
-            <scrolltime tween="cubic" easing="inout">500</scrolltime>
+            <scrolltime tween="cubic" easing="inout">0</scrolltime>
             <orientation>horizontal</orientation>
             <preloaditems>2</preloaditems>
             <itemlayout width="1920" height="1080">
@@ -89,8 +89,8 @@
                     <description>Group for the description</description>
                     <visible>Control.IsVisible(102)</visible>
                     <animation type="Focus">
-                        <effect type="fade" start="0" end="100" time="80" delay="1600" />
-                        <effect type="fade" condition="VisibleChange" time="80" delay="1600" />
+                        <effect type="fade" start="0" end="100" time="0" delay="1600" />
+                        <effect type="fade" condition="VisibleChange" time="0" delay="1600" />
                     </animation>
                     <control type="image">
                         <description>Description background</description>
@@ -98,7 +98,7 @@
                         <width>1920</width>
                         <height>651</height>
                         <texture>views/lowlist_panelback.png</texture>
-                        <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+                        <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
                     </control>
                     <control type="textbox">
                         <description>Description text</description>
@@ -119,7 +119,7 @@
         <control type="group">
             <description>Group for controls which are hidden and shown via info-key</description>
             <visible>Control.IsVisible(102)</visible>
-            <animation effect="fade" time="160">VisibleChange</animation>
+            <animation effect="fade" time="0">VisibleChange</animation>
             <control type="group">
                 <control type="image">
                     <width>1920</width>

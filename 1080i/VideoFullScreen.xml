@@ -3,17 +3,17 @@
     <defaultcontrol>-</defaultcontrol>
     <controls>
         <control type="group" id="0">
-            <animation effect="slide" end="0,45" time="160" tween="cubic" condition="Window.IsVisible(seekbar) + !Skin.HasSetting(Show_Info_Paused)">Conditional</animation>
-            <animation effect="slide" end="0,165" time="160" tween="cubic" condition="[Window.IsVisible(seekbar) + Skin.HasSetting(Show_Info_Paused)] | [Window.IsVisible(fullscreeninfo) + IsEmpty(Window(home).Property(morefullscreeninfo)) + Player.Paused]">Conditional</animation>
-            <animation effect="slide" end="0,135" time="160" tween="cubic" condition="!VideoPlayer.Content(LiveTV) + Window.IsVisible(fullscreeninfo) + IsEmpty(Window(home).Property(morefullscreeninfo)) + !Player.Paused">Conditional</animation>
+            <animation effect="slide" end="0,45" time="0" tween="cubic" condition="Window.IsVisible(seekbar) + !Skin.HasSetting(Show_Info_Paused)">Conditional</animation>
+            <animation effect="slide" end="0,165" time="0" tween="cubic" condition="[Window.IsVisible(seekbar) + Skin.HasSetting(Show_Info_Paused)] | [Window.IsVisible(fullscreeninfo) + IsEmpty(Window(home).Property(morefullscreeninfo)) + Player.Paused]">Conditional</animation>
+            <animation effect="slide" end="0,135" time="0" tween="cubic" condition="!VideoPlayer.Content(LiveTV) + Window.IsVisible(fullscreeninfo) + IsEmpty(Window(home).Property(morefullscreeninfo)) + !Player.Paused">Conditional</animation>
             <!-- codec infos -->
             <control type="image">
                 <posy>-465</posy>
                 <width>1920</width>
                 <height>651</height>
                 <texture flipy="true">views/lowlist_panelback.png</texture>
-                <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
-                <animation effect="slide" end="0,270" time="160" tween="cubic" condition="VideoPlayer.Content(LiveTV) + System.GetBool(pvrplayback.signalquality)">Conditional</animation>
+                <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
+                <animation effect="slide" end="0,270" time="0" tween="cubic" condition="VideoPlayer.Content(LiveTV) + System.GetBool(pvrplayback.signalquality)">Conditional</animation>
             </control>
             <control type="group">
                 <posy>-52</posy>

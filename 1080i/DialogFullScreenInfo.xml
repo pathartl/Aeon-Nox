@@ -8,20 +8,20 @@
             <visible>!Window.IsActive(infodialog)</visible>
             <visible>IsEmpty(Window(home).Property(morefullscreeninfo)) + !Control.IsVisible(9004) + !Control.IsVisible(9005)</visible>
             <animation type="Visible">
-                <effect type="fade" time="320" end="100" />
-                <effect type="slide" time="320" start="0,-135" end="0,0" tween="cubic" />
+                <effect type="fade" time="0" end="100" />
+                <effect type="slide" time="0" start="0,-135" end="0,0" tween="cubic" />
             </animation>
             <animation type="Hidden">
-                <effect type="fade" time="320" start="100" end="0" />
-                <effect type="slide" time="320" end="0,-135" easing="in" tween="cubic" />
+                <effect type="fade" time="0" start="100" end="0" />
+                <effect type="slide" time="0" end="0,-135" easing="in" tween="cubic" />
             </animation>
             <animation type="WindowOpen">
-                <effect type="fade" time="320" end="100" />
-                <effect type="slide" time="320" start="0,-135" end="0,0" tween="cubic" />
+                <effect type="fade" time="0" end="100" />
+                <effect type="slide" time="0" start="0,-135" end="0,0" tween="cubic" />
             </animation>
             <animation type="WindowClose">
-                <effect type="fade" time="320" start="100" end="0" />
-                <effect type="slide" time="320" end="0,-135" easing="in" tween="cubic" />
+                <effect type="fade" time="0" start="100" end="0" />
+                <effect type="slide" time="0" end="0,-135" easing="in" tween="cubic" />
             </animation>
             <control type="group">
                 <posy>128</posy>
@@ -136,29 +136,29 @@
         <control type="group" id="9002">
             <visible>IsEmpty(Window(home).Property(morefullscreeninfo)) + !Control.IsVisible(9004) + !Control.IsVisible(9005)</visible>
             <animation type="Visible">
-                <effect type="fade" time="320" end="100" />
-                <effect type="slide" time="320" start="0,135" end="0,0" tween="cubic" />
+                <effect type="fade" time="0" end="100" />
+                <effect type="slide" time="0" start="0,135" end="0,0" tween="cubic" />
             </animation>
             <animation type="Hidden">
-                <effect type="fade" time="320" start="100" end="0" />
-                <effect type="slide" time="320" end="0,135" easing="in" tween="cubic" />
+                <effect type="fade" time="0" start="100" end="0" />
+                <effect type="slide" time="0" end="0,135" easing="in" tween="cubic" />
             </animation>
             <animation type="WindowOpen">
-                <effect type="fade" time="320" end="100" />
-                <effect type="slide" time="320" start="0,135" end="0,0" tween="cubic" />
+                <effect type="fade" time="0" end="100" />
+                <effect type="slide" time="0" start="0,135" end="0,0" tween="cubic" />
             </animation>
             <animation type="WindowClose">
-                <effect type="fade" time="320" start="100" end="0" />
-                <effect type="slide" time="320" end="0,135" easing="in" tween="cubic" />
+                <effect type="fade" time="0" start="100" end="0" />
+                <effect type="slide" time="0" end="0,135" easing="in" tween="cubic" />
             </animation>
             <include condition="VideoPlayer.Content(livetv)">FullScreenInfoBarLiveTV</include>
             <include condition="!VideoPlayer.Content(livetv)">FullScreenInfoBar</include>
         </control>
         <include>AlaskaPausedLabel</include>
         <control type="group" id="9004">
-            <animation effect="slide" start="-729,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
-            <animation effect="slide" end="-729,0" time="320" tween="quadratic">WindowClose</animation>
-            <animation effect="slide" start="-729,0" end="0,0" time="320" tween="quadratic">VisibleChange</animation>
+            <animation effect="slide" start="-729,0" end="0,0" time="0" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" end="-729,0" time="0" tween="quadratic">WindowClose</animation>
+            <animation effect="slide" start="-729,0" end="0,0" time="0" tween="quadratic">VisibleChange</animation>
             <visible>!IsEmpty(Window(home).Property(morefullscreeninfo)) + !Control.IsVisible(9001) + !Control.IsVisible(9002) + !VideoPlayer.Content(LiveTV)</visible>
             <control type="image">
                 <width>729</width>
@@ -182,9 +182,9 @@
             </control>
         </control>
         <control type="group" id="9005">
-            <animation effect="slide" start="1192,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
-            <animation effect="slide" end="1192,0" time="320" tween="quadratic">WindowClose</animation>
-            <animation effect="slide" start="1192,0" end="0,0" time="320" tween="quadratic">VisibleChange</animation>
+            <animation effect="slide" start="1192,0" end="0,0" time="0" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" end="1192,0" time="0" tween="quadratic">WindowClose</animation>
+            <animation effect="slide" start="1192,0" end="0,0" time="0" tween="quadratic">VisibleChange</animation>
             <visible>!VideoPlayer.Content(LiveTV) + !IsEmpty(Window(home).Property(morefullscreeninfo)) + !Window.IsActive(infodialog) + !Control.IsVisible(9001) + !Control.IsVisible(9002)</visible>
             <control type="image">
                 <posx>729</posx>
@@ -239,10 +239,10 @@
                             <height>35</height>
                             <aspectratio aligny="center" align="left">keep</aspectratio>
                             <texture background="true">$INFO[VideoPlayer.Country,flags/language/,.png]</texture>
-                            <fadetime>200</fadetime>
+                            <fadetime>50</fadetime>
                             <colordiffuse>AAFFFFFF</colordiffuse>
                             <visible>!IsEmpty(Control.GetLabel(12020))</visible>
-                            <animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
+                            <animation effect="fade" delay="240" time="0" reversible="false">Hidden</animation>
                         </control>
                         <control type="label">
                             <width>995</width>
@@ -281,7 +281,7 @@
                     <height>57</height>
                     <aspectratio>keep</aspectratio>
                     <texture fallback="flags/rating/info/MPAA_NR_Certificate_US.png">$VAR[RatingFlagVar,flags/rating/info/,.png]</texture>
-                    <animation effect="fade" time="200">VisibleChange</animation>
+                    <animation effect="fade" time="0">VisibleChange</animation>
                     <colordiffuse>grey</colordiffuse>
                     <visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos)</visible>
                 </control>
@@ -327,7 +327,7 @@
                         <height>90</height>
                         <aspectratio align="center">keep</aspectratio>
                         <texture fallback="flags/rating/MPAA_NR_Certificate_US.png">$VAR[RatingFlagVar,flags/rating/,.png]</texture>
-                        <animation effect="fade" time="200">VisibleChange</animation>
+                        <animation effect="fade" time="0">VisibleChange</animation>
                         <colordiffuse>grey</colordiffuse>
                     </control>
                 </control>
@@ -653,7 +653,7 @@
                 <include>Animation_VisibleChange200</include>
                 <animation type="WindowOpen">
                     <effect type="rotate" end="-360" center="auto" time="6400" delay="1600" tween="cubic" easing="inout" />
-                    <effect type="slide" start="150" end="0" delay="640" time="320" tween="cubic" />
+                    <effect type="slide" start="150" end="0" delay="640" time="0" tween="cubic" />
                 </animation>
             </control>
             <control type="image">
@@ -667,9 +667,9 @@
             </control>
         </control>
         <control type="group" id="9005">
-            <animation effect="slide" start="0,1080" end="0,100" time="320" tween="quadratic">WindowOpen</animation>
-            <animation effect="slide" start="0,100" end="0,-1080" time="400" tween="quadratic">WindowClose</animation>
-            <animation effect="slide" start="0,1080" end="0,100" time="320" tween="quadratic">VisibleChange</animation>
+            <animation effect="slide" start="0,1080" end="0,100" time="0" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" start="0,100" end="0,-1080" time="0" tween="quadratic">WindowClose</animation>
+            <animation effect="slide" start="0,1080" end="0,100" time="0" tween="quadratic">VisibleChange</animation>
             <visible>VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg + !Window.IsActive(infodialog) + !Control.IsVisible(9001) + !Control.IsVisible(9002)</visible>
             <control type="image">
                 <posx>260</posx>

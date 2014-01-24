@@ -29,7 +29,7 @@
                     <height>429</height>
                     <aspectratio aligny="bottom">keep</aspectratio>
                     <texture background="true">$INFO[ListItem.Icon]</texture>
-                    <fadetime>400</fadetime>
+                    <fadetime>50</fadetime>
                 </control>
                 <control type="image">
                     <posx>1300</posx>
@@ -38,7 +38,7 @@
                     <height>429</height>
                     <aspectratio aligny="top">keep</aspectratio>
                     <texture background="true" flipy="true" diffuse="thumbs/diffuse_mirror3.png">$INFO[ListItem.Icon]</texture>
-                    <fadetime>400</fadetime>
+                    <fadetime>50</fadetime>
                 </control>
                 <control type="label" id="412">
                     <posx>1226</posx>
@@ -83,7 +83,7 @@
                 <width>1140</width>
                 <height>731</height>
                 <pagecontrol>60</pagecontrol>
-                <scrolltime tween="quadratic">200</scrolltime>
+                <scrolltime tween="quadratic">0</scrolltime>
                 <onleft>413</onleft>
                 <onright>60</onright>
                 <onup>450</onup>
@@ -133,7 +133,7 @@
                         <height>61</height>
                         <texture border="8">views/tripanel/listselect_fo.png</texture>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <animation effect="fade" start="100" end="50" time="160" condition="!Control.HasFocus(450)">Conditional</animation>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(450)">Conditional</animation>
                     </control>
                     <control type="label">
                         <posx>68</posx>
@@ -167,7 +167,7 @@
                 <width>1156</width>
                 <height>732</height>
                 <pagecontrol>60</pagecontrol>
-                <scrolltime tween="quadratic">200</scrolltime>
+                <scrolltime tween="quadratic">0</scrolltime>
                 <onleft>413</onleft>
                 <onright>60</onright>
                 <onup>451</onup>
@@ -217,7 +217,7 @@
                         <height>61</height>
                         <texture border="8">views/tripanel/listselect_fo.png</texture>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <animation effect="fade" start="100" end="50" time="160" condition="!Control.HasFocus(451)">Conditional</animation>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(451)">Conditional</animation>
                     </control>
                     <control type="label">
                         <posx>68</posx>
@@ -254,7 +254,7 @@
                 <onright>451</onright>
                 <onup>451</onup>
                 <ondown>451</ondown>
-                <scrolltime tween="quadratic">200</scrolltime>
+                <scrolltime tween="quadratic">0</scrolltime>
                 <orientation>horizontal</orientation>
                 <control type="button" id="413">
                     <width>279</width>

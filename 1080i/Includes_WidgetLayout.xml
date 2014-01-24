@@ -3,18 +3,18 @@
     <include name="AlternateTimeAndStats">
         <control type="group">
             <visible>Skin.HasSetting(AlternateTimeStats) + [!Skin.HasSetting(DisableLibraryStats) | !Skin.HasSetting(DisableTimePanel)]</visible>
-            <animation effect="slide" end="-1920,0" time="240">WindowClose</animation>
-            <animation effect="slide" start="-1920,0" end="0,0" delay="WidgetSlideDelay" time="240" condition="!Window.Previous(startup)">WindowOpen</animation>
-            <animation effect="slide" start="-1920" end="0" time="240">VisibleChange</animation>
-            <animation effect="slide" start="-1920,0" end="0,0" delay="800" time="480" condition="Window.Previous(startup)">WindowOpen</animation>
-            <animation effect="slide" end="0,338" time="320" tween="cubic" easing="inout" condition="[Skin.HasSetting(lowermainmenu)] + ![Skin.HasSetting(totalshomehigh) | Skin.HasSetting(timehomehigh)]">Conditional</animation>
-            <animation effect="slide" end="0,-472" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(totalshomehigh) | Skin.HasSetting(timehomehigh)">Conditional</animation>
+            <animation effect="slide" end="-1920,0" time="0">WindowClose</animation>
+            <animation effect="slide" start="-1920,0" end="0,0" delay="WidgetSlideDelay" time="0" condition="!Window.Previous(startup)">WindowOpen</animation>
+            <animation effect="slide" start="-1920" end="0" time="0">VisibleChange</animation>
+            <animation effect="slide" start="-1920,0" end="0,0" delay="800" time="0" condition="Window.Previous(startup)">WindowOpen</animation>
+            <animation effect="slide" end="0,338" time="0" tween="cubic" easing="inout" condition="[Skin.HasSetting(lowermainmenu)] + ![Skin.HasSetting(totalshomehigh) | Skin.HasSetting(timehomehigh)]">Conditional</animation>
+            <animation effect="slide" end="0,-472" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(totalshomehigh) | Skin.HasSetting(timehomehigh)">Conditional</animation>
             <control type="image">
                 <width>1860</width>
                 <height>87</height>
                 <texture flipy="true" flipx="true" border="0,0,80,0">$VAR[TimePanelImageVar]</texture>
                 <colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
-                <animation effect="rotatex" end="180" time="320" center="20" tween="cubic" easing="inout" condition="![Skin.HasSetting(totalshomehigh) | Skin.HasSetting(timehomehigh)]">Conditional</animation>
+                <animation effect="rotatex" end="180" time="0" center="20" tween="cubic" easing="inout" condition="![Skin.HasSetting(totalshomehigh) | Skin.HasSetting(timehomehigh)]">Conditional</animation>
                 <visible>!Skin.HasSetting(alternativerss)</visible>
             </control>
             <control type="image">
@@ -22,7 +22,7 @@
                 <height>87</height>
                 <texture flipy="true" flipx="true">$VAR[NavBarImageVar]</texture>
                 <colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
-                <animation effect="rotatex" end="180" time="320" center="20" tween="cubic" easing="inout" condition="![Skin.HasSetting(totalshomehigh) | Skin.HasSetting(timehomehigh)]">Conditional</animation>
+                <animation effect="rotatex" end="180" time="0" center="20" tween="cubic" easing="inout" condition="![Skin.HasSetting(totalshomehigh) | Skin.HasSetting(timehomehigh)]">Conditional</animation>
                 <visible>Skin.HasSetting(alternativerss)</visible>
             </control>
             <control type="label">
@@ -68,7 +68,7 @@
                 <font>Font_Reg28_Caps</font>
                 <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
                 <visible>!Skin.HasSetting(DisableTimePanel)</visible>
-                <animation effect="slide" start="0" end="130" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(alternativerss)">Conditional</animation>
+                <animation effect="slide" start="0" end="130" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(alternativerss)">Conditional</animation>
             </control>
         </control>
     </include>
@@ -76,20 +76,20 @@
         <control type="group">
             <visible>!Skin.HasSetting(DisableLibraryStats) + !Skin.HasSetting(AlternateTimeStats)</visible>
             <visible>!IsEmpty(Control.GetLabel(4323)) | Window.IsActive(1131)</visible>
-            <animation effect="slide" end="-750,0" time="240">WindowClose</animation>
-            <animation effect="slide" start="-750,0" end="0,0" delay="WidgetSlideDelay" time="240" condition="!Window.Previous(startup)">WindowOpen</animation>
-            <animation effect="slide" start="-750" end="0" time="240">VisibleChange</animation>
-            <animation effect="slide" start="-750,0" end="0,0" delay="800" time="480" condition="Window.Previous(startup)">WindowOpen</animation>
-            <animation effect="slide" end="0,338" time="320" tween="cubic" easing="inout" condition="[Skin.HasSetting(lowermainmenu)] + !Skin.HasSetting(totalshomehigh)">Conditional</animation>
-            <animation effect="slide" end="0,-472" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(totalshomehigh)">Conditional</animation>
+            <animation effect="slide" end="-750,0" time="0">WindowClose</animation>
+            <animation effect="slide" start="-750,0" end="0,0" delay="WidgetSlideDelay" time="0" condition="!Window.Previous(startup)">WindowOpen</animation>
+            <animation effect="slide" start="-750" end="0" time="0">VisibleChange</animation>
+            <animation effect="slide" start="-750,0" end="0,0" delay="800" time="0" condition="Window.Previous(startup)">WindowOpen</animation>
+            <animation effect="slide" end="0,338" time="0" tween="cubic" easing="inout" condition="[Skin.HasSetting(lowermainmenu)] + !Skin.HasSetting(totalshomehigh)">Conditional</animation>
+            <animation effect="slide" end="0,-472" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(totalshomehigh)">Conditional</animation>
             <control type="image">
                 <posy>0</posy>
                 <width>794</width>
                 <height>87</height>
                 <texture flipy="true" flipx="true">$VAR[TimePanelImageVar]</texture>
                 <colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
-                <animation effect="slide" end="-200" time="240" condition="Skin.HasSetting(shorterhomebars)">Conditional</animation>
-                <animation effect="rotatex" end="180" time="320" center="20" tween="cubic" easing="inout" condition="!Skin.HasSetting(totalshomehigh)">Conditional</animation>
+                <animation effect="slide" end="-200" time="0" condition="Skin.HasSetting(shorterhomebars)">Conditional</animation>
+                <animation effect="rotatex" end="180" time="0" center="20" tween="cubic" easing="inout" condition="!Skin.HasSetting(totalshomehigh)">Conditional</animation>
             </control>
             <control type="label">
                 <posx>15</posx>
@@ -118,12 +118,12 @@
         <control type="group">
             <posx>748r</posx>
             <visible>!Skin.HasSetting(DisableTimePanel) + !Skin.HasSetting(AlternateTimeStats)</visible>
-            <animation effect="slide" end="750,0" time="240">WindowClose</animation>
-            <animation effect="slide" start="750,0" end="0,0" delay="WidgetSlideDelay" time="240" condition="!Window.Previous(startup)">WindowOpen</animation>
-            <animation effect="slide" start="750,0" end="0,0" delay="800" time="480" condition="Window.Previous(startup)">WindowOpen</animation>
-            <animation effect="slide" end="0,338" time="320" tween="cubic" easing="inout" condition="[Skin.HasSetting(lowermainmenu)] + !Skin.HasSetting(timehomehigh)">Conditional</animation>
-            <animation effect="slide" end="0,-472" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(timehomehigh)">Conditional</animation>
-            <animation effect="slide" start="750" end="0" time="240">VisibleChange</animation>
+            <animation effect="slide" end="750,0" time="0">WindowClose</animation>
+            <animation effect="slide" start="750,0" end="0,0" delay="WidgetSlideDelay" time="0" condition="!Window.Previous(startup)">WindowOpen</animation>
+            <animation effect="slide" start="750,0" end="0,0" delay="800" time="0" condition="Window.Previous(startup)">WindowOpen</animation>
+            <animation effect="slide" end="0,338" time="0" tween="cubic" easing="inout" condition="[Skin.HasSetting(lowermainmenu)] + !Skin.HasSetting(timehomehigh)">Conditional</animation>
+            <animation effect="slide" end="0,-472" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(timehomehigh)">Conditional</animation>
+            <animation effect="slide" start="750" end="0" time="0">VisibleChange</animation>
             <control type="image">
                 <posx>-45</posx>
                 <posy>-46</posy>
@@ -131,8 +131,8 @@
                 <height>87</height>
                 <texture>$VAR[TimePanelImageVar]</texture>
                 <colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
-                <animation effect="slide" end="200" time="240" condition="Skin.HasSetting(shorterhomebars)">Conditional</animation>
-                <animation effect="rotatex" end="180" time="320" center="20" tween="cubic" easing="inout" condition="Skin.HasSetting(timehomehigh)">Conditional</animation>
+                <animation effect="slide" end="200" time="0" condition="Skin.HasSetting(shorterhomebars)">Conditional</animation>
+                <animation effect="rotatex" end="180" time="0" center="20" tween="cubic" easing="inout" condition="Skin.HasSetting(timehomehigh)">Conditional</animation>
             </control>
             <control type="label">
                 <posx>734</posx>
@@ -171,33 +171,33 @@
         <control type="group">
             <posy>610</posy>
             <visible>[system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(ActorBirthdayRSS)] + !Skin.HasSetting(DisableRSS)</visible>
-            <animation effect="slide" end="0,330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(rsshomelow) + !Skin.HasSetting(lowermainmenu) + !IsEmpty(Window(home).Property(PanelWidget2Info)) + !Window.IsActive(1115)">Conditional</animation>
-            <animation effect="slide" end="0,-330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(rsshomelow) + !Skin.HasSetting(lowermainmenu) + !IsEmpty(Window(home).Property(PanelWidgetInfo)) + !Window.IsActive(1115)">Conditional</animation>
-            <animation effect="slide" end="1920,0" time="240">WindowClose</animation>
-            <animation effect="slide" start="1880,0" end="0,0" delay="WidgetSlideDelay" time="240" condition="!Window.Previous(startup)">WindowOpen</animation>
-            <animation effect="slide" start="1880,0" end="0,0" delay="2000" time="480" condition="Window.Previous(startup)">WindowOpen</animation>
-            <animation effect="slide" end="0,338" time="320" tween="cubic" easing="inout" condition="[Skin.HasSetting(lowermainmenu)] + !Skin.HasSetting(rsshomelow)">Conditional</animation>
-            <animation effect="slide" end="0,-19" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu) + !Skin.HasSetting(rsshomelow)">Conditional</animation>
+            <animation effect="slide" end="0,330" time="0" tween="cubic" delay="160" condition="!Skin.HasSetting(rsshomelow) + !Skin.HasSetting(lowermainmenu) + !IsEmpty(Window(home).Property(PanelWidget2Info)) + !Window.IsActive(1115)">Conditional</animation>
+            <animation effect="slide" end="0,-330" time="0" tween="cubic" delay="160" condition="!Skin.HasSetting(rsshomelow) + !Skin.HasSetting(lowermainmenu) + !IsEmpty(Window(home).Property(PanelWidgetInfo)) + !Window.IsActive(1115)">Conditional</animation>
+            <animation effect="slide" end="1920,0" time="0">WindowClose</animation>
+            <animation effect="slide" start="1880,0" end="0,0" delay="WidgetSlideDelay" time="0" condition="!Window.Previous(startup)">WindowOpen</animation>
+            <animation effect="slide" start="1880,0" end="0,0" delay="2000" time="0" condition="Window.Previous(startup)">WindowOpen</animation>
+            <animation effect="slide" end="0,338" time="0" tween="cubic" easing="inout" condition="[Skin.HasSetting(lowermainmenu)] + !Skin.HasSetting(rsshomelow)">Conditional</animation>
+            <animation effect="slide" end="0,-19" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu) + !Skin.HasSetting(rsshomelow)">Conditional</animation>
             <animation type="Visible" reversible="false">
-                <effect type="fade" end="100" time="240" />
-                <effect type="slide" start="0,-40" end="0,0" time="240" tween="cubic" easing="inout" />
+                <effect type="fade" end="100" time="0" />
+                <effect type="slide" start="0,-40" end="0,0" time="0" tween="cubic" easing="inout" />
             </animation>
             <animation type="Hidden" reversible="false">
-                <effect type="fade" start="100" end="0" time="240" />
-                <effect type="slide" end="0,-40" time="240" tween="cubic" easing="inout" />
+                <effect type="fade" start="100" end="0" time="0" />
+                <effect type="slide" end="0,-40" time="0" tween="cubic" easing="inout" />
             </animation>
             <visible>[!Control.HasFocus(9010) + ![IntegerGreaterThan(Container(9010).NumItems,0) + Skin.HasSetting(showsubmenu)]] | Skin.HasSetting(rsshomelow)</visible>
             <control type="group">
                 <visible>Skin.HasSetting(alternativerss)</visible>
-                <animation effect="slide" end="0,429" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow) | WIndow.IsActive(1115)">Conditional</animation>
+                <animation effect="slide" end="0,429" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow) | WIndow.IsActive(1115)">Conditional</animation>
                 <control type="image">
                     <posy>2</posy>
                     <width>1920</width>
                     <height>87</height>
                     <texture flipy="true">$VAR[NavBarImageVar]</texture>
                     <colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
-                    <animation effect="slide" end="0,5" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow) | WIndow.IsActive(1115)">Conditional</animation>
-                    <animation effect="rotatex" end="180" time="320" center="22" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow) | WIndow.IsActive(1115)">Conditional</animation>
+                    <animation effect="slide" end="0,5" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow) | WIndow.IsActive(1115)">Conditional</animation>
+                    <animation effect="rotatex" end="180" time="0" center="22" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow) | WIndow.IsActive(1115)">Conditional</animation>
                 </control>
                 <control type="group">
                     <control type="label">
@@ -231,14 +231,14 @@
             </control>
             <control type="group">
                 <visible>!Skin.HasSetting(alternativerss)</visible>
-                <animation effect="slide" end="0,429" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow) | WIndow.IsActive(1115)">Conditional</animation>
+                <animation effect="slide" end="0,429" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow) | WIndow.IsActive(1115)">Conditional</animation>
                 <control type="image">
                     <posx>81</posx>
                     <width>1880</width>
                     <height>87</height>
                     <texture>home/rssbar_mid.png</texture>
                     <colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
-                    <animation effect="rotatex" end="180" time="320" center="22" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow) | WIndow.IsActive(1115)">Conditional</animation>
+                    <animation effect="rotatex" end="180" time="0" center="22" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow) | WIndow.IsActive(1115)">Conditional</animation>
                 </control>
                 <control type="label">
                     <posx>165</posx>
@@ -269,7 +269,7 @@
                     <visible>!Skin.HasSetting(ActorBirthdayRSS)</visible>
                 </control>
                 <control type="group">
-                    <animation effect="rotatex" end="180" time="320" center="22" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow)">Conditional</animation>
+                    <animation effect="rotatex" end="180" time="0" center="22" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow)">Conditional</animation>
                     <control type="image">
                         <posx>116</posx>
                         <width>200</width>
@@ -328,7 +328,7 @@
                         <aligny>top</aligny>
                         <aspectratio>keep</aspectratio>
                         <texture background="true" fallback="common/cdart/bd.png">$INFO[Player.Art(discart)]</texture>
-                        <fadetime>300</fadetime>
+                        <fadetime>50</fadetime>
                         <animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
                     </control>
                     <control type="image">
@@ -353,7 +353,7 @@
                 </control>
                 <control type="group">
                     <visible>VideoPlayer.Content(files) | VideoPlayer.Content(livetv)</visible>
-                    <animation effect="slide" end="0" time="640" easing="inout" tween="circle" condition="Skin.HasSetting(nowplayingpanel)">Conditional</animation>
+                    <animation effect="slide" end="0" time="0" easing="inout" tween="circle" condition="Skin.HasSetting(nowplayingpanel)">Conditional</animation>
                     <include>Animation_VisibleChange400</include>
                     <control type="image">
                         <posx>15</posx>
@@ -379,8 +379,8 @@
             </control>
             <control type="group">
                 <posx>-370</posx>
-                <animation effect="slide" time="320" tween="cubic" easing="inout" end="218,-20" condition="!Skin.HasSetting(ShowBackgroundVideo) + [VideoPlayer.Content(files) | VideoPlayer.Content(livetv)]">Conditional</animation>
-                <animation effect="slide" time="640" tween="circle" easing="inout" end="354" condition="Skin.HasSetting(ShowBackgroundVideo)">Conditional</animation>
+                <animation effect="slide" time="0" tween="cubic" easing="inout" end="218,-20" condition="!Skin.HasSetting(ShowBackgroundVideo) + [VideoPlayer.Content(files) | VideoPlayer.Content(livetv)]">Conditional</animation>
+                <animation effect="slide" time="0" tween="circle" easing="inout" end="354" condition="Skin.HasSetting(ShowBackgroundVideo)">Conditional</animation>
                 <control type="image">
                     <posx>660</posx>
                     <posy>990</posy>
@@ -413,9 +413,9 @@
         <control type="group">
             <posx>1436</posx>
             <posy>672</posy>
-            <animation effect="slide" start="575" end="0" time="560" tween="cubic" delay="320" condition="!Skin.HasSetting(nowplayingpanel)">WindowOpen</animation>
+            <animation effect="slide" start="575" end="0" time="0" tween="cubic" delay="320" condition="!Skin.HasSetting(nowplayingpanel)">WindowOpen</animation>
             <visible>IsEmpty(Window(Visualisation).Property(ArtistSlideshowRefresh))</visible>
-            <animation effect="fade" time="320">VisibleChange</animation>
+            <animation effect="fade" time="0">VisibleChange</animation>
             <control type="image">
                 <width>425</width>
                 <height>398</height>
@@ -432,7 +432,7 @@
                 <height>354</height>
                 <aspectratio scalediffuse="false">scale</aspectratio>
                 <imagepath background="true" diffuse="thumbs/boxes/cdcover_mask.png">$VAR[NowPlayingMultiImageVar]</imagepath>
-                <fadetime>750</fadetime>
+                <fadetime>50</fadetime>
                 <timeperimage>5000</timeperimage>
             </control>
             <control type="image">
@@ -446,12 +446,12 @@
         <control type="group">
             <visible>Player.HasAudio</visible>
             <animation type="Visible">
-                <effect type="zoom" start="150" end="100" center="960,540" time="400" tween="cubic" />
-                <effect type="fade" end="100" time="240" />
+                <effect type="zoom" start="150" end="100" center="960,540" time="0" tween="cubic" />
+                <effect type="fade" end="100" time="0" />
             </animation>
             <animation type="Hidden">
-                <effect type="fade" start="100" end="0" time="240" />
-                <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
+                <effect type="fade" start="100" end="0" time="0" />
+                <effect type="zoom" start="100" end="130" center="960,540" time="0" tween="cubic" easing="in" />
             </animation>
             <control type="group">
                 <visible>!Skin.HasSetting(disablecdart)</visible>
@@ -480,9 +480,9 @@
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 </control>
                 <control type="group">
-                    <animation effect="slide" start="-150" end="0" time="560" tween="cubic" delay="320">WindowOpen</animation>
+                    <animation effect="slide" start="-150" end="0" time="0" tween="cubic" delay="320">WindowOpen</animation>
                     <animation type="WindowClose">
-                        <effect type="slide" end="-180" time="320" tween="cubic" easing="in" />
+                        <effect type="slide" end="-180" time="0" tween="cubic" easing="in" />
                         <effect type="fade" start="100" end="0" time="0" delay="320" />
                         <condition type="!Player.Playing" />
                     </animation>
@@ -493,7 +493,7 @@
                         <height>360</height>
                         <aligny>top</aligny>
                         <aspectratio>keep</aspectratio>
-                        <fadetime>300</fadetime>
+                        <fadetime>50</fadetime>
                         <animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
                         <include>cdart</include>
                         <visible>!Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)</visible>
@@ -505,7 +505,7 @@
                         <height>360</height>
                         <aligny>top</aligny>
                         <aspectratio>keep</aspectratio>
-                        <fadetime>300</fadetime>
+                        <fadetime>50</fadetime>
                         <animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
                         <include>vinylart</include>
                         <visible>Skin.HasSetting(vinylart)</visible>
@@ -517,7 +517,7 @@
                         <height>360</height>
                         <aligny>top</aligny>
                         <aspectratio>keep</aspectratio>
-                        <fadetime>300</fadetime>
+                        <fadetime>50</fadetime>
                         <animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
                         <include>blurayart</include>
                         <visible>Skin.HasSetting(blurayart)</visible>
@@ -574,7 +574,7 @@
                     <font>Font_Reg36_Caps</font>
                     <include>Furniture_HomeNowPlayingMetrics</include>
                     <visible>Substring(Control.GetLabel(8308),empty.png) | IsEmpty(Skin.String(ArtistsLogosPath))</visible>
-                    <animation effect="slide" time="320" tween="cubic" easing="inout" end="82" condition="!Skin.HasSetting(disablecdart)">Conditional</animation>
+                    <animation effect="slide" time="0" tween="cubic" easing="inout" end="82" condition="!Skin.HasSetting(disablecdart)">Conditional</animation>
                 </control>
                 <control type="label">
                     <posy>768</posy>
@@ -582,7 +582,7 @@
                     <font>Font_Reg28_Caps</font>
                     <textcolor>white3</textcolor>
                     <include>Furniture_HomeNowPlayingMetrics</include>
-                    <animation effect="slide" time="320" tween="cubic" easing="inout" end="98" condition="!Skin.HasSetting(disablecdart)">Conditional</animation>
+                    <animation effect="slide" time="0" tween="cubic" easing="inout" end="98" condition="!Skin.HasSetting(disablecdart)">Conditional</animation>
                 </control>
                 <control type="image" id="8308">
                     <posx>530</posx>
@@ -590,10 +590,10 @@
                     <width>309</width>
                     <height>108</height>
                     <texture background="true" fallback="empty.png">$INFO[Skin.String(ArtistsLogosPath)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
-                    <fadetime>400</fadetime>
+                    <fadetime>50</fadetime>
                     <animation effect="fade" start="100" end="0" time="0" condition="Substring(Control.GetLabel(8308),empty.png)">Conditional</animation>
                     <visible>!IsEmpty(Skin.String(ArtistsLogosPath))</visible>
-                    <animation effect="slide" time="320" tween="cubic" easing="inout" end="-98" condition="Skin.HasSetting(disablecdart)">Conditional</animation>
+                    <animation effect="slide" time="0" tween="cubic" easing="inout" end="-98" condition="Skin.HasSetting(disablecdart)">Conditional</animation>
                 </control>
                 <control type="label">
                     <posy>940</posy>
@@ -602,7 +602,7 @@
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                     <include>Furniture_HomeNowPlayingMetrics</include>
                     <visible>!Player.Paused</visible>
-                    <animation effect="slide" time="320" tween="cubic" easing="inout" end="98" condition="!Skin.HasSetting(disablecdart)">Conditional</animation>
+                    <animation effect="slide" time="0" tween="cubic" easing="inout" end="98" condition="!Skin.HasSetting(disablecdart)">Conditional</animation>
                 </control>
                 <control type="label">
                     <posy>940</posy>
@@ -611,7 +611,7 @@
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                     <include>Furniture_HomeNowPlayingMetrics</include>
                     <visible>Player.Paused</visible>
-                    <animation effect="slide" time="320" tween="cubic" easing="inout" end="98" condition="!Skin.HasSetting(disablecdart)">Conditional</animation>
+                    <animation effect="slide" time="0" tween="cubic" easing="inout" end="98" condition="!Skin.HasSetting(disablecdart)">Conditional</animation>
                 </control>
                 <control type="label">
                     <posx>444</posx>
@@ -623,7 +623,7 @@
                     <font>Font_Reg37_Caps</font>
                     <textcolor>white3</textcolor>
                     <wrapmultiline>true</wrapmultiline>
-                    <animation effect="slide" time="320" tween="cubic" easing="inout" end="82" condition="!Skin.HasSetting(disablecdart)">Conditional</animation>
+                    <animation effect="slide" time="0" tween="cubic" easing="inout" end="82" condition="!Skin.HasSetting(disablecdart)">Conditional</animation>
                 </control>
             </control>
         </control>
@@ -639,12 +639,12 @@
             <visible>!Window.IsActive(1115) + !Window.IsActive(1154)</visible>
             <visible>IsEmpty(Window(home).Property(PanelWidgetInfo)) + IsEmpty(Window(home).Property(PanelWidget2Info))</visible>
             <visible>[IsEmpty(Control.GetLabel(4325)) + !Skin.HasSetting(movenowplayingwidget)] | [IsEmpty(Control.GetLabel(4321)) + Skin.HasSetting(movenowplayingwidget)] | !IsEmpty(Window(home).Property(DisableWidgets))</visible>
-            <animation effect="slide" end="0,35" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
+            <animation effect="slide" end="0,35" time="0" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
             <include>Animation_Widgets</include>
-            <animation effect="slide" end="0,390" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(movenowplayingwidget) + Skin.HasSetting(lowermainmenu)">Conditional</animation>
-            <animation effect="slide" end="0,210" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(movenowplayingwidget) + Skin.HasSetting(lowermainmenu) + Window.IsActive(1158)">Conditional</animation>
-            <animation effect="slide" end="0,600" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(movenowplayingwidget) + !Skin.HasSetting(lowermainmenu)">Conditional</animation>
-            <animation effect="slide" end="0,11" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]] + Window.IsActive(home)">Conditional</animation>
+            <animation effect="slide" end="0,390" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(movenowplayingwidget) + Skin.HasSetting(lowermainmenu)">Conditional</animation>
+            <animation effect="slide" end="0,210" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(movenowplayingwidget) + Skin.HasSetting(lowermainmenu) + Window.IsActive(1158)">Conditional</animation>
+            <animation effect="slide" end="0,600" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(movenowplayingwidget) + !Skin.HasSetting(lowermainmenu)">Conditional</animation>
+            <animation effect="slide" end="0,11" time="0" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]] + Window.IsActive(home)">Conditional</animation>
             <control type="group" id="8995">
                 <posx>22</posx>
                 <posy>-650</posy>
@@ -657,18 +657,18 @@
                     <include>Animation_PanelFlipUp1</include>
                 </animation>
                 <animation type="Visible">
-                    <effect type="zoom" start="150" end="100" center="960,540" time="400" tween="cubic" />
-                    <effect type="fade" end="100" time="240" />
+                    <effect type="zoom" start="150" end="100" center="960,540" time="0" tween="cubic" />
+                    <effect type="fade" end="100" time="0" />
                 </animation>
                 <animation type="Hidden">
-                    <effect type="fade" start="100" end="0" time="240" />
-                    <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
+                    <effect type="fade" start="100" end="0" time="0" />
+                    <effect type="zoom" start="100" end="130" center="960,540" time="0" tween="cubic" easing="in" />
                 </animation>
                 <visible>[!Skin.HasSetting(nohomepageMusicinfo) + Player.HasAudio] | [!Skin.HasSetting(homepageVideoinfo) + Player.HasVideo]</visible>
                 <control type="group">
                     <visible>Skin.HasSetting(nowplayingpanel)</visible>
-                    <animation effect="zoom" start="100" end="95" time="640" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
-                    <animation effect="fade" time="320">VisibleChange</animation>
+                    <animation effect="zoom" start="100" end="95" time="0" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
+                    <animation effect="fade" time="0">VisibleChange</animation>
                     <control type="image">
                         <posx>120</posx>
                         <posy>660</posy>
@@ -692,20 +692,20 @@
                 </control>
                 <control type="group">
                     <control type="group">
-                        <animation effect="zoom" start="100" end="80" time="640" easing="inout" tween="circle" condition="Skin.HasSetting(nowplayingpanel)">Conditional</animation>
-                        <animation effect="slide" end="230,190" time="640" easing="inout" tween="circle" condition="Skin.HasSetting(nowplayingpanel)">Conditional</animation>
-                        <animation effect="zoom" start="100" end="90" time="320" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(nowplayingpanel)">Conditional</animation>
-                        <animation effect="slide" end="0,70" time="320" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(nowplayingpanel)">Conditional</animation>
+                        <animation effect="zoom" start="100" end="80" time="0" easing="inout" tween="circle" condition="Skin.HasSetting(nowplayingpanel)">Conditional</animation>
+                        <animation effect="slide" end="230,190" time="0" easing="inout" tween="circle" condition="Skin.HasSetting(nowplayingpanel)">Conditional</animation>
+                        <animation effect="zoom" start="100" end="90" time="0" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(nowplayingpanel)">Conditional</animation>
+                        <animation effect="slide" end="0,70" time="0" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(nowplayingpanel)">Conditional</animation>
                         <include>Furniture_HomeNowPlayingAudio</include>
                         <include>Furniture_HomeNowPlayingVideo</include>
                     </control>
                     <control type="group">
                         <visible>Player.HasAudio</visible>
                         <include>Animation_VisibleChange400</include>
-                        <animation effect="zoom" start="100" end="85" time="640" easing="inout" tween="circle" condition="Skin.HasSetting(nowplayingpanel)">Conditional</animation>
-                        <animation effect="slide" end="240,125" time="640" easing="inout" tween="circle" condition="Skin.HasSetting(nowplayingpanel)">Conditional</animation>
-                        <animation effect="zoom" start="100" end="90" time="320" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(nowplayingpanel)">Conditional</animation>
-                        <animation effect="slide" end="200,70" time="320" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(nowplayingpanel)">Conditional</animation>
+                        <animation effect="zoom" start="100" end="85" time="0" easing="inout" tween="circle" condition="Skin.HasSetting(nowplayingpanel)">Conditional</animation>
+                        <animation effect="slide" end="240,125" time="0" easing="inout" tween="circle" condition="Skin.HasSetting(nowplayingpanel)">Conditional</animation>
+                        <animation effect="zoom" start="100" end="90" time="0" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(nowplayingpanel)">Conditional</animation>
+                        <animation effect="slide" end="200,70" time="0" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(nowplayingpanel)">Conditional</animation>
                         <include>NextTracksList</include>
                         <control type="group">
                             <visible>!Skin.HasSetting(nowplayingpanel) + Skin.HasSetting(homeartistslideshow)</visible>
@@ -715,10 +715,10 @@
                     <control type="group">
                         <visible>Player.HasVideo + Skin.HasSetting(nowplayingpanel)</visible>
                         <include>Animation_VisibleChange400</include>
-                        <animation effect="zoom" start="100" end="75" time="640" easing="inout" tween="circle" condition="Skin.HasSetting(nowplayingpanel)">Conditional</animation>
-                        <animation effect="slide" end="370,245" time="640" easing="inout" tween="circle" condition="Skin.HasSetting(nowplayingpanel)">Conditional</animation>
-                        <animation effect="zoom" start="100" end="90" time="320" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(nowplayingpanel)">Conditional</animation>
-                        <animation effect="slide" end="200,70" time="320" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(nowplayingpanel)">Conditional</animation>
+                        <animation effect="zoom" start="100" end="75" time="0" easing="inout" tween="circle" condition="Skin.HasSetting(nowplayingpanel)">Conditional</animation>
+                        <animation effect="slide" end="370,245" time="0" easing="inout" tween="circle" condition="Skin.HasSetting(nowplayingpanel)">Conditional</animation>
+                        <animation effect="zoom" start="100" end="90" time="0" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(nowplayingpanel)">Conditional</animation>
+                        <animation effect="slide" end="200,70" time="0" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(nowplayingpanel)">Conditional</animation>
                         <control type="textbox">
                             <posx>400</posx>
                             <posy>680</posy>
@@ -728,7 +728,7 @@
                             <label fallback="31006">$INFO[VideoPlayer.CastAndRole]</label>
                             <font>Font_Reg30_2</font>
                             <autoscroll>false</autoscroll>
-                            <animation effect="slide" time="320" tween="cubic" easing="inout" end="160" condition="Skin.HasSetting(ShowBackgroundVideo)">Conditional</animation>
+                            <animation effect="slide" time="0" tween="cubic" easing="inout" end="160" condition="Skin.HasSetting(ShowBackgroundVideo)">Conditional</animation>
                             <visible>!VideoPlayer.Content(episodes) + !VideoPlayer.Content(livetv)</visible>
                         </control>
                         <control type="textbox">
@@ -741,7 +741,7 @@
                             <font>Font_Reg30_2</font>
                             <autoscroll>false</autoscroll>
                             <visible>VideoPlayer.Content(episodes)</visible>
-                            <animation effect="slide" time="320" tween="cubic" easing="inout" end="-15" condition="Skin.HasSetting(ShowBackgroundVideo)">Conditional</animation>
+                            <animation effect="slide" time="0" tween="cubic" easing="inout" end="-15" condition="Skin.HasSetting(ShowBackgroundVideo)">Conditional</animation>
                         </control>
                         <control type="textbox">
                             <posx>1100</posx>
@@ -756,8 +756,8 @@
                 </control>
                 <control type="group">
                     <visible>Skin.HasSetting(nowplayingpanel)</visible>
-                    <animation effect="zoom" start="100" end="95" time="640" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
-                    <animation effect="fade" time="320">VisibleChange</animation>
+                    <animation effect="zoom" start="100" end="95" time="0" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
+                    <animation effect="fade" time="0">VisibleChange</animation>
                     <control type="image">
                         <posx>141</posx>
                         <posy>681</posy>
@@ -773,9 +773,9 @@
                 <posy>-680</posy>
                 <visible>Skin.HasSetting(rotationtimer) + Skin.HasSetting(rotatenowplayingpanel) + Skin.HasSetting(nowplayingpanel) + !IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.SimilarName))</visible>
                 <visible>[!Skin.HasSetting(nohomepageMusicinfo) + Player.HasAudio] | [!Skin.HasSetting(homepageVideoinfo) + Player.HasVideo]</visible>
-                <animation effect="fade" time="400">WindowOpen</animation>
-                <animation effect="fade" time="160">WindowClose</animation>
-                <animation effect="zoom" start="100" end="95" time="640" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
+                <animation effect="fade" time="0">WindowOpen</animation>
+                <animation effect="fade" time="0">WindowClose</animation>
+                <animation effect="zoom" start="100" end="95" time="0" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
                 <animation type="Visible" reversible="false">
                     <include>Animation_PanelFlipUp1</include>
                 </animation>
@@ -803,8 +803,8 @@
                     <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 </control>
                 <control type="group">
-                    <animation effect="zoom" start="100" end="85" time="640" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
-                    <animation effect="slide" end="-1420,55" time="640" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
+                    <animation effect="zoom" start="100" end="85" time="0" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
+                    <animation effect="slide" end="-1420,55" time="0" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
                     <include>HomeArtistSlideShow</include>
                 </control>
                 <control type="textbox">
@@ -821,7 +821,7 @@
                 <control type="group">
                     <posx>1450</posx>
                     <posy>125</posy>
-                    <animation effect="zoom" start="100" end="85" time="640" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
+                    <animation effect="zoom" start="100" end="85" time="0" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
                     <control type="image">
                         <posy>600</posy>
                         <width>425</width>
@@ -839,7 +839,7 @@
                         <height>354</height>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                         <imagepath background="true" diffuse="thumbs/boxes/cdcover_mask.png">$INFO[Container(5222).ListItem.Icon]</imagepath>
-                        <fadetime>750</fadetime>
+                        <fadetime>50</fadetime>
                         <timeperimage>5000</timeperimage>
                     </control>
                     <control type="image">
@@ -856,11 +856,11 @@
                         <onup>5011</onup>
                         <ondown>5011</ondown>
                         <onback>5011</onback>
-                        <animation effect="zoom" start="100" end="85" time="640" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
+                        <animation effect="zoom" start="100" end="85" time="0" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
                         <orientation>vertical</orientation>
                         <pagecontrol>60</pagecontrol>
                         <focusposition>0</focusposition>
-                        <scrolltime tween="cubic" easing="inout">1200</scrolltime>
+                        <scrolltime tween="cubic" easing="inout">0</scrolltime>
                         <preloaditems>2</preloaditems>
                         <itemlayout width="614" height="40">
                             <control type="label">
@@ -904,7 +904,7 @@
         <control type="group">
             <posy>660</posy>
             <visible>Substring(Control.GetLabel(4321),weather) + Weather.IsFetched</visible>
-            <animation effect="slide" end="0,-250" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
+            <animation effect="slide" end="0,-250" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
             <include>Animation_Widgets</include>
             <visible>!IsEmpty(Weather.Plugin)</visible>
             <visible>![!IsEmpty(Window(home).Property(DisableWidgets)) + Window.IsActive(home)]</visible>
@@ -1353,12 +1353,12 @@
             <visible>![IsEmpty(Window(Home).Property(NextAired.1.Label)) + Substring(Control.GetLabel(4321),nextairedtv)]</visible>
             <visible>![IsEmpty(Window(Home).Property(RecommendedMovie.1.Title)) + Substring(Control.GetLabel(4321),watchlistmovies)]</visible>
             <visible>![IsEmpty(Window(Home).Property(RecommendedEpisode.1.Title)) + Substring(Control.GetLabel(4321),watchlisttv)]</visible>
-            <animation effect="slide" end="0,-258" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
-            <animation effect="slide" time="160" end="0,-38" condition="!Skin.HasSetting(lowermainmenu) + Skin.HasSetting(rsshomelow)">Conditional</animation>
+            <animation effect="slide" end="0,-258" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
+            <animation effect="slide" time="0" end="0,-38" condition="!Skin.HasSetting(lowermainmenu) + Skin.HasSetting(rsshomelow)">Conditional</animation>
             <!--Unfocused widget-->
             <control type="group">
                 <visible>![Control.HasFocus(8000) | Control.HasFocus(8020)]</visible>
-                <animation effect="slide" start="450" end="0" time="240" delay="240" tween="quadratic">Visible</animation>
+                <animation effect="slide" start="450" end="0" time="0" delay="240" tween="quadratic">Visible</animation>
                 <control type="group">
                     <visible>Substring(Control.GetLabel(4321),default) | Substring(Control.GetLabel(4321),glass)</visible>
                     <include>Animation_VisibleChange200</include>
@@ -1429,8 +1429,8 @@
                         <texture background="true" fallback="DefaultAlbumCover.png">$INFO[Container(8000).ListItem.Icon]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
-                        <animation effect="fade" time="240">Visible</animation>
-                        <animation effect="fade" time="40">Hidden</animation>
+                        <animation effect="fade" time="0">Visible</animation>
+                        <animation effect="fade" time="0">Hidden</animation>
                         <visible>Substring(Control.GetLabel(4321),addons) | Substring(Control.GetLabel(4321),Icon) | Substring(Control.GetLabel(4321),albums) | Substring(Control.GetLabel(4321),artists) | Substring(Control.GetLabel(4321),actor) | Substring(Control.GetLabel(4321),pics) | Substring(Control.GetLabel(4321),roms)</visible>
                     </control>
                     <control type="image">
@@ -1440,8 +1440,8 @@
                         <texture background="true" fallback="special://skin/backgrounds/videos/videos.jpg">$VAR[ClassicWidgetImageVar]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
-                        <animation effect="fade" time="240">Visible</animation>
-                        <animation effect="fade" time="40">Hidden</animation>
+                        <animation effect="fade" time="0">Visible</animation>
+                        <animation effect="fade" time="0">Hidden</animation>
                         <visible>Substring(Control.GetLabel(4321),movie) | Substring(Control.GetLabel(4321),tv) | Substring(Control.GetLabel(4321),rss) | Substring(Control.GetLabel(4321),musicvideo)</visible>
                     </control>
                 </control>
@@ -1480,9 +1480,9 @@
                 <visible>Control.HasFocus(8000) | Control.HasFocus(8020)</visible>
                 <visible>Substring(Control.GetLabel(4321),movie) | Substring(Control.GetLabel(4321),musicvideo) | Substring(Control.GetLabel(4321),actors)</visible>
                 <animation type="Conditional" condition="true">
-                    <effect type="zoom" start="100" end="97" center="960,540" time="240" tween="cubic" />
+                    <effect type="zoom" start="100" end="97" center="960,540" time="0" tween="cubic" />
                 </animation>
-                <animation effect="slide" start="0" end="1530,0" time="400" easing="inout" tween="cubic">VisibleChange</animation>
+                <animation effect="slide" start="0" end="1530,0" time="0" easing="inout" tween="cubic">VisibleChange</animation>
                 <control type="group">
                     <posx>238</posx>
                     <control type="image">
@@ -1628,7 +1628,7 @@
                 <posy>-16</posy>
                 <visible>Control.HasFocus(8000) | Control.HasFocus(8020)</visible>
                 <visible>Substring(Control.GetLabel(4321),tv) | Substring(Control.GetLabel(4321),rss) | Substring(Control.GetLabel(4321),roms)</visible>
-                <animation effect="slide" start="0" end="1530,0" time="400" easing="inout" tween="cubic">VisibleChange</animation>
+                <animation effect="slide" start="0" end="1530,0" time="0" easing="inout" tween="cubic">VisibleChange</animation>
                 <control type="group">
                     <posx>463</posx>
                     <posy>75</posy>
@@ -1736,7 +1736,7 @@
                 <posy>-10</posy>
                 <visible>Control.HasFocus(8000) | Control.HasFocus(8020)</visible>
                 <visible>Substring(Control.GetLabel(4321),artists) | Substring(Control.GetLabel(4321),album) | Substring(Control.GetLabel(4321),addons) | Substring(Control.GetLabel(4321),pics) | Substring(Control.GetLabel(4321),Icon)</visible>
-                <animation effect="slide" start="0" end="1530,0" time="400" easing="inout" tween="cubic">VisibleChange</animation>
+                <animation effect="slide" start="0" end="1530,0" time="0" easing="inout" tween="cubic">VisibleChange</animation>
                 <control type="image">
                     <posx>29</posx>
                     <posy>12</posy>
@@ -1818,9 +1818,9 @@
             <control type="group">
                 <posx>513</posx>
                 <posy>-20</posy>
-                <animation effect="slide" end="-570,0" time="400" easing="inout" tween="cubic" condition="Control.HasFocus(8000) | Control.HasFocus(8020)">Conditional</animation>
+                <animation effect="slide" end="-570,0" time="0" easing="inout" tween="cubic" condition="Control.HasFocus(8000) | Control.HasFocus(8020)">Conditional</animation>
                 <animation type="Conditional" condition="true">
-                    <effect type="zoom" start="100" end="97" center="960,540" time="240" tween="cubic" />
+                    <effect type="zoom" start="100" end="97" center="960,540" time="0" tween="cubic" />
                 </animation>
                 <control type="image">
                     <posx>-2</posx>
@@ -1860,8 +1860,8 @@
                     <aspectratio align="center">keep</aspectratio>
                     <texture>$INFO[Container(8000).ListItem.Property(Rating),stars/,.png]</texture>
                     <colordiffuse>grey</colordiffuse>
-                    <animation effect="fade" end="100" time="480">WindowOpen</animation>
-                    <animation effect="fade" start="100" end="0" time="160">WindowClose</animation>
+                    <animation effect="fade" end="100" time="0">WindowOpen</animation>
+                    <animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
                     <visible>Substring(Control.GetLabel(4321),movie) | Substring(Control.GetLabel(4321),tv)</visible>
                 </control>
                 <control type="image">
@@ -1872,8 +1872,8 @@
                     <aspectratio align="center">keep</aspectratio>
                     <texture fallback="rating0.png">$INFO[Container(8000).ListItem.Property(Rating),rating,.png]</texture>
                     <colordiffuse>$VAR[HomeMenuWidgetTextVar]</colordiffuse>
-                    <animation effect="fade" end="100" time="480">WindowOpen</animation>
-                    <animation effect="fade" start="100" end="0" time="160">WindowClose</animation>
+                    <animation effect="fade" end="100" time="0">WindowOpen</animation>
+                    <animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
                     <visible>Substring(Control.GetLabel(4321),albums)</visible>
                 </control>
                 <control type="label">
@@ -1899,8 +1899,8 @@
                     <onright>8993</onright>
                     <include>NavigationWidget1</include>
                     <preloaditems>2</preloaditems>
-                    <scrolltime tween="quadratic">200</scrolltime>
-                    <animation effect="fade" time="160" start="100" end="0" condition="Control.HasFocus(8020)">Conditional</animation>
+                    <scrolltime tween="quadratic">0</scrolltime>
+                    <animation effect="fade" time="0" start="100" end="0" condition="Control.HasFocus(8020)">Conditional</animation>
                     <itemlayout height="34" width="450">
                         <control type="image">
                             <posx>-15</posx>
@@ -1924,7 +1924,7 @@
                             <height>34</height>
                             <texture border="8">views/tripanel/listselect_fo.png</texture>
                             <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                            <animation effect="fade" start="100" end="70" time="800" pulse="true" condition="!IsEmpty(Container(8000).ListItem.Property(Trailer))">Conditional</animation>
+                            <animation effect="fade" start="100" end="70" time="0" pulse="true" condition="!IsEmpty(Container(8000).ListItem.Property(Trailer))">Conditional</animation>
                         </control>
                         <control type="label">
                             <posx>15</posx>
@@ -1995,10 +1995,10 @@
                     <onleft>SetFocus(8000)</onleft>
                     <onright>SetFocus(8000)</onright>
                     <preloaditems>2</preloaditems>
-                    <scrolltime tween="quadratic">200</scrolltime>
+                    <scrolltime tween="quadratic">0</scrolltime>
                     <visible allowhiddenfocus="true">Control.HasFocus(8020)</visible>
                     <animation type="VisibleChange">
-                        <effect type="fade" delay="160" end="100" time="160" />
+                        <effect type="fade" delay="160" end="100" time="0" />
                     </animation>
                     <itemlayout height="68" width="450">
                         <control type="image">
@@ -2101,11 +2101,11 @@
             <visible>![IsEmpty(Window(Home).Property(RecommendedEpisode.1.Title)) + Substring(Control.GetLabel(4321),watchlisttv)]</visible>
             <include>Animation_Widgets</include>
             <animation type="Conditional" condition="true">
-                <effect type="zoom" start="100" end="97" center="960,540" time="240" tween="cubic" />
+                <effect type="zoom" start="100" end="97" center="960,540" time="0" tween="cubic" />
             </animation>
-            <animation effect="slide" end="0,-285" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
-            <animation effect="slide" end="0,18" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu) + [[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
-            <animation effect="slide" end="0,-31" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + Skin.HasSetting(rsshomelow) + !Skin.HasSetting(DisableRSS)">Conditional</animation>
+            <animation effect="slide" end="0,-285" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
+            <animation effect="slide" end="0,18" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu) + [[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
+            <animation effect="slide" end="0,-31" time="0" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + Skin.HasSetting(rsshomelow) + !Skin.HasSetting(DisableRSS)">Conditional</animation>
             <control type="group">
                 <animation type="Conditional" condition="!IsEmpty(Window(Home).Property(PanelWidgetInfo))" reversible="false">
                     <include condition="Skin.HasSetting(lowermainmenu)">Animation_PanelFlipUp2</include>
@@ -2133,7 +2133,7 @@
                         <height>402</height>
                         <texture border="50">$VAR[PanelWidgetBackVar]</texture>
                         <animation type="Conditional" condition="true">
-                            <effect type="fade" start="100" end="75" time="400" tween="cubic" easing="inout" />
+                            <effect type="fade" start="100" end="75" time="0" tween="cubic" easing="inout" />
                         </animation>
                         <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                     </control>
@@ -2151,7 +2151,7 @@
                         <onleft>5051</onleft>
                         <onright>5051</onright>
                         <preloaditems>2</preloaditems>
-                        <scrolltime>200</scrolltime>
+                        <scrolltime>0</scrolltime>
                         <include>NavigationWidget1</include>
                         <itemlayout height="174" width="399">
                             <control type="image">
@@ -2324,7 +2324,7 @@
                             <orientation>horizontal</orientation>
                             <pagecontrol>60</pagecontrol>
                             <focusposition>0</focusposition>
-                            <scrolltime tween="cubic" easing="inout">1200</scrolltime>
+                            <scrolltime tween="cubic" easing="inout">0</scrolltime>
                             <preloaditems>2</preloaditems>
                             <itemlayout width="614" height="340">
                                 <include>FeaturedWidgetLandscapeLayout</include>
@@ -2405,7 +2405,7 @@
                             <orientation>horizontal</orientation>
                             <pagecontrol>60</pagecontrol>
                             <focusposition>0</focusposition>
-                            <scrolltime tween="cubic" easing="inout">1200</scrolltime>
+                            <scrolltime tween="cubic" easing="inout">0</scrolltime>
                             <preloaditems>2</preloaditems>
                             <itemlayout width="340" height="340">
                                 <include>FeaturedWidgetSquareLayout</include>
@@ -2498,7 +2498,7 @@
                             <orientation>horizontal</orientation>
                             <pagecontrol>60</pagecontrol>
                             <focusposition>0</focusposition>
-                            <scrolltime tween="cubic" easing="inout">1200</scrolltime>
+                            <scrolltime tween="cubic" easing="inout">0</scrolltime>
                             <preloaditems>2</preloaditems>
                             <itemlayout width="614" height="340">
                                 <include>FeaturedWidgetLandscapeLayout</include>
@@ -2681,9 +2681,9 @@
                     <aspectratio>keep</aspectratio>
                     <texture background="true">$INFO[Window(home).Property(Discart)]</texture>
                     <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidgetInfo)) | !IsEmpty(Window(home).Property(PanelWidget2Info))" reversible="true">
-                        <effect type="slide" start="-1400,0" end="0,0" delay="880" time="1600" tween="cubic" />
-                        <effect type="rotate" start="0" center="auto" end="-720" delay="880" time="1600" tween="cubic" />
-                        <effect type="zoom" start="104" center="auto" end="100" delay="2520" time="140" tween="quadratic" easing="out" />
+                        <effect type="slide" start="-1400,0" end="0,0" delay="880" time="0" tween="cubic" />
+                        <effect type="rotate" start="0" center="auto" end="-720" delay="880" time="0" tween="cubic" />
+                        <effect type="zoom" start="104" center="auto" end="100" delay="2520" time="0" tween="quadratic" easing="out" />
                     </animation>
                     <visible>!IsEmpty(Window(home).Property(Discart))</visible>
                 </control>
@@ -2811,8 +2811,8 @@
                     <aspectratio>keep</aspectratio>
                     <texture background="true">$INFO[Window(home).Property(Logo)]</texture>
                     <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidgetInfo)) | !IsEmpty(Window(home).Property(PanelWidget2Info))" reversible="true">
-                        <effect type="fade" start="0" end="100" delay="960" time="960" tween="cubic" />
-                        <effect type="zoom" start="0" end="100" delay="960" time="960" center="auto" tween="cubic" />
+                        <effect type="fade" start="0" end="100" delay="960" time="0" tween="cubic" />
+                        <effect type="zoom" start="0" end="100" delay="960" time="0" center="auto" tween="cubic" />
                     </animation>
                     <visible>!IsEmpty(Window(home).Property(Logo))</visible>
                 </control>
@@ -2851,7 +2851,7 @@
                             <height>37</height>
                             <aspectratio align="right">keep</aspectratio>
                             <texture background="true">$INFO[Window(home).Property(Country),flags/language/,.png]</texture>
-                            <fadetime>200</fadetime>
+                            <fadetime>50</fadetime>
                             <colordiffuse>AAFFFFFF</colordiffuse>
                             <visible>!IsEmpty(Control.GetLabel(12020))</visible>
                         </control>
@@ -3038,10 +3038,10 @@
                     <aspectratio>keep</aspectratio>
                     <fadetime>IconCrossfadeTime2</fadetime>
                     <colordiffuse>white2</colordiffuse>
-                    <animation effect="fade" time="200">VisibleChange</animation>
+                    <animation effect="fade" time="0">VisibleChange</animation>
                     <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidgetInfo)) | !IsEmpty(Window(home).Property(PanelWidget2Info))" reversible="true">
-                        <effect type="fade" start="0" end="100" delay="960" time="960" tween="cubic" />
-                        <effect type="zoom" start="100,0" end="100,100" delay="960" time="960" center="auto" tween="cubic" />
+                        <effect type="fade" start="0" end="100" delay="960" time="0" tween="cubic" />
+                        <effect type="zoom" start="100,0" end="100,100" delay="960" time="0" center="auto" tween="cubic" />
                     </animation>
                 </control>
                 <control type="image">
@@ -3051,7 +3051,7 @@
                     <height>1</height>
                     <texture>views/lowlistpanel_line.png</texture>
                     <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidgetInfo)) | !IsEmpty(Window(home).Property(PanelWidget2Info))" reversible="true">
-                        <effect type="fade" start="0" end="100" delay="2520" time="560" tween="cubic" />
+                        <effect type="fade" start="0" end="100" delay="2520" time="0" tween="cubic" />
                     </animation>
                 </control>
                 <control type="grouplist">
@@ -3062,8 +3062,8 @@
                     <usecontrolcoords>true</usecontrolcoords>
                     <orientation>horizontal</orientation>
                     <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidgetInfo)) | !IsEmpty(Window(home).Property(PanelWidget2Info))" reversible="true">
-                        <effect type="fade" start="0" end="100" delay="960" time="960" tween="cubic" />
-                        <effect type="zoom" start="100,0" end="100,100" delay="960" time="960" center="auto" tween="cubic" />
+                        <effect type="fade" start="0" end="100" delay="960" time="0" tween="cubic" />
+                        <effect type="zoom" start="100,0" end="100,100" delay="960" time="0" center="auto" tween="cubic" />
                     </animation>
                     <itemgap>0</itemgap>
                     <!--                         <control type="image">
@@ -3087,7 +3087,7 @@
                             <texture>$INFO[Window(movieinformation).Property(AudioLanguage.1),flags/language/,.png]</texture>
                             <visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.1))</visible>
                             <include>Animation_VisibleChange200</include>
-                            <fadetime>400</fadetime>
+                            <fadetime>50</fadetime>
                         </control>
                         <control type="image">
                             <width>26</width>
@@ -3097,7 +3097,7 @@
                             <visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.2))</visible>
                             <visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.1),Window(movieinformation).Property(AudioLanguage.2))</visible>
                             <include>Animation_VisibleChange200</include>
-                            <fadetime>400</fadetime>
+                            <fadetime>50</fadetime>
                         </control>
                         <control type="image">
                             <width>26</width>
@@ -3108,7 +3108,7 @@
                             <visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.1),Window(movieinformation).Property(AudioLanguage.3))</visible>
                             <visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.2),Window(movieinformation).Property(AudioLanguage.3))</visible>
                             <include>Animation_VisibleChange200</include>
-                            <fadetime>400</fadetime>
+                            <fadetime>50</fadetime>
                         </control>
                     </control>
                     <control type="image">
@@ -3118,7 +3118,7 @@
                         <aspectratio align="left">keep</aspectratio>
                         <fadetime>IconCrossfadeTime2</fadetime>
                         <colordiffuse>white2</colordiffuse>
-                        <animation effect="fade" time="200">VisibleChange</animation>
+                        <animation effect="fade" time="0">VisibleChange</animation>
                     </control>
                     <control type="image">
                         <texture>$INFO[Window(home).Property(VideoResolution),flags/resolution/,.png]</texture>
@@ -3186,7 +3186,7 @@
                         <aspectratio>keep</aspectratio>
                         <fadetime>IconCrossfadeTime2</fadetime>
                         <colordiffuse>white2</colordiffuse>
-                        <animation effect="fade" time="200">VisibleChange</animation>
+                        <animation effect="fade" time="0">VisibleChange</animation>
                         <visible>!IsEmpty(Window(home).Property(Studio)) + !IsEmpty(Control.GetLabel(13300))</visible>
                     </control>
                     <control type="label">
@@ -3227,8 +3227,8 @@
                     <aspectratio>keep</aspectratio>
                     <texture background="true" fallback="empty.png">$VAR[cdARTWidget1Var]</texture>
                     <animation type="Conditional" condition="!IsEmpty(Window(home).Property(WidgetType))" reversible="false">
-                        <effect type="slide" start="-1400,0" end="0,0" delay="880" time="1600" tween="cubic" />
-                        <effect type="rotate" start="0" center="auto" end="-720" delay="880" time="1600" tween="cubic" />
+                        <effect type="slide" start="-1400,0" end="0,0" delay="880" time="0" tween="cubic" />
+                        <effect type="rotate" start="0" center="auto" end="-720" delay="880" time="0" tween="cubic" />
                     </animation>
                 </control>
                 <control type="image">
@@ -3330,7 +3330,7 @@
                     <height>1</height>
                     <texture>views/lowlistpanel_line.png</texture>
                     <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidgetInfo)) | !IsEmpty(Window(home).Property(PanelWidget2Info))" reversible="true">
-                        <effect type="fade" start="0" end="100" delay="1520" time="560" tween="cubic" />
+                        <effect type="fade" start="0" end="100" delay="1520" time="0" tween="cubic" />
                     </animation>
                 </control>
                 <control type="grouplist">
@@ -3347,7 +3347,7 @@
                         <texture>$INFO[Window(home).Property(Rating),stars/,.png]</texture>
                         <fadetime>IconCrossfadeTime2</fadetime>
                         <colordiffuse>white2</colordiffuse>
-                        <animation effect="fade" time="200">VisibleChange</animation>
+                        <animation effect="fade" time="0">VisibleChange</animation>
                         <visible>!IsEmpty(Window(home).Property(Rating)) + !Stringcompare(Window(home).Property(Rating),-1)</visible>
                     </control>
                     <control type="image">
@@ -3358,7 +3358,7 @@
                         <texture>$INFO[Window(home).Property(RecordLabel),flags/music/recordlabel/,.png]</texture>
                         <fadetime>IconCrossfadeTime2</fadetime>
                         <colordiffuse>white2</colordiffuse>
-                        <animation effect="fade" time="200">VisibleChange</animation>
+                        <animation effect="fade" time="0">VisibleChange</animation>
                         <visible>!IsEmpty(Window(home).Property(RecordLabel))</visible>
                     </control>
                     <control type="grouplist">
@@ -3411,7 +3411,7 @@
                     <height>220</height>
                     <aspectratio>keep</aspectratio>
                     <texture background="true">$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(home).Property(Label2),,/logo.png]</texture>
-                    <fadetime>400</fadetime>
+                    <fadetime>50</fadetime>
                 </control>
                 <control type="grouplist" id="5030">
                     <posx>700</posx>
@@ -3489,10 +3489,10 @@
         <control type="group" id="7998">
             <posx>1542</posx>
             <posy>13</posy>
-            <animation effect="slide" end="0,40" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
+            <animation effect="slide" end="0,40" time="0" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
             <visible>IsEmpty(Window(home).Property(DisableWidgets))</visible>
             <visible>Substring(Control.GetLabel(4325),classic) + !Window.IsActive(1120)</visible>
-            <animation effect="slide" end="0,25" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
+            <animation effect="slide" end="0,25" time="0" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
             <visible>![IsEmpty(Window(Home).Property(NextAired.1.Label)) + Substring(Control.GetLabel(4325),nextairedtv)]</visible>
             <visible>![IsEmpty(Window(Home).Property(RecommendedMovie.1.Title)) + Substring(Control.GetLabel(4325),watchlistmovies)]</visible>
             <visible>![IsEmpty(Window(Home).Property(RecommendedEpisode.1.Title)) + Substring(Control.GetLabel(4325),watchlisttv)]</visible>
@@ -3500,7 +3500,7 @@
             <!--Unfocused widget-->
             <control type="group">
                 <visible>![Control.HasFocus(7000) | Control.HasFocus(7020)]</visible>
-                <animation effect="slide" start="450" end="0" time="240" delay="240" tween="quadratic">Visible</animation>
+                <animation effect="slide" start="450" end="0" time="0" delay="240" tween="quadratic">Visible</animation>
                 <control type="group">
                     <visible>Substring(Control.GetLabel(4325),default) | Substring(Control.GetLabel(4325),glass)</visible>
                     <include>Animation_VisibleChange200</include>
@@ -3570,8 +3570,8 @@
                     <texture background="true" fallback="DefaultAlbumCover.png">$INFO[Container(7000).ListItem.Icon]</texture>
                     <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                     <bordersize>7</bordersize>
-                    <animation effect="fade" time="240">Visible</animation>
-                    <animation effect="fade" time="40">Hidden</animation>
+                    <animation effect="fade" time="0">Visible</animation>
+                    <animation effect="fade" time="0">Hidden</animation>
                     <visible>Substring(Control.GetLabel(4325),addons) | Substring(Control.GetLabel(4325),Icon) | Substring(Control.GetLabel(4325),artists) | Substring(Control.GetLabel(4325),albums) | Substring(Control.GetLabel(4325),actor) | Substring(Control.GetLabel(4325),pics) | Substring(Control.GetLabel(4325),roms)</visible>
                 </control>
                 <control type="image">
@@ -3583,8 +3583,8 @@
                     <texture background="true" fallback="special://skin/backgrounds/videos/videos.jpg">$VAR[ClassicWidget2ImageVar]</texture>
                     <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                     <bordersize>7</bordersize>
-                    <animation effect="fade" time="240">Visible</animation>
-                    <animation effect="fade" time="40">Hidden</animation>
+                    <animation effect="fade" time="0">Visible</animation>
+                    <animation effect="fade" time="0">Hidden</animation>
                     <visible>Substring(Control.GetLabel(4325),movie) | Substring(Control.GetLabel(4325),tv) | Substring(Control.GetLabel(4325),rss) | Substring(Control.GetLabel(4325),musicvideo)</visible>
                 </control>
                 <control type="group">
@@ -3622,9 +3622,9 @@
                 <visible>Control.HasFocus(7000) | Control.HasFocus(7020)</visible>
                 <visible>Substring(Control.GetLabel(4325),movie) | Substring(Control.GetLabel(4325),musicvideo) | Substring(Control.GetLabel(4325),actors)</visible>
                 <animation type="Conditional" condition="true">
-                    <effect type="zoom" start="100" end="97" center="960,540" time="240" tween="cubic" />
+                    <effect type="zoom" start="100" end="97" center="960,540" time="0" tween="cubic" />
                 </animation>
-                <animation effect="slide" start="0" end="1530,0" time="400" easing="inout" tween="cubic">VisibleChange</animation>
+                <animation effect="slide" start="0" end="1530,0" time="0" easing="inout" tween="cubic">VisibleChange</animation>
                 <control type="group">
                     <posx>238</posx>
                     <control type="image">
@@ -3770,7 +3770,7 @@
                 <posy>-16</posy>
                 <visible>Control.HasFocus(7000) | Control.HasFocus(7020)</visible>
                 <visible>Substring(Control.GetLabel(4325),tv) | Substring(Control.GetLabel(4325),rss) | Substring(Control.GetLabel(4325),roms)</visible>
-                <animation effect="slide" start="0" end="1530,0" time="400" easing="inout" tween="cubic">VisibleChange</animation>
+                <animation effect="slide" start="0" end="1530,0" time="0" easing="inout" tween="cubic">VisibleChange</animation>
                 <control type="group">
                     <posx>463</posx>
                     <posy>75</posy>
@@ -3879,7 +3879,7 @@
                 <posy>-16</posy>
                 <visible>Control.HasFocus(7000) | Control.HasFocus(7020)</visible>
                 <visible>Substring(Control.GetLabel(4325),artists) | Substring(Control.GetLabel(4325),album) | Substring(Control.GetLabel(4325),addons) | Substring(Control.GetLabel(4325),pics) | Substring(Control.GetLabel(4325),Icon)</visible>
-                <animation effect="slide" start="0" end="1530,0" time="400" easing="inout" tween="cubic">VisibleChange</animation>
+                <animation effect="slide" start="0" end="1530,0" time="0" easing="inout" tween="cubic">VisibleChange</animation>
                 <control type="image">
                     <posx>29</posx>
                     <posy>12</posy>
@@ -3954,9 +3954,9 @@
             <control type="group">
                 <posx>513</posx>
                 <posy>-18</posy>
-                <animation effect="slide" end="-570,0" time="400" easing="inout" tween="cubic" condition="Control.HasFocus(7000) | Control.HasFocus(7020)">Conditional</animation>
+                <animation effect="slide" end="-570,0" time="0" easing="inout" tween="cubic" condition="Control.HasFocus(7000) | Control.HasFocus(7020)">Conditional</animation>
                 <animation type="Conditional" condition="true">
-                    <effect type="zoom" start="100" end="97" center="960,540" time="240" tween="cubic" />
+                    <effect type="zoom" start="100" end="97" center="960,540" time="0" tween="cubic" />
                 </animation>
                 <control type="image">
                     <posx>-2</posx>
@@ -3996,8 +3996,8 @@
                     <aspectratio align="center">keep</aspectratio>
                     <texture>$INFO[Container(7000).ListItem.Property(Rating),stars/,.png]</texture>
                     <colordiffuse>grey</colordiffuse>
-                    <animation effect="fade" end="100" time="480">WindowOpen</animation>
-                    <animation effect="fade" start="100" end="0" time="160">WindowClose</animation>
+                    <animation effect="fade" end="100" time="0">WindowOpen</animation>
+                    <animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
                     <visible>Substring(Control.GetLabel(4325),movie) | Substring(Control.GetLabel(4325),tv)</visible>
                 </control>
                 <control type="image">
@@ -4008,8 +4008,8 @@
                     <aspectratio align="center">keep</aspectratio>
                     <texture fallback="rating0.png">$INFO[Container(7000).ListItem.Property(Rating),rating,.png]</texture>
                     <colordiffuse>$VAR[HomeMenuWidgetTextVar]</colordiffuse>
-                    <animation effect="fade" end="100" time="480">WindowOpen</animation>
-                    <animation effect="fade" start="100" end="0" time="160">WindowClose</animation>
+                    <animation effect="fade" end="100" time="0">WindowOpen</animation>
+                    <animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
                     <visible>Substring(Control.GetLabel(4325),albums)</visible>
                 </control>
                 <control type="label">
@@ -4035,8 +4035,8 @@
                     <onright>7993</onright>
                     <include>NavigationWidget2</include>
                     <preloaditems>2</preloaditems>
-                    <animation effect="fade" time="160" start="100" end="0" condition="Control.HasFocus(7020)">Conditional</animation>
-                    <scrolltime tween="quadratic">200</scrolltime>
+                    <animation effect="fade" time="0" start="100" end="0" condition="Control.HasFocus(7020)">Conditional</animation>
+                    <scrolltime tween="quadratic">0</scrolltime>
                     <itemlayout height="34" width="450">
                         <control type="image">
                             <posx>-15</posx>
@@ -4059,7 +4059,7 @@
                             <height>34</height>
                             <texture border="8">views/tripanel/listselect_fo.png</texture>
                             <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                            <animation effect="fade" start="100" end="70" time="800" pulse="true" condition="!IsEmpty(Container(7000).ListItem.Property(Trailer))">Conditional</animation>
+                            <animation effect="fade" start="100" end="70" time="0" pulse="true" condition="!IsEmpty(Container(7000).ListItem.Property(Trailer))">Conditional</animation>
                         </control>
                         <control type="label">
                             <posx>15</posx>
@@ -4129,10 +4129,10 @@
                     <onleft>SetFocus(7000)</onleft>
                     <onright>SetFocus(7000)</onright>
                     <preloaditems>2</preloaditems>
-                    <scrolltime tween="quadratic">200</scrolltime>
+                    <scrolltime tween="quadratic">0</scrolltime>
                     <visible allowhiddenfocus="true">Control.HasFocus(7020)</visible>
                     <animation type="VisibleChange">
-                        <effect type="fade" delay="160" end="100" time="160" />
+                        <effect type="fade" delay="160" end="100" time="0" />
                     </animation>
                     <itemlayout height="68" width="450">
                         <control type="image">
@@ -4179,15 +4179,15 @@
             <posy>-4</posy>
             <width>1920</width>
             <height>825</height>
-            <animation effect="slide" end="0,35" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
-            <animation effect="slide" end="0,25" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
+            <animation effect="slide" end="0,35" time="0" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
+            <animation effect="slide" end="0,25" time="0" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
             <visible>[Substring(Control.GetLabel(4325),featured) | Substring(Control.GetLabel(4325),panel)]</visible>
             <visible>![IsEmpty(Window(Home).Property(NextAired.1.Label)) + Substring(Control.GetLabel(4325),nextairedtv)]</visible>
             <visible>![IsEmpty(Window(Home).Property(RecommendedMovie.1.Title)) + Substring(Control.GetLabel(4325),watchlistmovies,left)]</visible>
             <visible>IsEmpty(Window(home).Property(DisableWidgets))</visible>
             <include>Animation_Widgets</include>
             <animation type="Conditional" condition="true">
-                <effect type="zoom" start="100" end="97" center="960,540" time="240" tween="cubic" />
+                <effect type="zoom" start="100" end="97" center="960,540" time="0" tween="cubic" />
             </animation>
             <control type="group">
                 <animation type="Conditional" condition="!IsEmpty(Window(Home).Property(PanelWidget2Info))" reversible="false">
@@ -4216,7 +4216,7 @@
                         <texture border="50">$VAR[PanelWidget2BackVar]</texture>
                         <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                         <animation type="Conditional" condition="true">
-                            <effect type="fade" start="100" end="75" time="400" tween="cubic" easing="inout" />
+                            <effect type="fade" start="100" end="75" time="0" tween="cubic" easing="inout" />
                         </animation>
                     </control>
                 </control>
@@ -4234,7 +4234,7 @@
                         <onright>6051</onright>
                         <include>NavigationWidget2</include>
                         <orientation>horizontal</orientation>
-                        <scrolltime>200</scrolltime>
+                        <scrolltime>0</scrolltime>
                         <itemlayout height="174" width="399">
                             <control type="image">
                                 <width>399</width>
@@ -4407,7 +4407,7 @@
                             <orientation>horizontal</orientation>
                             <pagecontrol>60</pagecontrol>
                             <focusposition>0</focusposition>
-                            <scrolltime tween="cubic" easing="inout">1200</scrolltime>
+                            <scrolltime tween="cubic" easing="inout">0</scrolltime>
                             <preloaditems>2</preloaditems>
                             <itemlayout width="614" height="340">
                                 <include>FeaturedWidgetLandscapeLayout</include>
@@ -4488,7 +4488,7 @@
                             <orientation>horizontal</orientation>
                             <pagecontrol>60</pagecontrol>
                             <focusposition>0</focusposition>
-                            <scrolltime tween="cubic" easing="inout">1200</scrolltime>
+                            <scrolltime tween="cubic" easing="inout">0</scrolltime>
                             <preloaditems>2</preloaditems>
                             <itemlayout width="340" height="340">
                                 <include>FeaturedWidgetSquareLayout</include>
@@ -4581,7 +4581,7 @@
                             <orientation>horizontal</orientation>
                             <pagecontrol>60</pagecontrol>
                             <focusposition>0</focusposition>
-                            <scrolltime tween="cubic" easing="inout">1200</scrolltime>
+                            <scrolltime tween="cubic" easing="inout">0</scrolltime>
                             <preloaditems>2</preloaditems>
                             <itemlayout width="614" height="340">
                                 <include>FeaturedWidgetLandscapeLayout</include>
@@ -4722,7 +4722,7 @@
                 <onleft>5010</onleft>
                 <onright>5010</onright>
                 <include>NavigationWidget1</include>
-                <scrolltime tween="quadratic">400</scrolltime>
+                <scrolltime tween="quadratic">0</scrolltime>
                 <focusedlayout width="532" height="340" condition="Substring(Control.GetLabel(4321),landscape)">
                     <include condition="Substring(Skin.String(widgetlist),landscape) | Window.IsActive(1124)">WidgetLandscapeLayout</include>
                     <control type="image">
@@ -4928,7 +4928,7 @@
                             <width>389</width>
                             <height>70</height>
                             <texture>common/bgcolor.png</texture>
-                            <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+                            <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
                         </control>
                         <control type="label">
                             <posx>5</posx>
@@ -4998,7 +4998,7 @@
                             <width>389</width>
                             <height>70</height>
                             <texture>common/bgcolor.png</texture>
-                            <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+                            <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
                         </control>
                         <control type="label">
                             <posx>5</posx>
@@ -5169,7 +5169,7 @@
                 <include>NavigationWidget2</include>
                 <onback>ClearProperty(PanelWidget2Info,Home)</onback>
                 <preloaditems>1</preloaditems>
-                <scrolltime tween="quadratic">400</scrolltime>
+                <scrolltime tween="quadratic">0</scrolltime>
                 <focusedlayout width="532" height="340" condition="Substring(Control.GetLabel(4325),landscape)">
                     <include condition="Substring(Skin.String(widget2list),landscape) | Window.IsActive(1124)">WidgetLandscapeLayout</include>
                     <control type="image">
@@ -5375,7 +5375,7 @@
                             <width>389</width>
                             <height>70</height>
                             <texture>common/bgcolor.png</texture>
-                            <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+                            <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
                         </control>
                         <control type="label">
                             <posx>5</posx>
@@ -5435,7 +5435,7 @@
                             <width>389</width>
                             <height>70</height>
                             <texture>common/bgcolor.png</texture>
-                            <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+                            <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
                         </control>
                         <control type="label">
                             <posx>5</posx>
@@ -6148,7 +6148,7 @@
                 <aligny>center</aligny>
                 <aspectratio>keep</aspectratio>
                 <imagepath>$INFO[Window(weather).Property(MapPath)]</imagepath>
-                <fadetime>0</fadetime>
+                <fadetime>50</fadetime>
                 <timeperimage>500</timeperimage>
                 <pauseatend>1000</pauseatend>
                 <randomize>false</randomize>
@@ -6173,7 +6173,7 @@
     <include name="Panel2WidgetSquareLayout">
         <control type="group">
             <control type="group">
-                <animation effect="zoom" center="100,150" start="95" end="100" time="480" tween="back" reversible="false">Focus</animation>
+                <animation effect="zoom" center="100,150" start="95" end="100" time="0" tween="back" reversible="false">Focus</animation>
                 <control type="image">
                     <posx>20</posx>
                     <posy>15</posy>
@@ -6234,7 +6234,7 @@
     <include name="Panel2WidgetEpisodeLayout">
         <control type="group">
             <control type="group">
-                <animation effect="zoom" center="100,150" start="95" end="100" time="480" tween="back" reversible="false">Focus</animation>
+                <animation effect="zoom" center="100,150" start="95" end="100" time="0" tween="back" reversible="false">Focus</animation>
                 <control type="image">
                     <posx>5</posx>
                     <posy>23</posy>
@@ -6346,7 +6346,7 @@
     </include>
     <include name="Panel2WidgetPosterLayout">
         <control type="group">
-            <animation effect="zoom" center="100,150" start="95" end="100" time="480" tween="back" reversible="false">Focus</animation>
+            <animation effect="zoom" center="100,150" start="95" end="100" time="0" tween="back" reversible="false">Focus</animation>
             <control type="image">
                 <posx>11</posx>
                 <posy>30</posy>
@@ -6466,7 +6466,7 @@
                     <width>532</width>
                     <height>45</height>
                     <texture>common/bgcolor.png</texture>
-                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+                    <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
                 </control>
                 <control type="label">
                     <posx>272</posx>
@@ -6494,7 +6494,7 @@
                 <width>532</width>
                 <height>40</height>
                 <texture>common/bgcolor.png</texture>
-                <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+                <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
             </control>
             <control type="label">
                 <posx>272</posx>
@@ -6510,7 +6510,7 @@
     </include>
     <include name="WidgetBannerLayout">
         <control type="group">
-            <animation effect="zoom" center="379,70" start="95" end="100" time="480" tween="back" reversible="false">Focus</animation>
+            <animation effect="zoom" center="379,70" start="95" end="100" time="0" tween="back" reversible="false">Focus</animation>
             <control type="group">
                 <visible>IsEmpty(ListItem.Property(Banner))</visible>
                 <control type="image">
@@ -6576,7 +6576,7 @@
             <width>532</width>
             <height>60</height>
             <texture>common/bgcolor.png</texture>
-            <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+            <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
         </control>
         <control type="label">
             <posx>272</posx>
@@ -6733,7 +6733,7 @@
             <width>340</width>
             <height>40</height>
             <texture>common/bgcolor.png</texture>
-            <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+            <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
         </control>
     </include>
     <include name="FeaturedWidgetLandscapeLayout">
@@ -6769,7 +6769,7 @@
             <width>614</width>
             <height>40</height>
             <texture>common/bgcolor.png</texture>
-            <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+            <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
         </control>
     </include>
 </includes>

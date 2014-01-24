@@ -20,7 +20,7 @@
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 <animation type="Conditional" condition="!Stringcompare(Window.Property(actualItem),MainMenu)">
-                    <effect type="zoom" end="100,66" time="320" easing="in" tween="cubic" />
+                    <effect type="zoom" end="100,66" time="0" easing="in" tween="cubic" />
                 </animation>
                 <include>Animation_VisibleChange400</include>
                 <include>PanelGlowFade</include>
@@ -32,7 +32,7 @@
                 <height>620</height>
                 <texture border="50">osd/osd_settings_back.png</texture>
                 <animation type="Conditional" condition="!Stringcompare(Window.Property(actualItem),MainMenu)">
-                    <effect type="zoom" end="100,66" time="320" easing="in" tween="cubic" />
+                    <effect type="zoom" end="100,66" time="0" easing="in" tween="cubic" />
                 </animation>
                 <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             </control>

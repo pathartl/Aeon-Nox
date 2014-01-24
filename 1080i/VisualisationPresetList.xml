@@ -7,12 +7,12 @@
         <system>1</system>
     </coordinates>
     <animation type="WindowOpen" reversible="false">
-        <effect type="zoom" start="80" end="100" center="960,540" tween="back" time="240" />
-        <effect type="fade" end="100" time="240" />
+        <effect type="zoom" start="80" end="100" center="960,540" tween="back" time="0" />
+        <effect type="fade" end="100" time="0" />
     </animation>
     <animation type="WindowClose" reversible="false">
-        <effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="240" />
-        <effect type="fade" start="100" end="0" time="240" />
+        <effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="0" />
+        <effect type="fade" start="100" end="0" time="0" />
     </animation>
     <control type="image">
         <posx>357</posx>
@@ -60,7 +60,7 @@
             <onright>60</onright>
             <onup>2</onup>
             <ondown>2</ondown>
-            <scrolltime>200</scrolltime>
+            <scrolltime>0</scrolltime>
             <pagecontrol>60</pagecontrol>
             <itemlayout height="60">
                 <control type="image">

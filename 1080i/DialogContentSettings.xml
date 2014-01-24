@@ -13,7 +13,7 @@
             <posy>153</posy>
             <width>1304</width>
             <height>750</height>
-            <animation effect="fade" start="100" end="0" time="160" condition="Window.IsActive(AddonSettings)">Conditional</animation>
+            <animation effect="fade" start="100" end="0" time="0" condition="Window.IsActive(AddonSettings)">Conditional</animation>
             <control type="image">
                 <posx>-146</posx>
                 <posy>22</posy>
@@ -78,7 +78,7 @@
                 <ondown>4</ondown>
                 <onleft>3</onleft>
                 <onright>28</onright>
-                <scrolltime>200</scrolltime>
+                <scrolltime>0</scrolltime>
                 <itemlayout height="62">
                     <control type="image">
                         <width>292</width>

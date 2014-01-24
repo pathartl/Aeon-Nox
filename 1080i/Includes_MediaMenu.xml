@@ -238,9 +238,9 @@
             <posy>-38</posy>
             <visible>!Skin.HasSetting(TopBarToolTip)</visible>
             <include>Animation_VisibleChange200</include>
-            <animation effect="slide" end="-80" time="240" condition="[IsEmpty(ListItem.Trailer) + Skin.HasSetting(kioskmode)] |Control.HasFocus(109)">Conditional</animation>
-            <animation effect="slide" end="-181" time="320" easing="in" tween="cubic" condition="Window.IsActive(1121)">Conditional</animation>
-            <animation effect="slide" end="20" time="320" easing="in" tween="cubic" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
+            <animation effect="slide" end="-80" time="0" condition="[IsEmpty(ListItem.Trailer) + Skin.HasSetting(kioskmode)] |Control.HasFocus(109)">Conditional</animation>
+            <animation effect="slide" end="-181" time="0" easing="in" tween="cubic" condition="Window.IsActive(1121)">Conditional</animation>
+            <animation effect="slide" end="20" time="0" easing="in" tween="cubic" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
             <control type="image">
                 <posx>404</posx>
                 <posy>425</posy>
@@ -251,16 +251,16 @@
                 <colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
             </control>
             <control type="group">
-                <animation effect="slide" end="0,-15" time="320" tween="cubic" condition="[[!IsEmpty(ListItem.Trailer) + Window.IsActive(videolibrary)] | [!IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(musiclibrary)]] + !Container.Scrolling">Conditional</animation>
+                <animation effect="slide" end="0,-15" time="0" tween="cubic" condition="[[!IsEmpty(ListItem.Trailer) + Window.IsActive(videolibrary)] | [!IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(musiclibrary)]] + !Container.Scrolling">Conditional</animation>
                 <control type="image">
                     <posx>415</posx>
                     <posy>532</posy>
                     <width>25</width>
                     <height>25</height>
                     <texture>defaulticons/DefaultFolderBack.png</texture>
-                    <animation effect="rotate" end="-90" center="auto" delay="240" time="640" condition="Window.IsActive(musicinformation) | Control.HasFocus(7000) | Control.IsVisible(508) | Control.IsVisible(501) | Control.IsVisible(503) | Control.IsVisible(510) | Control.IsVisible(57) | Control.IsVisible(516) | Control.IsVisible(509) | [Control.IsVisible(500) + !Skin.HasSetting(WallVertical)]">Conditional</animation>
-                    <animation effect="rotate" end="-180" center="auto" delay="240" time="640" condition="ControlGroup(9000).HasFocus">Conditional</animation>
-                    <animation effect="rotate" start="-90" end="180" center="auto" delay="240" time="640" condition="Control.IsVisible(503) + [Skin.HasSetting(landscapeonelogo) + Container.Content(movies)]">Conditional</animation>
+                    <animation effect="rotate" end="-90" center="auto" delay="240" time="0" condition="Window.IsActive(musicinformation) | Control.HasFocus(7000) | Control.IsVisible(508) | Control.IsVisible(501) | Control.IsVisible(503) | Control.IsVisible(510) | Control.IsVisible(57) | Control.IsVisible(516) | Control.IsVisible(509) | [Control.IsVisible(500) + !Skin.HasSetting(WallVertical)]">Conditional</animation>
+                    <animation effect="rotate" end="-180" center="auto" delay="240" time="0" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+                    <animation effect="rotate" start="-90" end="180" center="auto" delay="240" time="0" condition="Control.IsVisible(503) + [Skin.HasSetting(landscapeonelogo) + Container.Content(movies)]">Conditional</animation>
                     <colordiffuse>$VAR[TitleColorVar]</colordiffuse>
                     <include>Animation_VisibleChange400</include>
                     <visible>!ControlGroup(9000).HasFocus</visible>
@@ -285,9 +285,9 @@
                 <texture>special://skin/extras/BigIcons/Film.png</texture>
                 <colordiffuse>$VAR[TitleColorVar]</colordiffuse>
                 <include>Animation_VisibleChange400</include>
-                <animation effect="fade" start="100" end="60" time="1200" pulse="true" condition="true">conditional</animation>
-                <animation effect="fade" start="100" end="0" time="400" delay="400" condition="!Control.IsVisible(4051)">Conditional</animation>
-                <animation effect="fade" start="100" end="0" time="160" condition="[IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(musiclibrary)] | [IsEmpty(ListItem.Trailer) + Window.IsActive(videolibrary)] | Container.Scrolling">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="0" pulse="true" condition="true">conditional</animation>
+                <animation effect="fade" start="100" end="0" time="0" delay="400" condition="!Control.IsVisible(4051)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="0" condition="[IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(musiclibrary)] | [IsEmpty(ListItem.Trailer) + Window.IsActive(videolibrary)] | Container.Scrolling">Conditional</animation>
                 <visible>!ControlGroup(9000).HasFocus + [Window.IsActive(musiclibrary) | Window.IsActive(videos)]</visible>
             </control>
         </control>
@@ -295,19 +295,19 @@
     <include name="Media_Menu_Furniture">
         <control type="group">
             <animation type="Conditional" condition="!ControlGroup(9000).HasFocus">
-                <effect type="slide" end="-420" time="320" easing="in" tween="cubic" />
+                <effect type="slide" end="-420" time="0" easing="in" tween="cubic" />
             </animation>
             <animation type="Conditional" condition="Window.IsActive(1126)">
-                <effect type="slide" end="75" time="320" easing="in" tween="cubic" />
+                <effect type="slide" end="75" time="0" easing="in" tween="cubic" />
             </animation>
             <animation type="Conditional" condition="Window.IsActive(1128) | Window.IsActive(1127) | Window.IsActive(1112)">
-                <effect type="slide" end="-600" time="320" easing="in" tween="cubic" />
+                <effect type="slide" end="-600" time="0" easing="in" tween="cubic" />
             </animation>
             <animation type="WindowClose">
-                <effect type="slide" end="-450" time="320" easing="in" tween="cubic" />
+                <effect type="slide" end="-450" time="0" easing="in" tween="cubic" />
             </animation>
             <animation type="WindowOpen">
-                <effect type="slide" start="-450" end="0" time="320" delay="800" tween="cubic" />
+                <effect type="slide" start="-450" end="0" time="0" delay="800" tween="cubic" />
             </animation>
             <include>Media_Menu_Tooltip</include>
             <control type="image">
@@ -317,18 +317,18 @@
                 <texture>dialogs/context_middle.png</texture>
                 <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 <animation type="Conditional" condition="Window.IsActive(1126)">
-                    <effect type="zoom" end="115,100" time="320" easing="in" tween="cubic" />
-                    <effect type="slide" end="-62" time="320" easing="in" tween="cubic" />
+                    <effect type="zoom" end="115,100" time="0" easing="in" tween="cubic" />
+                    <effect type="slide" end="-62" time="0" easing="in" tween="cubic" />
                 </animation>
                 <animation type="Conditional" condition="Window.IsActive(1121)">
-                    <effect type="zoom" end="66,100" time="320" easing="in" tween="cubic" />
-                    <effect type="slide" end="-49" time="320" easing="in" tween="cubic" />
+                    <effect type="zoom" end="66,100" time="0" easing="in" tween="cubic" />
+                    <effect type="slide" end="-49" time="0" easing="in" tween="cubic" />
                 </animation>
             </control>
             <control type="group">
                 <posx>380</posx>
                 <animation type="Conditional" condition="Window.IsActive(1121)">
-                    <effect type="slide" end="-180" time="320" easing="in" tween="cubic" />
+                    <effect type="slide" end="-180" time="0" easing="in" tween="cubic" />
                 </animation>
                 <include>Neon_VerticalBar</include>
             </control>
@@ -349,7 +349,7 @@
                 <ondown>9000</ondown>
                 <onback>50</onback>
                 <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus</visible>
-                <animation effect="fade" time="160" delay="1000">Hidden</animation>
+                <animation effect="fade" time="0" delay="1000">Hidden</animation>
                 <control type="button" id="1802">
                     <label>[B]$INFO[Container.Viewmode][/B]</label>
                     <include>Objects_MediaMenuButtonIcons</include>
@@ -393,8 +393,8 @@
                 <posy>15</posy>
                 <itemgap>20</itemgap>
                 <visible>ControlGroup(9000).HasFocus</visible>
-                <animation effect="fade" time="220">Visible</animation>
-                <animation effect="fade" time="160" delay="1000">Hidden</animation>
+                <animation effect="fade" time="0">Visible</animation>
+                <animation effect="fade" time="0" delay="1000">Hidden</animation>
                 <control type="image">
                     <texture>special://skin/extras/BigIcons/Presentation.png</texture>
                     <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(1802)">Conditional</animation>

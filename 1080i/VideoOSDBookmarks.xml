@@ -55,7 +55,7 @@
             <ondown>11</ondown>
             <onleft>450</onleft>
             <onright>450</onright>
-            <scrolltime tween="sine">200</scrolltime>
+            <scrolltime tween="sine">0</scrolltime>
             <orientation>horizontal</orientation>
             <itemgap>30</itemgap>
             <control type="button" id="2">
@@ -107,7 +107,7 @@
             <onright>61</onright>
             <ondown>2</ondown>
             <onup>3</onup>
-            <scrolltime>200</scrolltime>
+            <scrolltime>0</scrolltime>
             <pagecontrol>61</pagecontrol>
             <itemlayout height="262" width="360">
                 <control type="image">

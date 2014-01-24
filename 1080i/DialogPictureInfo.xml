@@ -3,12 +3,12 @@
     <defaultcontrol always="true">5</defaultcontrol>
     <onload>SetFocus(5)</onload>
     <animation type="WindowOpen" reversible="false">
-        <effect type="zoom" start="150" end="100" center="960,540" time="400" tween="cubic" />
-        <effect type="fade" end="100" time="200" />
+        <effect type="zoom" start="150" end="100" center="960,540" time="0" tween="cubic" />
+        <effect type="fade" end="100" time="0" />
     </animation>
     <animation type="WindowClose" reversible="false">
-        <effect type="fade" start="100" end="0" time="240" />
-        <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
+        <effect type="fade" start="100" end="0" time="0" />
+        <effect type="zoom" start="100" end="130" center="960,540" time="0" tween="cubic" easing="in" />
     </animation>
     <controls>
         <control type="image">
@@ -46,7 +46,7 @@
                 <onup>5</onup>
                 <ondown>5</ondown>
                 <pagecontrol>61</pagecontrol>
-                <scrolltime tween="quadratic">300</scrolltime>
+                <scrolltime tween="quadratic">0</scrolltime>
                 <orientation>vertical</orientation>
                 <itemlayout height="60" width="640">
                     <control type="image">

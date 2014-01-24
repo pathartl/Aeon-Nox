@@ -6,13 +6,13 @@
     <controls>
         <control type="group">
             <visible>![Window.IsVisible(FileBrowser) | Window.IsVisible(script-Actors-Browser.xml) | [Window.IsVisible(DialogSelect.xml) + StringCompare(Window.Property(actorsselect),1)]]</visible>
-            <!--<animation effect="fade" time="300">Visible</animation>
-			<animation effect="fade" time="300">Hidden</animation>-->
+            <!--<animation effect="fade" time="0">Visible</animation>
+			<animation effect="fade" time="0">Hidden</animation>-->
             <control type="group">
                 <!--left side-->
-                <animation effect="slide" start="-729,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
-                <animation effect="slide" end="-729,0" time="320" tween="quadratic">WindowClose</animation>
-                <animation effect="slide" start="-729,0" end="0,0" time="320" tween="quadratic">VisibleChange</animation>
+                <animation effect="slide" start="-729,0" end="0,0" time="0" tween="quadratic">WindowOpen</animation>
+                <animation effect="slide" end="-729,0" time="0" tween="quadratic">WindowClose</animation>
+                <animation effect="slide" start="-729,0" end="0,0" time="0" tween="quadratic">VisibleChange</animation>
                 <control type="image">
                     <width>729</width>
                     <height>1080</height>
@@ -35,9 +35,9 @@
             </control>
             <control type="group">
                 <!-- right side -->
-                <animation effect="slide" start="1192,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
-                <animation effect="slide" end="1192,0" time="320" tween="quadratic">WindowClose</animation>
-                <animation effect="slide" start="1192,0" end="0,0" time="320" tween="quadratic">VisibleChange</animation>
+                <animation effect="slide" start="1192,0" end="0,0" time="0" tween="quadratic">WindowOpen</animation>
+                <animation effect="slide" end="1192,0" time="0" tween="quadratic">WindowClose</animation>
+                <animation effect="slide" start="1192,0" end="0,0" time="0" tween="quadratic">VisibleChange</animation>
                 <control type="image">
                     <posx>729</posx>
                     <width>1192</width>
@@ -51,7 +51,7 @@
                     <height>1080</height>
                     <aspectratio align="center">scale</aspectratio>
                     <texture background="true">$INFO[Container(50).ListItem.Art(fanart)]</texture>
-                    <fadetime>500</fadetime>
+                    <fadetime>50</fadetime>
                 </control>
                 <control type="image">
                     <posx>729</posx>
@@ -222,7 +222,7 @@
                         <onup>150</onup>
                         <ondown>150</ondown>
                         <pagecontrol>61</pagecontrol>
-                        <scrolltime>200</scrolltime>
+                        <scrolltime>0</scrolltime>
                         <orientation>vertical</orientation>
                         <itemlayout height="50" width="710">
                             <control type="image">
@@ -350,8 +350,8 @@
                         <posx>827</posx>
                         <posy>120</posy>
                         <visible>ControlGroup(9000).HasFocus(20)</visible>
-                        <animation effect="fade" time="240">Visible</animation>
-                        <animation effect="fade" time="240">Hidden</animation>
+                        <animation effect="fade" time="0">Visible</animation>
+                        <animation effect="fade" time="0">Hidden</animation>
                         <control type="image">
                             <width>1000</width>
                             <height>360</height>
@@ -420,8 +420,8 @@
                         <posx>827</posx>
                         <posy>80</posy>
                         <visible>[Control.HasFocus(10) + IntegerGreaterThan(Container(250).NumItems,0)] | ControlGroup(2500).HasFocus</visible>
-                        <animation effect="fade" time="240">Visible</animation>
-                        <animation effect="fade" time="240">Hidden</animation>
+                        <animation effect="fade" time="0">Visible</animation>
+                        <animation effect="fade" time="0">Hidden</animation>
                         <control type="panel" id="250">
                             <width>1000</width>
                             <height>450</height>
@@ -430,7 +430,7 @@
                             <onup>9000</onup>
                             <ondown>9000</ondown>
                             <pagecontrol>60</pagecontrol>
-                            <scrolltime>300</scrolltime>
+                            <scrolltime>0</scrolltime>
                             <focusposition>0</focusposition>
                             <orientation>horizontal</orientation>
                             <preloaditems>2</preloaditems>

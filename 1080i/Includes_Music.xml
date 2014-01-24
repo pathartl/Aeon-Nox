@@ -8,12 +8,12 @@
             <visible>Window.IsActive(1112) | Control.IsVisible(199) | Control.HasFocus(7000) | Stringcompare(Control.GetLabel(4421),infopanelon)</visible>
             <visible>!Stringcompare(ListItem.Label,..)</visible>
             <visible>Control.IsVisible(57) | Control.isVisible(509) | Control.IsVisible(503)</visible>
-            <animation effect="slide" start="0,-1200" end="0,0" time="560" tween="cubic">VisibleChange</animation>
-            <animation effect="slide" start="0,-1200" end="0,0" time="440" delay="640" tween="cubic">WindowOpen</animation>
-            <animation effect="slide" end="0,-32" time="440" tween="cubic" condition="Control.IsVisible(57)">Conditional</animation>
-            <animation effect="slide" end="0,112" time="440" tween="cubic" condition="Control.IsVisible(57) + Skin.HasSetting(smallshiftview)">Conditional</animation>
-            <animation effect="slide" end="0,20" time="440" tween="cubic" condition="Control.IsVisible(503)">Conditional</animation>
-            <animation effect="slide" end="0,-1200" time="320" tween="cubic">WindowClose</animation>
+            <animation effect="slide" start="0,-1200" end="0,0" time="0" tween="cubic">VisibleChange</animation>
+            <animation effect="slide" start="0,-1200" end="0,0" time="0" delay="640" tween="cubic">WindowOpen</animation>
+            <animation effect="slide" end="0,-32" time="0" tween="cubic" condition="Control.IsVisible(57)">Conditional</animation>
+            <animation effect="slide" end="0,112" time="0" tween="cubic" condition="Control.IsVisible(57) + Skin.HasSetting(smallshiftview)">Conditional</animation>
+            <animation effect="slide" end="0,20" time="0" tween="cubic" condition="Control.IsVisible(503)">Conditional</animation>
+            <animation effect="slide" end="0,-1200" time="0" tween="cubic">WindowClose</animation>
             <control type="group">
                 <control type="image">
                     <posx>112</posx>
@@ -45,7 +45,7 @@
                     <height>75</height>
                     <aspectratio aligny="bottom">keep</aspectratio>
                     <texture background="true">$VAR[LogoVar]</texture>
-                    <fadetime>400</fadetime>
+                    <fadetime>50</fadetime>
                     <visible>!IsEmpty(Skin.String(ArtistsLogosPath))</visible>
                     <visible>![Control.IsVisible(503) + Skin.HasSetting(landscapeonelogo)]</visible>
                     <visible>[Container.Content(artists) + !Skin.HasSetting(artistslogosfloor)]| Container.Content(albums)</visible>
@@ -153,7 +153,7 @@
                         <!-- left side-->
                         <control type="image">
                             <posx>154</posx>
-                            <animation effect="zoom" end="200" center="154,70" time="320" tween="cubic" easing="inout" condition="IsEmpty(Window(home).Property(Artist.Album.3.Thumb)) + !IsEmpty(Window(home).Property(Artist.Album.1.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.5.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.7.Thumb))">Conditional</animation>
+                            <animation effect="zoom" end="200" center="154,70" time="0" tween="cubic" easing="inout" condition="IsEmpty(Window(home).Property(Artist.Album.3.Thumb)) + !IsEmpty(Window(home).Property(Artist.Album.1.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.5.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.7.Thumb))">Conditional</animation>
                             <posy>70</posy>
                             <width>200</width>
                             <height>200</height>
@@ -161,7 +161,7 @@
                         </control>
                         <control type="image">
                             <posx>360</posx>
-                            <animation effect="zoom" end="200" center="560,70" time="320" tween="cubic" easing="inout" condition="!IsEmpty(Window(home).Property(Artist.Album.3.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.1.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.5.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.7.Thumb))">Conditional</animation>
+                            <animation effect="zoom" end="200" center="560,70" time="0" tween="cubic" easing="inout" condition="!IsEmpty(Window(home).Property(Artist.Album.3.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.1.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.5.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.7.Thumb))">Conditional</animation>
                             <posy>70</posy>
                             <width>200</width>
                             <height>200</height>
@@ -189,12 +189,12 @@
                             <posy>70</posy>
                             <width>200</width>
                             <height>200</height>
-                            <animation effect="zoom" end="200" center="1780,70" time="320" tween="cubic" easing="inout" condition="IsEmpty(Window(home).Property(Artist.Album.4.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.6.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.8.Thumb)) + !IsEmpty(Window(home).Property(Artist.Album.2.Thumb))">Conditional</animation>
+                            <animation effect="zoom" end="200" center="1780,70" time="0" tween="cubic" easing="inout" condition="IsEmpty(Window(home).Property(Artist.Album.4.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.6.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.8.Thumb)) + !IsEmpty(Window(home).Property(Artist.Album.2.Thumb))">Conditional</animation>
                             <texture>$INFO[Window(home).Property(Artist.Album.2.Thumb)]</texture>
                         </control>
                         <control type="image">
                             <posx>1364</posx>
-                            <animation effect="zoom" end="200" center="1364,70" time="320" tween="cubic" easing="inout" condition="!IsEmpty(Window(home).Property(Artist.Album.4.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.6.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.8.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.2.Thumb))">Conditional</animation>
+                            <animation effect="zoom" end="200" center="1364,70" time="0" tween="cubic" easing="inout" condition="!IsEmpty(Window(home).Property(Artist.Album.4.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.6.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.8.Thumb)) + IsEmpty(Window(home).Property(Artist.Album.2.Thumb))">Conditional</animation>
                             <posy>70</posy>
                             <width>200</width>
                             <height>200</height>
@@ -683,7 +683,7 @@
             <width>1290</width>
             <height>1080</height>
             <orientation>vertical</orientation>
-            <animation effect="fade" time="320">VisibleChange</animation>
+            <animation effect="fade" time="0">VisibleChange</animation>
             <visible>Skin.HasSetting(itemsplaylist) | Window.IsActive(visualisation)</visible>
             <control type="label">
                 <width>900</width>
@@ -1128,7 +1128,7 @@
                 <height>150</height>
                 <align>left</align>
                 <itemgap>-25</itemgap>
-                <scrolltime tween="sine">200</scrolltime>
+                <scrolltime tween="sine">0</scrolltime>
                 <orientation>horizontal</orientation>
                 <onup>Dialog.Close(musicosd)</onup>
                 <ondown condition="!Window.IsActive(playercontrols)">40</ondown>
@@ -1170,7 +1170,7 @@
                 <height>150</height>
                 <align>center</align>
                 <itemgap>-25</itemgap>
-                <scrolltime tween="sine">200</scrolltime>
+                <scrolltime tween="sine">0</scrolltime>
                 <orientation>horizontal</orientation>
                 <onup>Dialog.Close(musicosd)</onup>
                 <ondown condition="!Window.IsActive(playercontrols)">40</ondown>
@@ -1239,7 +1239,7 @@
                 <height>150</height>
                 <align>right</align>
                 <itemgap>-25</itemgap>
-                <scrolltime tween="sine">200</scrolltime>
+                <scrolltime tween="sine">0</scrolltime>
                 <orientation>horizontal</orientation>
                 <onup>Dialog.Close(musicosd)</onup>
                 <ondown condition="!Window.IsActive(playercontrols)">40</ondown>
@@ -1300,7 +1300,7 @@
             <width>960</width>
             <height>135</height>
             <itemgap>7</itemgap>
-            <scrolltime tween="sine">200</scrolltime>
+            <scrolltime tween="sine">0</scrolltime>
             <orientation>horizontal</orientation>
             <animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
             <control type="button">
@@ -1333,7 +1333,7 @@
             <width>960</width>
             <height>135</height>
             <itemgap>7</itemgap>
-            <scrolltime tween="sine">200</scrolltime>
+            <scrolltime tween="sine">0</scrolltime>
             <orientation>horizontal</orientation>
             <onup>Dialog.Close(musicosd)</onup>
             <ondown condition="!Window.IsActive(playercontrols)">40</ondown>
@@ -1387,7 +1387,7 @@
             <height>135</height>
             <align>center</align>
             <visible>!Skin.HasSetting(RemovePlayerControls)</visible>
-            <scrolltime tween="sine">200</scrolltime>
+            <scrolltime tween="sine">0</scrolltime>
             <orientation>horizontal</orientation>
             <animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
             <control type="button">
@@ -1443,7 +1443,7 @@
             <height>135</height>
             <align>center</align>
             <visible>!Skin.HasSetting(RemovePlayerControls)</visible>
-            <scrolltime tween="sine">200</scrolltime>
+            <scrolltime tween="sine">0</scrolltime>
             <orientation>horizontal</orientation>
             <onup>Dialog.Close(musicosd)</onup>
             <ondown condition="!Window.IsActive(playercontrols)">40</ondown>
@@ -1534,7 +1534,7 @@
             <height>135</height>
             <align>right</align>
             <itemgap>7</itemgap>
-            <scrolltime tween="sine">200</scrolltime>
+            <scrolltime tween="sine">0</scrolltime>
             <orientation>horizontal</orientation>
             <animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
             <control type="togglebutton">
@@ -1579,7 +1579,7 @@
             <height>135</height>
             <align>right</align>
             <itemgap>7</itemgap>
-            <scrolltime tween="sine">200</scrolltime>
+            <scrolltime tween="sine">0</scrolltime>
             <orientation>horizontal</orientation>
             <onup>Dialog.Close(musicosd)</onup>
             <ondown condition="!Window.IsActive(playercontrols)">40</ondown>
@@ -1655,24 +1655,24 @@
             <height>780</height>
             <visible>!IsEmpty(Player.FolderPath)</visible>
             <animation effect="slide" end="0,300" time="0" condition="Window.IsActive(1147)">Conditional</animation>
-            <scrolltime tween="cubic" easing="inout">500</scrolltime>
+            <scrolltime tween="cubic" easing="inout">0</scrolltime>
             <orientation>horizontal</orientation>
             <itemgap>-1060</itemgap>
             <animation type="WindowOpen" reversible="false">
-                <effect type="zoom" start="150" end="100" center="960,540" time="960" tween="cubic" />
-                <effect type="fade" end="100" time="960" />
+                <effect type="zoom" start="150" end="100" center="960,540" time="0" tween="cubic" />
+                <effect type="fade" end="100" time="0" />
             </animation>
             <animation type="WindowClose" reversible="false">
-                <effect type="fade" start="100" end="0" time="240" />
-                <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
+                <effect type="fade" start="100" end="0" time="0" />
+                <effect type="zoom" start="100" end="130" center="960,540" time="0" tween="cubic" easing="in" />
             </animation>
             <!-- Similar Artists -->
             <control type="group" id="5000">
                 <width>2325</width>
                 <height>825</height>
                 <animation type="Conditional" condition="![ControlGroup(5000).HasFocus | Control.HasFocus(5012)]">
-                    <effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout" />
-                    <effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto" />
+                    <effect type="fade" start="100" end="80" time="0" tween="cubic" easing="inout" />
+                    <effect type="zoom" start="100" end="70" time="0" tween="cubic" easing="inout" center="auto" />
                 </animation>
                 <control type="button" id="5012">
                     <include>HiddenObject</include>
@@ -1721,7 +1721,7 @@
                                 <height>420</height>
                                 <aspectratio scalediffuse="false">scale</aspectratio>
                                 <imagepath background="true" diffuse="thumbs/boxes/cdcover_mask.png">$INFO[Container(5010).ListItem.Icon]</imagepath>
-                                <fadetime>750</fadetime>
+                                <fadetime>50</fadetime>
                                 <timeperimage>5000</timeperimage>
                             </control>
                             <control type="image">
@@ -1745,7 +1745,7 @@
                             <orientation>vertical</orientation>
                             <pagecontrol>60</pagecontrol>
                             <focusposition>0</focusposition>
-                            <scrolltime tween="cubic" easing="inout">400</scrolltime>
+                            <scrolltime tween="cubic" easing="inout">0</scrolltime>
                             <preloaditems>2</preloaditems>
                             <itemlayout height="240" width="266">
                                 <include>MusicVisPanelLayout</include>
@@ -1791,8 +1791,8 @@
                 <width>2325</width>
                 <height>825</height>
                 <animation type="Conditional" condition="![ControlGroup(6000).HasFocus | Control.HasFocus(6012)]">
-                    <effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout" />
-                    <effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto" />
+                    <effect type="fade" start="100" end="80" time="0" tween="cubic" easing="inout" />
+                    <effect type="zoom" start="100" end="70" time="0" tween="cubic" easing="inout" center="auto" />
                 </animation>
                 <control type="button" id="6012">
                     <include>HiddenObject</include>
@@ -1842,7 +1842,7 @@
                                 <height>420</height>
                                 <aspectratio scalediffuse="false">scale</aspectratio>
                                 <imagepath background="true" diffuse="thumbs/boxes/cdcover_mask.png">$INFO[Container(6010).ListItem.Icon]</imagepath>
-                                <fadetime>750</fadetime>
+                                <fadetime>50</fadetime>
                                 <timeperimage>5000</timeperimage>
                             </control>
                             <control type="image">
@@ -1866,7 +1866,7 @@
                             <orientation>vertical</orientation>
                             <pagecontrol>60</pagecontrol>
                             <focusposition>0</focusposition>
-                            <scrolltime tween="cubic" easing="inout">400</scrolltime>
+                            <scrolltime tween="cubic" easing="inout">0</scrolltime>
                             <preloaditems>2</preloaditems>
                             <itemlayout height="240" width="266">
                                 <include>MusicVisPanelLayout</include>
@@ -1912,8 +1912,8 @@
                 <width>2325</width>
                 <height>825</height>
                 <animation type="Conditional" condition="![ControlGroup(7000).HasFocus | Control.HasFocus(7012)]">
-                    <effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout" />
-                    <effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto" />
+                    <effect type="fade" start="100" end="80" time="0" tween="cubic" easing="inout" />
+                    <effect type="zoom" start="100" end="70" time="0" tween="cubic" easing="inout" center="auto" />
                 </animation>
                 <control type="button" id="7012">
                     <include>HiddenObject</include>
@@ -1971,7 +1971,7 @@
                                 <height>420</height>
                                 <aspectratio scalediffuse="false">scale</aspectratio>
                                 <imagepath background="true" diffuse="thumbs/boxes/cdcover_mask.png">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
-                                <fadetime>750</fadetime>
+                                <fadetime>50</fadetime>
                                 <timeperimage>5000</timeperimage>
                             </control>
                             <control type="image">
@@ -2000,7 +2000,7 @@
                             <onup>7012</onup>
                             <ondown>7012</ondown>
                             <onleft>6010</onleft>
-                            <animation effect="zoom" start="100" end="115" center="auto" time="240" tween="back" condition="Control.HasFocus(7010)">Conditional</animation>
+                            <animation effect="zoom" start="100" end="115" center="auto" time="0" tween="back" condition="Control.HasFocus(7010)">Conditional</animation>
                             <onright>8010</onright>
                         </control>
                     </control>
@@ -2019,8 +2019,8 @@
                 <width>2325</width>
                 <height>825</height>
                 <animation type="Conditional" condition="![ControlGroup(8000).HasFocus | Control.HasFocus(8012)]">
-                    <effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout" />
-                    <effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="1160,412" />
+                    <effect type="fade" start="100" end="80" time="0" tween="cubic" easing="inout" />
+                    <effect type="zoom" start="100" end="70" time="0" tween="cubic" easing="inout" center="1160,412" />
                 </animation>
                 <control type="button" id="8012">
                     <include>HiddenObject</include>
@@ -2077,7 +2077,7 @@
                                 <height>420</height>
                                 <aspectratio scalediffuse="false">scale</aspectratio>
                                 <imagepath background="true" diffuse="thumbs/boxes/cdcover_mask.png">$INFO[Container(8010).ListItem.Thumb]</imagepath>
-                                <fadetime>750</fadetime>
+                                <fadetime>50</fadetime>
                                 <timeperimage>5000</timeperimage>
                             </control>
                             <control type="image">
@@ -2100,7 +2100,7 @@
                             <orientation>vertical</orientation>
                             <pagecontrol>60</pagecontrol>
                             <focusposition>0</focusposition>
-                            <scrolltime tween="cubic" easing="inout">400</scrolltime>
+                            <scrolltime tween="cubic" easing="inout">0</scrolltime>
                             <preloaditems>2</preloaditems>
                             <itemlayout height="48" width="800">
                                 <control type="image">
@@ -2277,8 +2277,8 @@
                 <width>2325</width>
                 <height>825</height>
                 <animation type="Conditional" condition="![ControlGroup(9000).HasFocus | Control.HasFocus(9012)]">
-                    <effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout" />
-                    <effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto" />
+                    <effect type="fade" start="100" end="80" time="0" tween="cubic" easing="inout" />
+                    <effect type="zoom" start="100" end="70" time="0" tween="cubic" easing="inout" center="auto" />
                 </animation>
                 <control type="button" id="9012">
                     <include>HiddenObject</include>
@@ -2329,7 +2329,7 @@
                             <height>35</height>
                             <texture>common/bgcolor.png</texture>
                             <visible>!IsEmpty(MusicPlayer.Property(Artist_Born)) | !IsEmpty(MusicPlayer.Property(Artist_Formed)) | !IsEmpty(MusicPlayer.Property(Artist_Died)) | !IsEmpty(MusicPlayer.Property(Artist_Disbanded))</visible>
-                            <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+                            <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
                         </control>
                         <control type="grouplist">
                             <posx>31</posx>
@@ -2439,32 +2439,32 @@
                 <control type="label">
                     <label>$LOCALIZE[31635]</label>
                     <include>FeaturedTopLabel</include>
-                    <animation effect="fade" start="100" end="50" time="240" tween="cubic" easing="inout" condition="!Control.HasFocus(5012)">Conditional</animation>
-                    <animation effect="zoom" start="100" end="120" time="240" center="auto" tween="cubic" easing="inout" condition="ControlGroup(5000).HasFocus">Conditional</animation>
+                    <animation effect="fade" start="100" end="50" time="0" tween="cubic" easing="inout" condition="!Control.HasFocus(5012)">Conditional</animation>
+                    <animation effect="zoom" start="100" end="120" time="0" center="auto" tween="cubic" easing="inout" condition="ControlGroup(5000).HasFocus">Conditional</animation>
                 </control>
                 <control type="label">
                     <label>$LOCALIZE[21888]</label>
                     <include>FeaturedTopLabel</include>
-                    <animation effect="fade" start="100" end="50" time="240" tween="cubic" easing="inout" condition="!Control.HasFocus(6012)">Conditional</animation>
-                    <animation effect="zoom" start="100" end="120" time="240" center="auto" tween="cubic" easing="inout" condition="ControlGroup(6000).HasFocus">Conditional</animation>
+                    <animation effect="fade" start="100" end="50" time="0" tween="cubic" easing="inout" condition="!Control.HasFocus(6012)">Conditional</animation>
+                    <animation effect="zoom" start="100" end="120" time="0" center="auto" tween="cubic" easing="inout" condition="ControlGroup(6000).HasFocus">Conditional</animation>
                 </control>
                 <control type="label">
                     <label>$LOCALIZE[21887]</label>
                     <include>FeaturedTopLabel</include>
-                    <animation effect="fade" start="100" end="50" time="240" tween="cubic" easing="inout" condition="!Control.HasFocus(7012)">Conditional</animation>
-                    <animation effect="zoom" start="100" end="120" time="240" center="auto" tween="cubic" easing="inout" condition="ControlGroup(7000).HasFocus">Conditional</animation>
+                    <animation effect="fade" start="100" end="50" time="0" tween="cubic" easing="inout" condition="!Control.HasFocus(7012)">Conditional</animation>
+                    <animation effect="zoom" start="100" end="120" time="0" center="auto" tween="cubic" easing="inout" condition="ControlGroup(7000).HasFocus">Conditional</animation>
                 </control>
                 <control type="label">
                     <label>$LOCALIZE[559]</label>
                     <include>FeaturedTopLabel</include>
-                    <animation effect="fade" start="100" end="50" time="240" tween="cubic" easing="inout" condition="!Control.HasFocus(8012)">Conditional</animation>
-                    <animation effect="zoom" start="100" end="120" time="240" center="auto" tween="cubic" easing="inout" condition="ControlGroup(8000).HasFocus">Conditional</animation>
+                    <animation effect="fade" start="100" end="50" time="0" tween="cubic" easing="inout" condition="!Control.HasFocus(8012)">Conditional</animation>
+                    <animation effect="zoom" start="100" end="120" time="0" center="auto" tween="cubic" easing="inout" condition="ControlGroup(8000).HasFocus">Conditional</animation>
                 </control>
                 <control type="label">
                     <label>$LOCALIZE[20445]</label>
                     <include>FeaturedTopLabel</include>
-                    <animation effect="fade" start="100" end="50" time="240" tween="cubic" easing="inout" condition="!Control.HasFocus(9012)">Conditional</animation>
-                    <animation effect="zoom" start="100" end="120" time="240" center="auto" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+                    <animation effect="fade" start="100" end="50" time="0" tween="cubic" easing="inout" condition="!Control.HasFocus(9012)">Conditional</animation>
+                    <animation effect="zoom" start="100" end="120" time="0" center="auto" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus">Conditional</animation>
                 </control>
             </control>
         </control>

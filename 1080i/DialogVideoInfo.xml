@@ -10,10 +10,10 @@
     <allowoverlay>no</allowoverlay>
     <controls>
         <control type="group">
-            <animation effect="slide" start="1242,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
-            <animation effect="slide" end="1242,0" time="320" tween="quadratic">WindowClose</animation>
-            <animation effect="slide" start="1242,0" end="0,0" time="320" tween="quadratic" condition="!Window.IsVisible(script-Actors-DialogVideoInfo.xml)|!Window.IsVisible(script-Actors-DialogInfo.xml)">Conditional</animation>
-            <animation effect="slide" end="1242,0" time="320" tween="quadratic" condition="Window.IsVisible(script-Actors-DialogVideoInfo.xml)|Window.IsVisible(script-Actors-DialogInfo.xml)">Conditional</animation>
+            <animation effect="slide" start="1242,0" end="0,0" time="0" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" end="1242,0" time="0" tween="quadratic">WindowClose</animation>
+            <animation effect="slide" start="1242,0" end="0,0" time="0" tween="quadratic" condition="!Window.IsVisible(script-Actors-DialogVideoInfo.xml)|!Window.IsVisible(script-Actors-DialogInfo.xml)">Conditional</animation>
+            <animation effect="slide" end="1242,0" time="0" tween="quadratic" condition="Window.IsVisible(script-Actors-DialogVideoInfo.xml)|Window.IsVisible(script-Actors-DialogInfo.xml)">Conditional</animation>
             <control type="image">
                 <posx>729</posx>
                 <width>1192</width>
@@ -106,7 +106,7 @@
                     <control type="group">
                         <animation type="WindowOpen" reversible="false">
                             <effect type="fade" start="0" end="100" delay="0" time="0" tween="cubic" />
-                            <effect type="slide" start="0,80" end="0,0" delay="460" time="960" tween="cubic" />
+                            <effect type="slide" start="0,80" end="0,0" delay="460" time="0" tween="cubic" />
                         </animation>
                         <control type="group">
                             <visible>!IsEmpty(ListItem.Top250)</visible>
@@ -165,7 +165,7 @@
                                     <height>35</height>
                                     <aspectratio aligny="center" align="left">keep</aspectratio>
                                     <texture background="true">$VAR[CountryFlagVar]</texture>
-                                    <fadetime>200</fadetime>
+                                    <fadetime>50</fadetime>
                                     <colordiffuse>AAFFFFFF</colordiffuse>
                                     <visible>!IsEmpty(Control.GetLabel(12020))</visible>
                                 </control>
@@ -225,8 +225,8 @@
                     <!-- First Row -->
                     <control type="group">
                         <animation type="WindowOpen" reversible="false">
-                            <effect type="fade" start="0" end="100" delay="460" time="960" tween="cubic" />
-                            <effect type="zoom" start="100,0" end="100,100" delay="460" time="960" center="0,170" tween="cubic" />
+                            <effect type="fade" start="0" end="100" delay="460" time="0" tween="cubic" />
+                            <effect type="zoom" start="100,0" end="100,100" delay="460" time="0" center="0,170" tween="cubic" />
                         </animation>
                         <control type="image">
                             <posy>90</posy>
@@ -572,8 +572,8 @@
                     </control>
                     <control type="group">
                         <animation type="WindowOpen" reversible="false">
-                            <effect type="fade" start="0" end="100" delay="460" time="960" tween="cubic" />
-                            <effect type="zoom" start="100,0" end="100,100" delay="460" time="960" center="0,872" tween="cubic" />
+                            <effect type="fade" start="0" end="100" delay="460" time="0" tween="cubic" />
+                            <effect type="zoom" start="100,0" end="100,100" delay="460" time="0" center="0,872" tween="cubic" />
                         </animation>
                         <posy>26</posy>
                         <control type="image">
@@ -685,7 +685,7 @@
                                     <width>600</width>
                                     <height>25</height>
                                     <align>left</align>
-                                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+                                    <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
                                     <itemgap>2</itemgap>
                                     <orientation>horizontal</orientation>
                                     <visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.1)) + !Stringcompare(Window(movieinformation).Property(AudioLanguage.1),und)</visible>
@@ -701,7 +701,7 @@
                                 </control>
                                 <!-- Subtitle flags -->
                                 <control type="grouplist" id="12000">
-                                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+                                    <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
                                     <width>600</width>
                                     <height>25</height>
                                     <align>left</align>
@@ -765,13 +765,13 @@
                     <!--                 <visible>!ControlGroup(6000).HasFocus</visible>
  -->
                     <animation type="WindowOpen" reversible="false">
-                        <effect type="slide" start="-1610,0" end="0" delay="800" time="1120" tween="quadratic" easing="out" />
-                        <effect type="rotate" start="0" center="1760,810" end="-720" delay="800" time="1120" tween="quadratic" easing="out" />
-                        <effect type="zoom" start="104" center="1760,810" end="100" delay="2120" time="140" tween="quadratic" easing="out" />
+                        <effect type="slide" start="-1610,0" end="0" delay="800" time="0" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="1760,810" end="-720" delay="800" time="0" tween="quadratic" easing="out" />
+                        <effect type="zoom" start="104" center="1760,810" end="100" delay="2120" time="0" tween="quadratic" easing="out" />
                     </animation>
                     <animation type="WindowClose" reversible="false">
-                        <effect type="slide" start="0,0" end="4600" time="700" tween="quadratic" easing="out" />
-                        <effect type="rotate" start="0" center="1760,810" end="-720" time="700" tween="quadratic" easing="out" />
+                        <effect type="slide" start="0,0" end="4600" time="0" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="1760,810" end="-720" time="0" tween="quadratic" easing="out" />
                     </animation>
                 </control>
                 <control type="list" id="50">
@@ -779,8 +779,8 @@
                     <posy>326</posy>
                     <width>950</width>
                     <height>217</height>
-                    <animation effect="fade" start="100" end="0" time="50" condition="!IsEmpty(Window.Property(ActorFade))">Conditional</animation>
-                    <scrolltime>200</scrolltime>
+                    <animation effect="fade" start="100" end="0" time="0" condition="!IsEmpty(Window.Property(ActorFade))">Conditional</animation>
+                    <scrolltime>0</scrolltime>
                     <orientation>horizontal</orientation>
                     <itemlayout height="217" width="190">
                         <control type="image">
@@ -790,7 +790,7 @@
                             <bordertexture>thumbs/thumbshadow.png</bordertexture>
                             <bordersize>7</bordersize>
                             <aspectratio aligny="center">keep</aspectratio>
-                            <fadetime>0</fadetime>
+                            <fadetime>50</fadetime>
                         </control>
                     </itemlayout>
                     <focusedlayout height="217" width="190">
@@ -807,7 +807,7 @@
                             <texture fallback="DefaultActor.png">$INFO[ListItem.Thumb]</texture>
                             <bordertexture>thumbs/thumbshadow.png</bordertexture>
                             <bordersize>7</bordersize>
-                            <fadetime>0</fadetime>
+                            <fadetime>50</fadetime>
                             <aspectratio aligny="center">keep</aspectratio>
                         </control>
                     </focusedlayout>
@@ -837,7 +837,7 @@
                         <onright>5000</onright>
                         <onup>131</onup>
                         <ondown>600</ondown>
-                        <scrolltime>200</scrolltime>
+                        <scrolltime>0</scrolltime>
                         <orientation>vertical</orientation>
                         <itemlayout height="35" width="555">
                             <control type="label">
@@ -904,13 +904,13 @@
                     <width>950</width>
                     <height>217</height>
                     <onleft>600</onleft>
-                    <animation effect="fade" start="100" end="0" time="160" condition="Control.HasFocus(601)">Conditional</animation>
+                    <animation effect="fade" start="100" end="0" time="0" condition="Control.HasFocus(601)">Conditional</animation>
                     <onright>600</onright>
                     <onup>131</onup>
                     <ondown>5000</ondown>
-                    <scrolltime>200</scrolltime>
+                    <scrolltime>0</scrolltime>
                     <orientation>horizontal</orientation>
-                    <animation effect="fade" start="1" end="100" delay="1200" time="520" tween="quadratic">WindowOpen</animation>
+                    <animation effect="fade" start="1" end="100" delay="1200" time="0" tween="quadratic">WindowOpen</animation>
                     <itemlayout height="217" width="190">
                         <control type="image">
                             <width>190</width>
@@ -919,7 +919,7 @@
                             <bordertexture>thumbs/thumbshadow.png</bordertexture>
                             <bordersize>7</bordersize>
                             <aspectratio aligny="center">keep</aspectratio>
-                            <fadetime>0</fadetime>
+                            <fadetime>50</fadetime>
                         </control>
                         <control type="image">
                             <width>190</width>
@@ -927,7 +927,7 @@
                             <height>51</height>
                             <posy>160</posy>
                             <texture>common/bgcolor.png</texture>
-                            <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+                            <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
                         </control>
                         <control type="textbox">
                             <width>170</width>
@@ -953,7 +953,7 @@
                             <texture fallback="DefaultActor.png">$INFO[ListItem.Thumb]</texture>
                             <bordertexture>thumbs/thumbshadow.png</bordertexture>
                             <bordersize>7</bordersize>
-                            <fadetime>0</fadetime>
+                            <fadetime>50</fadetime>
                             <aspectratio aligny="center">keep</aspectratio>
                         </control>
                         <control type="image">
@@ -962,8 +962,8 @@
                             <height>51</height>
                             <posy>160</posy>
                             <texture>common/bgcolor.png</texture>
-                            <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
-                            <animation effect="fade" start="100" end="80" time="40" condition="Control.HasFocus(600)">Conditional</animation>
+                            <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
+                            <animation effect="fade" start="100" end="80" time="0" condition="Control.HasFocus(600)">Conditional</animation>
                         </control>
                         <control type="textbox">
                             <width>170</width>
@@ -1417,7 +1417,7 @@
                     <onup>600</onup>
                     <ondown>5055</ondown>
                     <orientation>horizontal</orientation>
-                    <scrolltime tween="quadratic">200</scrolltime>
+                    <scrolltime tween="quadratic">0</scrolltime>
                     <control type="button" id="8">
                         <label>$VAR[DialogVideoInfoButtonLabelVar]</label>
                         <include>DialogVideoInfoButton</include>
@@ -1474,7 +1474,7 @@
                             <visible>!substring(Container.FolderPath,plugin://)</visible>
                         </control>
                         <control type="button" id="441">
-                            <animation effect="zoom" start="100,0" end="100,100" time="300" easing="out" tween="cubic">VisibleChange</animation>
+                            <animation effect="zoom" start="100,0" end="100,100" time="0" easing="out" tween="cubic">VisibleChange</animation>
                             <label>31030</label>
                             <onright>6000</onright>
                             <include>DialogVideoInfoButtonSolid</include>
@@ -1495,7 +1495,7 @@
                             <include>DialogVideoInfoButtonSolid</include>
                             <label>Manual</label>
                             <visible>ControlGroup(6000).HasFocus</visible>
-                                                        <animation effect="zoom" start="100,0" end="100,100" time="300" easing="out" tween="cubic">VisibleChange</animation>
+                                                        <animation effect="zoom" start="100,0" end="100,100" time="0" easing="out" tween="cubic">VisibleChange</animation>
                             <visible>[Container.Content(tvshows) | Container.Content(movies)]</visible>
                             <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader,mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
                             <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader,mode=gui,mediatype=movie,dbid=$INFO[ListItem.DBID])</onclick>
@@ -1503,7 +1503,7 @@
                         <control type="button" id="5053">
                             <include>DialogVideoInfoButtonSolid</include>
                             <label>Auto</label>
-                                                        <animation effect="zoom" start="100,0" end="100,100" time="300" easing="out" tween="cubic">VisibleChange</animation>
+                                                        <animation effect="zoom" start="100,0" end="100,100" time="0" easing="out" tween="cubic">VisibleChange</animation>
                             <visible>ControlGroup(6000).HasFocus</visible>
                             <visible>[Container.Content(tvshows) | Container.Content(movies)]</visible>
                             <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
@@ -1514,7 +1514,7 @@
                             <include>DialogVideoInfoButtonSolid</include>
                             <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader,mode=custom,mediatype=movie,dbid=$INFO[ListItem.DBID],extrafanart)</onclick>
                             <onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,dbid=$INFO[ListItem.DBID],extrafanart)</onclick>
-                                                        <animation effect="zoom" start="100,0" end="100,100" time="300" easing="out" tween="cubic">VisibleChange</animation>
+                                                        <animation effect="zoom" start="100,0" end="100,100" time="0" easing="out" tween="cubic">VisibleChange</animation>
                             <visible>ControlGroup(6000).HasFocus</visible>
                             <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
                         </control>
@@ -1522,7 +1522,7 @@
                             <label>$LOCALIZE[31365]</label>
                             <include>DialogVideoInfoButtonSolid</include>
                             <onclick>RunScript(script.tvtunes,mode=solo&amp;tvpath=$ESCINFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
-                                                        <animation effect="zoom" start="100,0" end="100,100" time="300" easing="out" tween="cubic">VisibleChange</animation>
+                                                        <animation effect="zoom" start="100,0" end="100,100" time="0" easing="out" tween="cubic">VisibleChange</animation>
                             <visible>ControlGroup(6000).HasFocus</visible>
                             <visible>Container.Content(tvshows) + system.hasaddon(script.tvtunes)</visible>
                         </control>
@@ -1530,7 +1530,7 @@
                             <label>$LOCALIZE[31468]</label>
                             <include>DialogVideoInfoButtonSolid</include>
                             <onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,dbid=$INFO[ListItem.DBID],extrathumbs)</onclick>
-                                                        <animation effect="zoom" start="100,0" end="100,100" time="300" easing="out" tween="cubic">VisibleChange</animation>
+                                                        <animation effect="zoom" start="100,0" end="100,100" time="0" easing="out" tween="cubic">VisibleChange</animation>
                             <visible>ControlGroup(6000).HasFocus</visible>
                             <visible>Container.Content(movies) + !substring(Container.FolderPath,plugin://)</visible>
                         </control>
@@ -1564,7 +1564,7 @@
                     <texture flipx="true">arrowright.png</texture>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <include>Animation_VisibleChange200</include>
-                    <animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+                    <animation effect="slide" start="-150" end="0" delay="640" time="0" tween="cubic">WindowOpen</animation>
                     <visible>Container(5000).HasPrevious+ ControlGroup(5000).HasFocus</visible>
                 </control>
                 <control type="image">
@@ -1575,16 +1575,16 @@
                     <texture>arrowright.png</texture>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <include>Animation_VisibleChange200</include>
-                    <animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+                    <animation effect="slide" start="150" end="0" delay="640" time="0" tween="cubic">WindowOpen</animation>
                     <visible>Container(5000).HasNext+ ControlGroup(5000).HasFocus</visible>
                 </control>
             </control>
         </control>
         <control type="group">
-            <animation effect="slide" start="-729,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
-            <animation effect="slide" end="-729,0" time="320" tween="quadratic">WindowClose</animation>
-            <animation effect="slide" start="-729,0" end="0,0" time="320" tween="quadratic" condition="!Window.IsVisible(script-Actors-DialogVideoInfo.xml)|!Window.IsVisible(script-Actors-DialogInfo.xml)">Conditional</animation>
-            <animation effect="slide" end="-729,0" time="320" tween="quadratic" condition="Window.IsVisible(script-Actors-DialogVideoInfo.xml)|Window.IsVisible(script-Actors-DialogInfo.xml)">Conditional</animation>
+            <animation effect="slide" start="-729,0" end="0,0" time="0" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" end="-729,0" time="0" tween="quadratic">WindowClose</animation>
+            <animation effect="slide" start="-729,0" end="0,0" time="0" tween="quadratic" condition="!Window.IsVisible(script-Actors-DialogVideoInfo.xml)|!Window.IsVisible(script-Actors-DialogInfo.xml)">Conditional</animation>
+            <animation effect="slide" end="-729,0" time="0" tween="quadratic" condition="Window.IsVisible(script-Actors-DialogVideoInfo.xml)|Window.IsVisible(script-Actors-DialogInfo.xml)">Conditional</animation>
             <control type="image">
                 <width>729</width>
                 <height>1080</height>
@@ -1608,8 +1608,8 @@
                 <width>40</width>
                 <height>1080</height>
                 <texture>common/topbar_down.png</texture>
-                <animation effect="fade" time="320" delay="408">Visible</animation>
-                <animation effect="fade" time="80">Hidden</animation>
+                <animation effect="fade" time="0" delay="408">Visible</animation>
+                <animation effect="fade" time="0">Hidden</animation>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <include>TopbarPulseAnimationRight</include>
                 <visible>!Skin.HasSetting(DisableGlowbar) + IsEmpty(Window(movieinformation).Property(FanartZoom))</visible>

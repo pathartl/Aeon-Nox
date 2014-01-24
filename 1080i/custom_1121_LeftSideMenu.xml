@@ -9,28 +9,28 @@
         <system>1</system>
     </coordinates>
     <animation type="WindowClose">
-        <effect type="slide" end="-460,0" time="320" easing="in" tween="cubic" />
+        <effect type="slide" end="-460,0" time="0" easing="in" tween="cubic" />
     </animation>
     <animation type="WindowOpen">
-        <effect type="fade" end="100" delay="320" time="160" />
+        <effect type="fade" end="100" delay="320" time="0" />
     </animation>
     <controls>
         <control type="image">
             <texture>common/bgcolor.png</texture>
             <include>FullscreenDimensions</include>
-            <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+            <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
             <visible>!IsEmpty(Window(home).Property(quicknavsetup))</visible>
             <include>Animation_VisibleChange400</include>
-            <animation effect="fade" end="100" time="560">WindowOpen</animation>
-            <animation effect="fade" start="100" end="0" time="240">WindowClose</animation>
+            <animation effect="fade" end="100" time="0">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
         </control>
         <control type="group">
             <visible>Window.IsActive(skinsettings) | Window.IsActive(1115) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(picturessettings) | Window.IsActive(programssettings) | Window.IsActive(weathersettings) | Window.IsActive(musicsettings) | Window.IsActive(systemsettings) | Window.IsActive(videossettings) | Window.IsActive(networksettings) | Window.IsActive(appearancesettings) | Window.IsActive(profiles) | Window.IsActive(filemanager) | Window.IsActive(pvrsettings)</visible>
             <animation type="WindowClose">
-                <effect type="slide" end="-490" time="320" easing="in" tween="cubic" />
+                <effect type="slide" end="-490" time="0" easing="in" tween="cubic" />
             </animation>
             <animation type="WindowOpen">
-                <effect type="slide" start="-450" end="0" time="320" tween="cubic" />
+                <effect type="slide" start="-450" end="0" time="0" tween="cubic" />
             </animation>
             <control type="image">
                 <posx>-42</posx>
@@ -39,14 +39,14 @@
                 <texture>dialogs/context_middle.png</texture>
                 <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 <animation type="Conditional" condition="Window.IsActive(1121)">
-                    <effect type="zoom" end="66,100" time="320" easing="in" tween="cubic" />
-                    <effect type="slide" end="-49" time="320" easing="in" tween="cubic" />
+                    <effect type="zoom" end="66,100" time="0" easing="in" tween="cubic" />
+                    <effect type="slide" end="-49" time="0" easing="in" tween="cubic" />
                 </animation>
             </control>
             <control type="group">
                 <posx>380</posx>
                 <animation type="Conditional" condition="Window.IsActive(1121)">
-                    <effect type="slide" end="-180" time="320" easing="in" tween="cubic" />
+                    <effect type="slide" end="-180" time="0" easing="in" tween="cubic" />
                 </animation>
                 <include>Neon_VerticalBar</include>
             </control>
@@ -476,7 +476,7 @@
             <width>42</width>
             <height>42</height>
             <texture>$VAR[QuickConfigIconVar]</texture>
-            <animation effect="fade" start="100" end="75" time="100" condition="!Control.HasFocus(9012)">Conditional</animation>
+            <animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(9012)">Conditional</animation>
             <visible>Control.IsVisible(9012)</visible>
         </control>
         <control type="button" id="9013">
@@ -506,7 +506,7 @@
             <width>42</width>
             <height>42</height>
             <texture>special://skin/extras/BigIcons/Fullscreen2.png</texture>
-            <animation effect="fade" start="100" end="75" time="100" condition="!Control.HasFocus(9013)">Conditional</animation>
+            <animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(9013)">Conditional</animation>
             <visible>Control.IsVisible(9013)</visible>
         </control>
         <control type="button" id="9014">
@@ -536,7 +536,7 @@
             <width>42</width>
             <height>42</height>
             <texture>special://skin/extras/BigIcons/Format.png</texture>
-            <animation effect="fade" start="100" end="75" time="100" condition="!Control.HasFocus(9014)">Conditional</animation>
+            <animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(9014)">Conditional</animation>
             <visible>Control.IsVisible(9014)</visible>
         </control>
         <control type="button" id="9015">
@@ -566,7 +566,7 @@
             <width>42</width>
             <height>42</height>
             <texture>special://skin/extras/BigIcons/CD-DVD.png</texture>
-            <animation effect="fade" start="100" end="75" time="100" condition="!Control.HasFocus(9015)">Conditional</animation>
+            <animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(9015)">Conditional</animation>
             <visible>Control.IsVisible(9015)</visible>
         </control>
     </controls>

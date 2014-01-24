@@ -32,7 +32,7 @@
                 <height>767</height>
                 <aligny>center</aligny>
                 <pagecontrol>60</pagecontrol>
-                <scrolltime tween="quadratic">200</scrolltime>
+                <scrolltime tween="quadratic">0</scrolltime>
                 <orientation>vertical</orientation>
                 <onright>60</onright>
                 <onleft>4</onleft>

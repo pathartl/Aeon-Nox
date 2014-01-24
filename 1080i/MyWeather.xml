@@ -13,8 +13,8 @@
             <imagepath background="true">$VAR[WeatherFanartVar]</imagepath>
             <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
             <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
-            <animation effect="fade" time="400" condition="!Window.Previous(1115)">WindowOpen</animation>
-            <animation effect="fade" time="160" condition="!Window.Next(1115)">WindowClose</animation>
+            <animation effect="fade" time="0" condition="!Window.Previous(1115)">WindowOpen</animation>
+            <animation effect="fade" time="0" condition="!Window.Next(1115)">WindowClose</animation>
         </control>
         <control type="group">
             <include>Animation_OpenClose_Furniture</include>
@@ -30,8 +30,8 @@
                 <width>1920</width>
                 <height>920</height>
                 <texture>common/bgcolor.png</texture>
-                <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
-                <animation effect="fade" end="100" time="440" delay="160">VisibleChange</animation>
+                <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
+                <animation effect="fade" end="100" time="0" delay="160">VisibleChange</animation>
                 <visible>Skin.HasSetting(darkinfopane)</visible>
             </control>
             <control type="image">
@@ -52,12 +52,12 @@
         </control>
         <control type="group">
             <animation type="WindowOpen" reversible="false">
-                <effect type="zoom" start="150" end="100" center="960,540" time="480" tween="cubic" />
-                <effect type="fade" end="100" time="80" />
+                <effect type="zoom" start="150" end="100" center="960,540" time="0" tween="cubic" />
+                <effect type="fade" end="100" time="0" />
             </animation>
             <animation type="WindowClose" reversible="false">
-                <effect type="fade" start="100" end="0" time="240" />
-                <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
+                <effect type="fade" start="100" end="0" time="0" />
+                <effect type="zoom" start="100" end="130" center="960,540" time="0" tween="cubic" easing="in" />
             </animation>
             <control type="group">
                 <posy>-15</posy>
@@ -99,7 +99,7 @@
             <control type="group">
                 <visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
                 <animation type="VisibleChange">
-                    <effect type="fade" end="100" delay="320" time="160" />
+                    <effect type="fade" end="100" delay="320" time="0" />
                 </animation>
                 <control type="group">
                     <control type="label">
@@ -287,7 +287,7 @@
                             <height>550</height>
                             <orientation>vertical</orientation>
                             <pagecontrol>60</pagecontrol>
-                            <scrolltime>200</scrolltime>
+                            <scrolltime>0</scrolltime>
                             <onleft>9000</onleft>
                             <onup>7500</onup>
                             <ondown>7500</ondown>
@@ -591,7 +591,7 @@
                             <height>540</height>
                             <orientation>vertical</orientation>
                             <pagecontrol>60</pagecontrol>
-                            <scrolltime>200</scrolltime>
+                            <scrolltime>0</scrolltime>
                             <onleft>9000</onleft>
                             <onup>7502</onup>
                             <ondown>7502</ondown>
@@ -744,7 +744,7 @@
                             <height>540</height>
                             <orientation>vertical</orientation>
                             <pagecontrol>60</pagecontrol>
-                            <scrolltime>200</scrolltime>
+                            <scrolltime>0</scrolltime>
                             <onleft>9000</onleft>
                             <onup>7503</onup>
                             <ondown>7503</ondown>
@@ -915,7 +915,7 @@
                             <height>786</height>
                             <orientation>vertical</orientation>
                             <pagecontrol>60</pagecontrol>
-                            <scrolltime>200</scrolltime>
+                            <scrolltime>0</scrolltime>
                             <onleft>9000</onleft>
                             <onup>7504</onup>
                             <ondown>7504</ondown>
@@ -1471,7 +1471,7 @@
                                 <onup>7505</onup>
                                 <ondown>7505</ondown>
                                 <pagecontrol>63</pagecontrol>
-                                <scrolltime>200</scrolltime>
+                                <scrolltime>0</scrolltime>
                                 <itemlayout height="60" width="878">
                                     <control type="image">
                                         <width>878</width>
@@ -1813,11 +1813,11 @@
                                 <height>532</height>
                                 <aspectratio>keep</aspectratio>
                                 <imagepath>$INFO[Window.Property(MapPath)]</imagepath>
-                                <fadetime>0</fadetime>
+                                <fadetime>50</fadetime>
                                 <timeperimage>500</timeperimage>
                                 <pauseatend>1000</pauseatend>
                                 <randomize>false</randomize>
-                                <animation effect="zoom" end="-892,0,1920,1080" time="640" tween="cubic" condition="!IsEmpty(Window(weather).Property(FSMap))">Conditional</animation>
+                                <animation effect="zoom" end="-892,0,1920,1080" time="0" tween="cubic" condition="!IsEmpty(Window(weather).Property(FSMap))">Conditional</animation>
                             </control>
                             <control type="button" id="5">
                                 <include>HiddenObject</include>
@@ -1837,7 +1837,7 @@
                             <height>222</height>
                             <pagecontrol>60</pagecontrol>
                             <orientation>horizontal</orientation>
-                            <scrolltime>200</scrolltime>
+                            <scrolltime>0</scrolltime>
                             <onup>7500</onup>
                             <ondown>7500</ondown>
                             <visible>![SubString(Window.Property(Weather.CurrentView),hourly) | SubString(Window.Property(Weather.CurrentView),videos) | SubString(Window.Property(Weather.CurrentView),maps) | SubString(Window.Property(Weather.CurrentView),video)]</visible>
@@ -1982,13 +1982,13 @@
                     <wrapmultiline>false</wrapmultiline>
                     <scrollspeed>30</scrollspeed>
                     <visible>Window.Property(Alerts.IsFetched)</visible>
-                    <animation effect="slide" end="0,429" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow)">Conditional</animation>
+                    <animation effect="slide" end="0,429" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow)">Conditional</animation>
                 </control>
             </control>
             <control type="group">
                 <visible>!Skin.HasSetting(ExtendedWeatherInfo)</visible>
                 <animation type="VisibleChange">
-                    <effect type="fade" end="100" delay="320" time="160" />
+                    <effect type="fade" end="100" delay="320" time="0" />
                 </animation>
                 <control type="image">
                     <posx>126</posx>
@@ -2171,7 +2171,7 @@
                     <height>786</height>
                     <orientation>vertical</orientation>
                     <pagecontrol>60</pagecontrol>
-                    <scrolltime tween="quadratic">200</scrolltime>
+                    <scrolltime tween="quadratic">0</scrolltime>
                     <onleft>9000</onleft>
                     <onup>7510</onup>
                     <ondown>7510</ondown>
@@ -2371,7 +2371,7 @@
         <!---MEDIA MENU-->
         <control type="group" id="9000">
             <animation type="Conditional" condition="Window.IsActive(1128) | Window.IsActive(1127)">
-                <effect type="slide" end="-600" time="320" easing="in" tween="cubic" />
+                <effect type="slide" end="-600" time="0" easing="in" tween="cubic" />
             </animation>
             <include>Media_Menu_Furniture</include>
             <control type="group">
@@ -2453,7 +2453,7 @@
                         <onclick>ClearProperty(Weather.CurrentView)</onclick>
                         <selected>IsEmpty(Window.Property(Weather.CurrentView))</selected>
                         <animation type="VisibleChange">
-                            <effect type="fade" end="100" delay="320" time="160" />
+                            <effect type="fade" end="100" delay="320" time="0" />
                         </animation>
                         <visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
                     </control>
@@ -2463,7 +2463,7 @@
                         <onclick>SetProperty(Weather.CurrentView,36hour)</onclick>
                         <selected>SubString(Window.Property(Weather.CurrentView),36hour)</selected>
                         <animation type="VisibleChange">
-                            <effect type="fade" end="100" delay="320" time="160" />
+                            <effect type="fade" end="100" delay="320" time="0" />
                         </animation>
                         <visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
                     </control>
@@ -2473,7 +2473,7 @@
                         <onclick>SetProperty(Weather.CurrentView,weekend)</onclick>
                         <selected>SubString(Window.Property(Weather.CurrentView),weekend)</selected>
                         <animation type="VisibleChange">
-                            <effect type="fade" end="100" delay="320" time="160" />
+                            <effect type="fade" end="100" delay="320" time="0" />
                         </animation>
                         <visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
                     </control>
@@ -2483,7 +2483,7 @@
                         <onclick>SetProperty(Weather.CurrentView,hourly)</onclick>
                         <selected>SubString(Window.Property(Weather.CurrentView),hourly)</selected>
                         <animation type="VisibleChange">
-                            <effect type="fade" end="100" delay="320" time="160" />
+                            <effect type="fade" end="100" delay="320" time="0" />
                         </animation>
                         <visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
                     </control>
@@ -2493,7 +2493,7 @@
                         <onclick>SetProperty(Weather.CurrentView,videos)</onclick>
                         <selected>SubString(Window.Property(Weather.CurrentView),videos)</selected>
                         <animation type="VisibleChange">
-                            <effect type="fade" end="100" delay="320" time="160" />
+                            <effect type="fade" end="100" delay="320" time="0" />
                         </animation>
                         <visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
                         <visible>![IsEmpty(Window.Property(Video.1.Title)) + IsEmpty(Window.Property(Video.2.Title)) + IsEmpty(Window.Property(Video.3.Title)) + IsEmpty(Window.Property(MapList.1.MapLabel.1)) + IsEmpty(Window.Property(MapList.1.MapLabel.2)) + IsEmpty(Window.Property(MapList.1.MapLabel.3))]</visible>
@@ -2504,7 +2504,7 @@
                         <onclick>SetProperty(Weather.CurrentView,maps)</onclick>
                         <selected>SubString(Window.Property(Weather.CurrentView),maps)</selected>
                         <animation type="VisibleChange">
-                            <effect type="fade" end="100" delay="320" time="160" />
+                            <effect type="fade" end="100" delay="320" time="0" />
                         </animation>
                         <visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
                         <visible>SubString(Weather.Plugin,weather.wunderground)</visible>

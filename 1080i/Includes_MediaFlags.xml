@@ -208,7 +208,7 @@
         <aspectratio>keep</aspectratio>
         <fadetime>IconCrossfadeTime2</fadetime>
         <colordiffuse>white2</colordiffuse>
-        <animation effect="fade" time="200">VisibleChange</animation>
+        <animation effect="fade" time="0">VisibleChange</animation>
     </include>
     <include name="WidgetFlagVars">
         <height>64</height>
@@ -216,7 +216,7 @@
         <aspectratio>keep</aspectratio>
         <fadetime>IconCrossfadeTime2</fadetime>
         <colordiffuse>white2</colordiffuse>
-        <animation effect="fade" time="200">VisibleChange</animation>
+        <animation effect="fade" time="0">VisibleChange</animation>
     </include>
     <include name="Furniture_FlagUpright">
         <width>2</width>
@@ -230,7 +230,7 @@
         <aspectratio>keep</aspectratio>
         <fadetime>IconCrossfadeTime2</fadetime>
         <colordiffuse>floor</colordiffuse>
-        <animation effect="fade" time="200">VisibleChange</animation>
+        <animation effect="fade" time="0">VisibleChange</animation>
     </include>
     <include name="FloorFlags">
         <control type="group">
@@ -240,8 +240,8 @@
             <posy>1000</posy>
             <control type="group">
                 <visible>!ListItem.IsFolder</visible>
-                <animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
-                <animation effect="slide" time="250" end="0,400" tween="cubic" easing="in">Hidden</animation>
+                <animation effect="slide" time="0" start="0,300" end="0,0" tween="cubic">Visible</animation>
+                <animation effect="slide" time="0" end="0,400" tween="cubic" easing="in">Hidden</animation>
                 <control type="group">
                     <!--left part -->
                     <animation effect="slide" end="1070" condition="Control.IsVisible(516)">Conditional</animation>
@@ -264,7 +264,7 @@
                             <aspectratio>keep</aspectratio>
                             <fadetime>IconCrossfadeTime2</fadetime>
                             <colordiffuse>floor</colordiffuse>
-                            <animation effect="fade" time="200">VisibleChange</animation>
+                            <animation effect="fade" time="0">VisibleChange</animation>
                         </control>
                         <control type="image">
                             <texture>flags/studios/default-studio.png</texture>
@@ -329,7 +329,7 @@
                             <texture>$INFO[Window(movieinformation).Property(AudioLanguage.1),flags/language/,.png]</texture>
                             <visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.1))</visible>
                             <include>Animation_VisibleChange200</include>
-                            <fadetime>400</fadetime>
+                            <fadetime>50</fadetime>
                         </control>
                         <control type="image">
                             <width>26</width>
@@ -339,7 +339,7 @@
                             <visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.2))</visible>
                             <visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.1),Window(movieinformation).Property(AudioLanguage.2))</visible>
                             <include>Animation_VisibleChange200</include>
-                            <fadetime>400</fadetime>
+                            <fadetime>50</fadetime>
                         </control>
                         <control type="image">
                             <width>26</width>
@@ -350,15 +350,15 @@
                             <visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.1),Window(movieinformation).Property(AudioLanguage.3))</visible>
                             <visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.2),Window(movieinformation).Property(AudioLanguage.3))</visible>
                             <include>Animation_VisibleChange200</include>
-                            <fadetime>400</fadetime>
+                            <fadetime>50</fadetime>
                         </control>
                     </control>
                 </control>
             </control>
             <control type="group">
                 <visible>[[Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(ListItem.TVShowTitle)]</visible>
-                <animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
-                <animation effect="slide" time="250" end="0,400" tween="cubic" easing="in">Hidden</animation>
+                <animation effect="slide" time="0" start="0,300" end="0,0" tween="cubic">Visible</animation>
+                <animation effect="slide" time="0" end="0,400" tween="cubic" easing="in">Hidden</animation>
                 <control type="group">
                     <animation effect="slide" end="980" condition="Control.IsVisible(516)">Conditional</animation>
                     <control type="image">
@@ -370,14 +370,14 @@
                         <aspectratio>keep</aspectratio>
                         <fadetime>IconCrossfadeTime2</fadetime>
                         <colordiffuse>white2</colordiffuse>
-                        <animation effect="fade" time="200">VisibleChange</animation>
+                        <animation effect="fade" time="0">VisibleChange</animation>
                     </control>
                     <control type="group">
                         <posy>-5</posy>
                         <posx>200</posx>
                         <visible>Container.Content(tvshows)</visible>
-                        <animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
-                        <animation effect="slide" time="250" end="0,400" tween="cubic" easing="in">Hidden</animation>
+                        <animation effect="slide" time="0" start="0,300" end="0,0" tween="cubic">Visible</animation>
+                        <animation effect="slide" time="0" end="0,400" tween="cubic" easing="in">Hidden</animation>
                         <control type="label">
                             <width>135</width>
                             <height>60</height>
@@ -400,8 +400,8 @@
                         <posy>-5</posy>
                         <posx>200</posx>
                         <visible>Container.Content(seasons)</visible>
-                        <animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
-                        <animation effect="slide" time="250" end="0,400" tween="cubic" easing="in">Hidden</animation>
+                        <animation effect="slide" time="0" start="0,300" end="0,0" tween="cubic">Visible</animation>
+                        <animation effect="slide" time="0" end="0,400" tween="cubic" easing="in">Hidden</animation>
                         <control type="label">
                             <width>135</width>
                             <height>60</height>
@@ -422,8 +422,8 @@
                     </control>
                     <control type="group">
                         <posy>-5</posy>
-                        <animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
-                        <animation effect="slide" time="250" end="0,400" tween="cubic" easing="in">Hidden</animation>
+                        <animation effect="slide" time="0" start="0,300" end="0,0" tween="cubic">Visible</animation>
+                        <animation effect="slide" time="0" end="0,400" tween="cubic" easing="in">Hidden</animation>
                         <posx>340</posx>
                         <control type="label">
                             <width>135</width>
@@ -472,15 +472,15 @@
                         <posx>1745</posx>
                         <texture fallback="flags/rating/MPAA_NR_Certificate_US.png">$VAR[RatingFlagVar,flags/rating/,.png]</texture>
                         <include>AudioFlagsVars</include>
-                        <animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
-                        <animation effect="slide" time="250" end="0,400" tween="cubic" easing="in">Hidden</animation>
+                        <animation effect="slide" time="0" start="0,300" end="0,0" tween="cubic">Visible</animation>
+                        <animation effect="slide" time="0" end="0,400" tween="cubic" easing="in">Hidden</animation>
                     </control>
                 </control>
             </control>
             <control type="group">
                 <visible>Control.IsVisible(512) | Control.IsVisible(550)</visible>
-                <animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
-                <animation effect="slide" time="250" end="0,400" tween="cubic" easing="in">Hidden</animation>
+                <animation effect="slide" time="0" start="0,300" end="0,0" tween="cubic">Visible</animation>
+                <animation effect="slide" time="0" end="0,400" tween="cubic" easing="in">Hidden</animation>
                 <control type="label">
                     <posx>1850</posx>
                     <posy>7</posy>
@@ -490,7 +490,7 @@
                     <label>$VAR[InfoWallBottomLabel1Var]</label>
                     <font>Font_Reg30_2</font>
                     <visible>![ListItem.IsFolder + Container.Content(movies)]</visible>
-                    <animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
+                    <animation effect="slide" time="0" start="0,300" end="0,0" tween="cubic">Visible</animation>
                     <textcolor>floor</textcolor>
                     <scroll>true</scroll>
                 </control>
@@ -511,8 +511,8 @@
             <visible>Control.IsVisible(511) | Control.IsVisible(50) | Control.IsVisible(514)</visible>
             <visible>Control.IsVisible(9900) + ![SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,plugin.video)]</visible>
             <animation effect="slide" end="-1220" condition="Control.IsVisible(514)">Conditional</animation>
-            <animation effect="slide" end="0,-30" time="240" tween="cubic" easing="inout" condition="Control.IsVisible(50)">Conditional</animation>
-            <animation effect="slide" end="-50,0" time="240" tween="cubic" easing="inout" condition="Control.IsVisible(50) + !Skin.HasSetting(slimlist)">Conditional</animation>
+            <animation effect="slide" end="0,-30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(50)">Conditional</animation>
+            <animation effect="slide" end="-50,0" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(50) + !Skin.HasSetting(slimlist)">Conditional</animation>
             <posy>1004</posy>
             <control type="image">
                 <posx>1255</posx>
@@ -523,7 +523,7 @@
                 <aspectratio>keep</aspectratio>
                 <fadetime>IconCrossfadeTime2</fadetime>
                 <colordiffuse>white2</colordiffuse>
-                <animation effect="fade" time="200">VisibleChange</animation>
+                <animation effect="fade" time="0">VisibleChange</animation>
                 <visible>!IsEmpty(ListItem.Thumb)</visible>
                 <visible>![Control.IsVisible(50) + !Skin.HasSetting(slimlist)]</visible>
                 <visible>Container.Content(tvshows) | [Container.Content(seasons) + ListItem.IsFolder]</visible>
@@ -595,8 +595,8 @@
             <control type="group">
                 <visible>Container.Content(artists) + !IsEmpty(ListItem.DBID)</visible>
                 <visible>skin.hassetting(backendmode)</visible>
-                <animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
-                <animation effect="slide" time="250" end="0,400" tween="cubic" easing="in">Hidden</animation>
+                <animation effect="slide" time="0" start="0,300" end="0,0" tween="cubic">Visible</animation>
+                <animation effect="slide" time="0" end="0,400" tween="cubic" easing="in">Hidden</animation>
                                     <animation effect="slide" end="30,-20" time="0" condition="Control.IsVisible(53) | Control.IsVisible(50)">Conditional</animation>
                 <control type="group">
                                     <animation effect="slide" end="1190" time="0" condition="Control.IsVisible(53) | Control.IsVisible(50) | Control.IsVisible(57)">Conditional</animation>
@@ -649,8 +649,8 @@
                     <!--artist newest/oldest-->
                     <posx>1500</posx>
                     <animation effect="slide" end="-1190" time="0" condition="Control.IsVisible(512) | Control.IsVisible(514)">Conditional</animation>
-                    <animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
-                    <animation effect="slide" time="250" end="0,400" tween="cubic" easing="in">Hidden</animation>
+                    <animation effect="slide" time="0" start="0,300" end="0,0" tween="cubic">Visible</animation>
+                    <animation effect="slide" time="0" end="0,400" tween="cubic" easing="in">Hidden</animation>
                     <control type="label">
                         <posx>200</posx>
                         <width>135</width>
@@ -691,8 +691,8 @@
             </control>
             <control type="group">
                 <visible>Container.Content(albums) + !IsEmpty(ListItem.DBID)</visible>
-                <animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
-                <animation effect="slide" time="250" end="0,400" tween="cubic" easing="in">Hidden</animation>
+                <animation effect="slide" time="0" start="0,300" end="0,0" tween="cubic">Visible</animation>
+                <animation effect="slide" time="0" end="0,400" tween="cubic" easing="in">Hidden</animation>
                 <animation effect="slide" end="5,-30" time="0" condition="Control.IsVisible(50)">Conditional</animation>
                 <!-- Rating -->
                 <control type="group">
@@ -792,7 +792,7 @@
                     <height>88</height>
                     <texture>flags/music/genre/genre.png</texture>
                     <colordiffuse>floor</colordiffuse>
-                    <animation effect="fade" start="100" end="30" time="40" condition="true">Conditional</animation>
+                    <animation effect="fade" start="100" end="30" time="0" condition="true">Conditional</animation>
                 </control>
                 <control type="label">
                     <posx>1768</posx>
@@ -811,8 +811,8 @@
             </control>
             <control type="group">
                 <visible>Container.Content(songs)</visible>
-                <animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
-                <animation effect="slide" time="250" end="0,400" tween="cubic" easing="in">Hidden</animation>
+                <animation effect="slide" time="0" start="0,300" end="0,0" tween="cubic">Visible</animation>
+                <animation effect="slide" time="0" end="0,400" tween="cubic" easing="in">Hidden</animation>
                 <control type="group">
                     <!--playcount-->
                     <posx>15</posx>
@@ -883,7 +883,7 @@
                     <height>88</height>
                     <texture>flags/music/genre/genre.png</texture>
                     <colordiffuse>floor</colordiffuse>
-                    <animation effect="fade" start="100" end="30" time="40" condition="true">Conditional</animation>
+                    <animation effect="fade" start="100" end="30" time="0" condition="true">Conditional</animation>
                 </control>
                 <control type="label">
                     <posx>1768</posx>
@@ -910,8 +910,8 @@
             <include>Animation_FlagSlideDown</include>
             <control type="group">
                 <visible>!ListItem.IsFolder</visible>
-                <animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
-                <animation effect="slide" time="250" end="0,400" tween="cubic" easing="in">Hidden</animation>
+                <animation effect="slide" time="0" start="0,300" end="0,0" tween="cubic">Visible</animation>
+                <animation effect="slide" time="0" end="0,400" tween="cubic" easing="in">Hidden</animation>
                 <control type="group">
                     <visible>!IsEmpty(ListItem.Rating)</visible>
                     <posx>1400</posx>
@@ -986,7 +986,7 @@
                     <aspectratio>keep</aspectratio>
                     <fadetime>IconCrossfadeTime2</fadetime>
                     <colordiffuse>floor</colordiffuse>
-                    <animation effect="fade" time="200">VisibleChange</animation>
+                    <animation effect="fade" time="0">VisibleChange</animation>
                     <visible>!Control.IsVisible(57)</visible>
                     <visible>Container.Content(tvshows) | SubString(Container.FolderPath,plugin.video.the.trailers)</visible>
                 </control>

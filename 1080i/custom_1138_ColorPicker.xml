@@ -59,7 +59,7 @@
                 <width>600</width>
                 <height>300</height>
                 <orientation>vertical</orientation>
-                <scrolltime>200</scrolltime>
+                <scrolltime>0</scrolltime>
                 <onback>Dialog.Close(1138)</onback>
                 <ondown>11</ondown>
                 <onup>11</onup>

@@ -11,7 +11,7 @@
         <control type="image">
             <texture>common/bgcolor.png</texture>
             <include>FullscreenDimensions</include>
-            <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+            <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
             <visible>!Skin.HasSetting(DisableGlowbar)</visible>
         </control>
         <control type="group">

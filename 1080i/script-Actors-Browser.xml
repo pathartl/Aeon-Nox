@@ -11,16 +11,16 @@
         <control type="image">
             <texture>common/bgcolor.png</texture>
             <include>FullscreenDimensions</include>
-            <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+            <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
             <animation effect="fade" end="100" time="2160" reversible="false">WindowOpen</animation>
-            <animation effect="fade" start="100" end="0" time="240">WindowClose</animation>
+            <animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
         </control>
         <control type="group">
             <include>Animation_DialogZoom</include>
             <control type="group">
                 <width>609</width>
                 <height>834</height>
-                <animation effect="slide" start="-615,0" end="0,0" time="320" delay="400" tween="cubic">WindowOpen</animation>
+                <animation effect="slide" start="-615,0" end="0,0" time="0" delay="400" tween="cubic">WindowOpen</animation>
                 <control type="image">
                     <posx>1214</posx>
                     <posy>154</posy>
@@ -35,7 +35,7 @@
                     <height>429</height>
                     <aspectratio aligny="bottom">keep</aspectratio>
                     <texture background="true">$INFO[container(450).ListItem.Icon]</texture>
-                    <fadetime>400</fadetime>
+                    <fadetime>50</fadetime>
                 </control>
                 <control type="image">
                     <posx>1300</posx>
@@ -44,7 +44,7 @@
                     <height>429</height>
                     <aspectratio aligny="top">keep</aspectratio>
                     <texture background="true" flipy="true" diffuse="thumbs/diffuse_mirror3.png">$INFO[container(450).ListItem.Icon]</texture>
-                    <fadetime>400</fadetime>
+                    <fadetime>50</fadetime>
                 </control>
                 <control type="label" id="412">
                     <posx>1226</posx>
@@ -81,7 +81,7 @@
                 <height>728</height>
                 <pagecontrol>60</pagecontrol>
                 <enable>!StringCompare(Window.Property(dialogprogress),1)</enable>
-                <scrolltime tween="quadratic">200</scrolltime>
+                <scrolltime tween="quadratic">0</scrolltime>
                 <onleft>413</onleft>
                 <onright>60</onright>
                 <onup>450</onup>
@@ -129,7 +129,7 @@
                         <height>58</height>
                         <texture border="8">views/tripanel/listselect_fo.png</texture>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <animation effect="fade" start="100" end="50" time="160" condition="!Control.HasFocus(450)">Conditional</animation>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(450)">Conditional</animation>
                     </control>
                     <control type="label">
                         <posx>68</posx>
@@ -164,7 +164,7 @@
                 <height>728</height>
                 <pagecontrol>60</pagecontrol>
                 <enable>!StringCompare(Window.Property(dialogprogress),1)</enable>
-                <scrolltime tween="quadratic">200</scrolltime>
+                <scrolltime tween="quadratic">0</scrolltime>
                 <onleft>413</onleft>
                 <onright>60</onright>
                 <onup>451</onup>
@@ -212,7 +212,7 @@
                         <height>58</height>
                         <texture border="8">views/tripanel/listselect_fo.png</texture>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <animation effect="fade" start="100" end="50" time="160" condition="!Control.HasFocus(451)">Conditional</animation>
+                        <animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(451)">Conditional</animation>
                     </control>
                     <control type="label">
                         <posx>68</posx>
@@ -249,7 +249,7 @@
                 <onright>9000</onright>
                 <onup>450</onup>
                 <ondown>450</ondown>
-                <scrolltime tween="quadratic">200</scrolltime>
+                <scrolltime tween="quadratic">0</scrolltime>
                 <enable>!StringCompare(Window.Property(dialogprogress),1)</enable>
                 <orientation>horizontal</orientation>
                 <control type="button" id="413">
@@ -304,12 +304,12 @@
         <control type="group">
             <visible>StringCompare(Window.Property(dialogprogress),1)</visible>
             <animation type="Visible" reversible="false">
-                <effect type="zoom" start="80" end="100" center="960,540" tween="back" time="240" />
-                <effect type="fade" end="100" time="240" />
+                <effect type="zoom" start="80" end="100" center="960,540" tween="back" time="0" />
+                <effect type="fade" end="100" time="0" />
             </animation>
             <animation type="Hidden" reversible="false">
-                <effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="240" />
-                <effect type="fade" start="100" end="0" time="240" />
+                <effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="0" />
+                <effect type="fade" start="100" end="0" time="0" />
             </animation>
             <control type="group">
                 <posx>570</posx>

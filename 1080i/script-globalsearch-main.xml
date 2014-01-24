@@ -51,24 +51,24 @@
             <control type="image">
                 <texture background="true" fallback="special://skin/backgrounds/search/search.jpg">$VAR[GlobalSearchFanartVar]</texture>
                 <include>CommonFanartVarsSingle</include>
-                <animation effect="fade" time="200">WindowOpen</animation>
-                <animation effect="fade" time="200">WindowClose</animation>
+                <animation effect="fade" time="0">WindowOpen</animation>
+                <animation effect="fade" time="0">WindowClose</animation>
             </control>
             <!-- Furniture -->
             <control type="group">
-                <animation effect="fade" time="280" delay="800">WindowOpen</animation>
-                <animation effect="fade" time="200" condition="[Window.Next(home) | Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow)]">WindowClose</animation>
-                <animation effect="fade" time="200" delay="1120" condition="Control.IsVisible(510) + [Window.Next(home) | Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow)]">WindowClose</animation>
+                <animation effect="fade" time="0" delay="800">WindowOpen</animation>
+                <animation effect="fade" time="0" condition="[Window.Next(home) | Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow)]">WindowClose</animation>
+                <animation effect="fade" time="0" delay="1120" condition="Control.IsVisible(510) + [Window.Next(home) | Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow)]">WindowClose</animation>
                 <include>CommonMediaPlayingBackground</include>
                 <include>Furniture_SettingsFloor</include>
             </control>
             <control type="group">
-                <animation effect="fade" time="280" delay="800">WindowOpen</animation>
-                <animation effect="fade" time="200">WindowClose</animation>
-                <animation effect="zoom" end="91" center="960,360" time="320" tween="cubic" easing="inout" condition="true">Conditional</animation>
+                <animation effect="fade" time="0" delay="800">WindowOpen</animation>
+                <animation effect="fade" time="0">WindowClose</animation>
+                <animation effect="zoom" end="91" center="960,360" time="0" tween="cubic" easing="inout" condition="true">Conditional</animation>
                 <include>Furniture_SettingsBackPanel2</include>
                 <control type="group">
-                    <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(script-globalsearch-infodialog.xml)">Conditional</animation>
+                    <animation effect="fade" start="100" end="0" time="0" condition="Window.IsVisible(script-globalsearch-infodialog.xml)">Conditional</animation>
                     <control type="list" id="9000">
                         <posx>63</posx>
                         <posy>190</posy>
@@ -77,7 +77,7 @@
                         <onright>200</onright>
                         <onup>9000</onup>
                         <ondown>9000</ondown>
-                        <scrolltime tween="quadratic">200</scrolltime>
+                        <scrolltime tween="quadratic">0</scrolltime>
                         <itemlayout height="74" width="570">
                             <control type="label">
                                 <posx>30</posx>
@@ -102,7 +102,7 @@
                                 <width>434</width>
                                 <height>74</height>
                                 <texture border="8">views/tripanel/listselect_fo.png</texture>
-                                <animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
+                                <animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(9000)">Conditional</animation>
                                 <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             </control>
                             <control type="label">
@@ -198,7 +198,7 @@
                                 <orientation>vertical</orientation>
                                 <pagecontrol>60</pagecontrol>
                                 <focusposition>0</focusposition>
-                                <scrolltime tween="quadratic">200</scrolltime>
+                                <scrolltime tween="quadratic">0</scrolltime>
                                 <preloaditems>2</preloaditems>
                                 <itemlayout width="1358" height="296">
                                     <control type="image">
@@ -295,7 +295,7 @@
                                     </control>
                                     <control type="group">
                                         <posx>250</posx>
-                                        <animation effect="fade" start="100" end="60" time="40" condition="!Control.HasFocus(111)">Conditional</animation>
+                                        <animation effect="fade" start="100" end="60" time="0" condition="!Control.HasFocus(111)">Conditional</animation>
                                         <control type="label">
                                             <width>1108</width>
                                             <height>45</height>
@@ -360,7 +360,7 @@
                                 <orientation>vertical</orientation>
                                 <pagecontrol>60</pagecontrol>
                                 <focusposition>0</focusposition>
-                                <scrolltime tween="quadratic">200</scrolltime>
+                                <scrolltime tween="quadratic">0</scrolltime>
                                 <preloaditems>2</preloaditems>
                                 <itemlayout width="1358" height="296">
                                     <control type="image">
@@ -457,7 +457,7 @@
                                     </control>
                                     <control type="group">
                                         <posx>250</posx>
-                                        <animation effect="fade" start="100" end="60" time="40" condition="!Control.HasFocus(121)">Conditional</animation>
+                                        <animation effect="fade" start="100" end="60" time="0" condition="!Control.HasFocus(121)">Conditional</animation>
                                         <control type="label">
                                             <width>1108</width>
                                             <height>45</height>
@@ -522,7 +522,7 @@
                                 <orientation>vertical</orientation>
                                 <pagecontrol>60</pagecontrol>
                                 <focusposition>0</focusposition>
-                                <scrolltime tween="quadratic">200</scrolltime>
+                                <scrolltime tween="quadratic">0</scrolltime>
                                 <preloaditems>2</preloaditems>
                                 <itemlayout width="1358" height="148">
                                     <control type="image">
@@ -606,7 +606,7 @@
                                     </control>
                                     <control type="group">
                                         <posx>150</posx>
-                                        <animation effect="fade" start="100" end="60" time="40" condition="!Control.HasFocus(131)">Conditional</animation>
+                                        <animation effect="fade" start="100" end="60" time="0" condition="!Control.HasFocus(131)">Conditional</animation>
                                         <control type="label">
                                             <width>612</width>
                                             <height>45</height>
@@ -660,7 +660,7 @@
                                 <orientation>vertical</orientation>
                                 <pagecontrol>60</pagecontrol>
                                 <focusposition>0</focusposition>
-                                <scrolltime tween="quadratic">200</scrolltime>
+                                <scrolltime tween="quadratic">0</scrolltime>
                                 <preloaditems>2</preloaditems>
                                 <itemlayout width="1358" height="296">
                                     <control type="image">
@@ -746,7 +746,7 @@
                                     </control>
                                     <control type="group">
                                         <posx>300</posx>
-                                        <animation effect="fade" start="100" end="60" time="40" condition="!Control.HasFocus(141)">Conditional</animation>
+                                        <animation effect="fade" start="100" end="60" time="0" condition="!Control.HasFocus(141)">Conditional</animation>
                                         <control type="label">
                                             <width>1108</width>
                                             <height>45</height>
@@ -800,7 +800,7 @@
                                 <orientation>vertical</orientation>
                                 <pagecontrol>60</pagecontrol>
                                 <focusposition>0</focusposition>
-                                <scrolltime tween="quadratic">200</scrolltime>
+                                <scrolltime tween="quadratic">0</scrolltime>
                                 <preloaditems>2</preloaditems>
                                 <itemlayout width="1358" height="296">
                                     <control type="image">
@@ -886,7 +886,7 @@
                                     </control>
                                     <control type="group">
                                         <posx>250</posx>
-                                        <animation effect="fade" start="100" end="60" time="40" condition="!Control.HasFocus(151)">Conditional</animation>
+                                        <animation effect="fade" start="100" end="60" time="0" condition="!Control.HasFocus(151)">Conditional</animation>
                                         <control type="label">
                                             <width>1108</width>
                                             <height>45</height>
@@ -940,7 +940,7 @@
                                 <orientation>vertical</orientation>
                                 <pagecontrol>60</pagecontrol>
                                 <focusposition>0</focusposition>
-                                <scrolltime tween="quadratic">200</scrolltime>
+                                <scrolltime tween="quadratic">0</scrolltime>
                                 <preloaditems>2</preloaditems>
                                 <itemlayout width="679" height="296">
                                     <control type="image">
@@ -1016,7 +1016,7 @@
                                     </control>
                                     <control type="group">
                                         <posx>300</posx>
-                                        <animation effect="fade" start="100" end="60" time="40" condition="!Control.HasFocus(161)">Conditional</animation>
+                                        <animation effect="fade" start="100" end="60" time="0" condition="!Control.HasFocus(161)">Conditional</animation>
                                         <control type="label">
                                             <width>379</width>
                                             <height>45</height>
@@ -1060,7 +1060,7 @@
                                 <orientation>vertical</orientation>
                                 <pagecontrol>60</pagecontrol>
                                 <focusposition>0</focusposition>
-                                <scrolltime tween="quadratic">200</scrolltime>
+                                <scrolltime tween="quadratic">0</scrolltime>
                                 <preloaditems>2</preloaditems>
                                 <itemlayout width="679" height="296">
                                     <control type="image">
@@ -1161,7 +1161,7 @@
                                     </control>
                                     <control type="group">
                                         <posx>300</posx>
-                                        <animation effect="fade" start="100" end="60" time="40" condition="!Control.HasFocus(171)">Conditional</animation>
+                                        <animation effect="fade" start="100" end="60" time="0" condition="!Control.HasFocus(171)">Conditional</animation>
                                         <control type="label">
                                             <width>379</width>
                                             <height>45</height>
@@ -1230,7 +1230,7 @@
                                 <orientation>vertical</orientation>
                                 <pagecontrol>60</pagecontrol>
                                 <focusposition>0</focusposition>
-                                <scrolltime tween="quadratic">200</scrolltime>
+                                <scrolltime tween="quadratic">0</scrolltime>
                                 <preloaditems>2</preloaditems>
                                 <itemlayout width="679" height="296">
                                     <control type="image">
@@ -1339,7 +1339,7 @@
                                     </control>
                                     <control type="group">
                                         <posx>300</posx>
-                                        <animation effect="fade" start="100" end="60" time="40" condition="!Control.HasFocus(181)">Conditional</animation>
+                                        <animation effect="fade" start="100" end="60" time="0" condition="!Control.HasFocus(181)">Conditional</animation>
                                         <control type="label">
                                             <width>379</width>
                                             <height>45</height>
@@ -1414,8 +1414,8 @@
                     <aligny>center</aligny>
                     <itemgap>10</itemgap>
                     <orientation>horizontal</orientation>
-                    <animation effect="fade" time="320" delay="320">Visible</animation>
-                    <animation effect="fade" time="320">Hidden</animation>
+                    <animation effect="fade" time="0" delay="320">Visible</animation>
+                    <animation effect="fade" time="0">Hidden</animation>
                     <control type="label" id="199">
                         <label>$LOCALIZE[284]</label>
                         <include>BreadcrumbsLabel</include>

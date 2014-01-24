@@ -40,10 +40,10 @@
     <onunload>Skin.SetString(backgroundlist,$INFO[Control.GetLabel(11113)])</onunload>
     <onunload>Skin.SetString(submenulist,$INFO[Control.GetLabel(11114)])</onunload>
     <animation type="WindowClose" reversible="false">
-        <effect type="fade" start="100" end="0" time="640" />
+        <effect type="fade" start="100" end="0" time="0" />
     </animation>
     <animation type="WindowOpen" reversible="false">
-        <effect type="fade" end="100" delay="800" time="640" />
+        <effect type="fade" end="100" delay="800" time="0" />
     </animation>
     <controls>
         <control type="group">
@@ -74,7 +74,7 @@
             <height>74</height>
             <texture>loader.gif</texture>
             <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-            <animation effect="fade" start="70" time="1200" condition="true" pulse="true">Conditional</animation>
+            <animation effect="fade" start="70" time="0" condition="true" pulse="true">Conditional</animation>
         </control>
         <control type="image">
             <posx>704</posx>

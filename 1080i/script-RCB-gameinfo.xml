@@ -7,12 +7,12 @@
         <system>1</system>
     </coordinates>
     <animation type="WindowOpen" reversible="false">
-        <effect type="zoom" start="150" end="100" center="960,540" time="400" tween="cubic" />
-        <effect type="fade" end="100" time="200" />
+        <effect type="zoom" start="150" end="100" center="960,540" time="0" tween="cubic" />
+        <effect type="fade" end="100" time="0" />
     </animation>
     <animation type="WindowClose" reversible="false">
-        <effect type="fade" start="100" end="0" time="240" />
-        <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
+        <effect type="fade" start="100" end="0" time="0" />
+        <effect type="zoom" start="100" end="130" center="960,540" time="0" tween="cubic" easing="in" />
     </animation>
     <controls>
         <!-- gameinfoviewgamelist -->
@@ -23,7 +23,7 @@
                 <onright>3000</onright>
                 <onup>3000</onup>
                 <ondown>3000</ondown>
-                <scrolltime>200</scrolltime>
+                <scrolltime>0</scrolltime>
                 <itemlayout height="0" width="0" />
                 <focusedlayout height="0" width="0"></focusedlayout>
             </control>
@@ -109,7 +109,7 @@
                 <font>Font_Reg33_Caps</font>
                 <shadowcolor>black</shadowcolor>
                 <include>BreadcrumbsLabel</include>
-                <animation effect="fade" start="100" end="50" time="240" tween="cubic" easing="inout" condition="!Control.HasFocus(3000)">Conditional</animation>
+                <animation effect="fade" start="100" end="50" time="0" tween="cubic" easing="inout" condition="!Control.HasFocus(3000)">Conditional</animation>
                 <visible>Control.IsEnabled(3000) + Control.IsVisible(3000)</visible>
             </control>
             <control type="label">
@@ -117,7 +117,7 @@
                 <font>Font_Reg33_Caps</font>
                 <shadowcolor>black</shadowcolor>
                 <include>BreadcrumbsLabel</include>
-                <animation effect="fade" start="100" end="50" time="240" tween="cubic" easing="inout" condition="!Control.HasFocus(3001)">Conditional</animation>
+                <animation effect="fade" start="100" end="50" time="0" tween="cubic" easing="inout" condition="!Control.HasFocus(3001)">Conditional</animation>
                 <visible>Control.IsEnabled(3001) + Control.IsVisible(3001)</visible>
             </control>
         </control>
@@ -158,7 +158,7 @@
                     <width>900</width>
                     <height>4</height>
                     <texture>views/list_divider.png</texture>
-                    <animation effect="slide" start="1950" end="0" time="560" tween="cubic" delay="880">WindowOpen</animation>
+                    <animation effect="slide" start="1950" end="0" time="0" tween="cubic" delay="880">WindowOpen</animation>
                 </control>
                 <control type="group">
                     <control type="label">

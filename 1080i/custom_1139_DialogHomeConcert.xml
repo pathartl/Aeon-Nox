@@ -34,7 +34,7 @@
                 <onleft>Dialog.Close(1139)</onleft>
                 <onright>450</onright>
                 <ondown>450</ondown>
-                <scrolltime>200</scrolltime>
+                <scrolltime>0</scrolltime>
                 <itemlayout height="110" width="340">
                     <control type="image">
                         <width>340</width>

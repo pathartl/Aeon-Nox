@@ -207,7 +207,7 @@
         <include>Animation_VisibleChange200</include>
         <preloaditems>2</preloaditems>
         <pagecontrol>70</pagecontrol>
-        <scrolltime>200</scrolltime>
+        <scrolltime>0</scrolltime>
         <onleft>9000</onleft>
         <onright>70</onright>
         <itemlayout condition="!Skin.HasSetting(smalltvlist)" height="104" width="924">
@@ -241,7 +241,7 @@
                 <width>35</width>
                 <height>35</height>
                 <texture>pvr/PVR-IsRecording.png</texture>
-                <animation effect="fade" start="100" end="40" time="960" pulse="true" condition="true">conditional</animation>
+                <animation effect="fade" start="100" end="40" time="0" pulse="true" condition="true">conditional</animation>
                 <visible>ListItem.IsRecording</visible>
             </control>
             <control type="label">
@@ -308,8 +308,8 @@
                 <height>103</height>
                 <texture border="8">views/tripanel/listselect_fo.png</texture>
                 <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                <animation effect="fade" start="100" end="50" time="40" condition="Control.IsVisible(10) + !Control.HasFocus(10)">Conditional</animation>
-                <animation effect="fade" start="100" end="50" time="40" condition="Control.IsVisible(11) + !Control.HasFocus(11)">Conditional</animation>
+                <animation effect="fade" start="100" end="50" time="0" condition="Control.IsVisible(10) + !Control.HasFocus(10)">Conditional</animation>
+                <animation effect="fade" start="100" end="50" time="0" condition="Control.IsVisible(11) + !Control.HasFocus(11)">Conditional</animation>
             </control>
             <control type="label">
                 <posx>30</posx>
@@ -334,7 +334,7 @@
                 <width>35</width>
                 <height>35</height>
                 <texture>pvr/PVR-IsRecording.png</texture>
-                <animation effect="fade" start="100" end="40" time="960" pulse="true" condition="true">conditional</animation>
+                <animation effect="fade" start="100" end="40" time="0" pulse="true" condition="true">conditional</animation>
                 <visible>ListItem.IsRecording</visible>
             </control>
             <control type="label">
@@ -420,7 +420,7 @@
                 <width>25</width>
                 <height>25</height>
                 <texture>pvr/PVR-IsRecording.png</texture>
-                <animation effect="fade" start="100" end="40" time="960" pulse="true" condition="true">conditional</animation>
+                <animation effect="fade" start="100" end="40" time="0" pulse="true" condition="true">conditional</animation>
                 <visible>ListItem.IsRecording</visible>
             </control>
             <control type="label">
@@ -500,7 +500,7 @@
                 <width>25</width>
                 <height>25</height>
                 <texture>pvr/PVR-IsRecording.png</texture>
-                <animation effect="fade" start="100" end="40" time="960" pulse="true" condition="true">conditional</animation>
+                <animation effect="fade" start="100" end="40" time="0" pulse="true" condition="true">conditional</animation>
                 <visible>ListItem.IsRecording</visible>
             </control>
             <control type="label">
@@ -603,7 +603,7 @@
                 <width>930</width>
                 <height>810</height>
                 <pagecontrol>72</pagecontrol>
-                <scrolltime>200</scrolltime>
+                <scrolltime>0</scrolltime>
                 <onleft>9000</onleft>
                 <onright>72</onright>
                 <onup>13</onup>
@@ -663,7 +663,7 @@
                         <height>103</height>
                         <texture border="8">views/tripanel/listselect_fo.png</texture>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <animation effect="fade" start="100" end="50" time="40" condition="Control.IsVisible(13) + !Control.HasFocus(13)">Conditional</animation>
+                        <animation effect="fade" start="100" end="50" time="0" condition="Control.IsVisible(13) + !Control.HasFocus(13)">Conditional</animation>
                     </control>
                     <control type="image">
                         <posx>10</posx>
@@ -802,7 +802,7 @@
                 <width>1795</width>
                 <height>605</height>
                 <pagecontrol>10</pagecontrol>
-                <scrolltime>350</scrolltime>
+                <scrolltime>0</scrolltime>
                 <timeblocks>40</timeblocks>
                 <rulerunit>6</rulerunit>
                 <onleft>9000</onleft>
@@ -1101,7 +1101,7 @@
                     <onleft>9000</onleft>
                     <onright>76</onright>
                     <pagecontrol>76</pagecontrol>
-                    <scrolltime>200</scrolltime>
+                    <scrolltime>0</scrolltime>
                     <itemlayout height="60">
                         <control type="image">
                             <posx>-45</posx>
@@ -1326,7 +1326,7 @@
                     <onleft>9000</onleft>
                     <onright>77</onright>
                     <pagecontrol>77</pagecontrol>
-                    <scrolltime>200</scrolltime>
+                    <scrolltime>0</scrolltime>
                     <itemlayout height="60">
                         <control type="image">
                             <posx>-45</posx>
@@ -1578,7 +1578,7 @@
                     <onleft>9000</onleft>
                     <onright>75</onright>
                     <pagecontrol>75</pagecontrol>
-                    <scrolltime>200</scrolltime>
+                    <scrolltime>0</scrolltime>
                     <itemlayout height="60">
                         <control type="image">
                             <posx>-45</posx>
@@ -1607,7 +1607,7 @@
                             <width>35</width>
                             <height>35</height>
                             <texture>pvr/PVR-IsRecording.png</texture>
-                            <animation effect="fade" start="100" end="40" time="960" pulse="true" condition="true">conditional</animation>
+                            <animation effect="fade" start="100" end="40" time="0" pulse="true" condition="true">conditional</animation>
                             <visible>ListItem.IsRecording</visible>
                         </control>
                         <control type="label">
@@ -1680,7 +1680,7 @@
                             <width>35</width>
                             <height>35</height>
                             <texture>pvr/PVR-IsRecording.png</texture>
-                            <animation effect="fade" start="100" end="40" time="960" pulse="true" condition="true">conditional</animation>
+                            <animation effect="fade" start="100" end="40" time="0" pulse="true" condition="true">conditional</animation>
                             <visible>ListItem.IsRecording</visible>
                         </control>
                         <control type="label">
@@ -1779,7 +1779,7 @@
                     <onleft>9000</onleft>
                     <onright>76</onright>
                     <pagecontrol>76</pagecontrol>
-                    <scrolltime>200</scrolltime>
+                    <scrolltime>0</scrolltime>
                     <itemlayout height="60">
                         <control type="image">
                             <posx>-45</posx>
@@ -1823,7 +1823,7 @@
                             <width>35</width>
                             <height>35</height>
                             <texture>pvr/PVR-IsRecording.png</texture>
-                            <animation effect="fade" start="100" end="40" time="960" pulse="true" condition="true">conditional</animation>
+                            <animation effect="fade" start="100" end="40" time="0" pulse="true" condition="true">conditional</animation>
                             <visible>ListItem.IsRecording</visible>
                         </control>
                         <control type="label">
@@ -1911,7 +1911,7 @@
                             <width>35</width>
                             <height>35</height>
                             <texture>pvr/PVR-IsRecording.png</texture>
-                            <animation effect="fade" start="100" end="40" time="960" pulse="true" condition="true">conditional</animation>
+                            <animation effect="fade" start="100" end="40" time="0" pulse="true" condition="true">conditional</animation>
                             <visible>ListItem.IsRecording</visible>
                         </control>
                         <control type="label">

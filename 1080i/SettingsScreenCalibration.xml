@@ -13,9 +13,9 @@
         <control type="image">
             <texture>common/bgcolor.png</texture>
             <include>FullscreenDimensions</include>
-            <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+            <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
             <animation effect="fade" end="100" time="2400">WindowOpen</animation>
-            <animation effect="fade" start="100" end="0" time="240">WindowClose</animation>
+            <animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
         </control>
         <control type="mover" id="8">
             <width>192</width>

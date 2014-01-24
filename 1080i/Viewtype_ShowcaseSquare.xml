@@ -14,16 +14,16 @@
         <ondown condition="!Control.IsVisible(61)">109</ondown>
         <viewtype label="31029">bigwrap</viewtype>
         <pagecontrol>61</pagecontrol>
-        <scrolltime>200</scrolltime>
+        <scrolltime>0</scrolltime>
         <focusposition>3</focusposition>
         <orientation>horizontal</orientation>
         <preloaditems>2</preloaditems>
         <include>Animation_OpenCloseZoom_New</include>
         <animation effect="fade" time="8" delay="600" end="100" condition="Skin.HasSetting(noflowalbum)">Conditional</animation>
-        <animation effect="fade" start="100" end="0" time="320" condition="Control.HasFocus(110)">Conditional</animation>
+        <animation effect="fade" start="100" end="0" time="0" condition="Control.HasFocus(110)">Conditional</animation>
         <itemlayout height="525" width="375" condition="Skin.HasSetting(noflowalbum) + !Control.IsVisible(7003)">
             <control type="group">
-                <animation effect="zoom" start="100" end="85" center="200,345" time="240" reversible="false" tween="cubic" condition="!Skin.HasSetting(usecasescd) + Container.Content(albums)">Conditional</animation>
+                <animation effect="zoom" start="100" end="85" center="200,345" time="0" reversible="false" tween="cubic" condition="!Skin.HasSetting(usecasescd) + Container.Content(albums)">Conditional</animation>
                 <animation effect="fade" time="0" delay="640">Visible</animation>
                 <include>MusicShowcaseGlow</include>
                 <control type="image">
@@ -43,11 +43,11 @@
         </itemlayout>
         <focusedlayout height="525" width="375" condition="Skin.HasSetting(noflowalbum) + !Control.IsVisible(7003)">
             <control type="group">
-                <animation effect="zoom" start="100" end="85" center="200,345" time="240" reversible="false" tween="cubic" condition="!Skin.HasSetting(usecasescd) + Container.Content(albums)">Conditional</animation>
+                <animation effect="zoom" start="100" end="85" center="200,345" time="0" reversible="false" tween="cubic" condition="!Skin.HasSetting(usecasescd) + Container.Content(albums)">Conditional</animation>
                 <visible>Skin.HasSetting(noflowalbum) + !Control.IsVisible(7003)</visible>
                 <animation effect="fade" time="0" delay="640">Visible</animation>
-                <animation effect="zoom" start="100" end="110" center="202,345" time="320" reversible="false" tween="cubic">Focus</animation>
-                <animation effect="zoom" start="110" end="100" center="202,345" time="160" reversible="false" tween="cubic">Unfocus</animation>
+                <animation effect="zoom" start="100" end="110" center="202,345" time="0" reversible="false" tween="cubic">Focus</animation>
+                <animation effect="zoom" start="110" end="100" center="202,345" time="0" reversible="false" tween="cubic">Unfocus</animation>
                 <include>MusicShowcaseGlow</include>
                 <control type="image">
                     <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[MusicShowcaseItem0Var]</texture>
@@ -81,16 +81,16 @@
         <control type="group">
             <visible>Control.IsVisible(509)</visible>
             <camera x="960" y="810" />
-            <animation effect="zoom" start="100" end="165" time="640" easing="inout" tween="circle" center="960,960" condition="Skin.HasSetting(showcasesquarezoom)">Conditional</animation>
-            <animation effect="slide" tween="cubic" time="720" start="0,806" end="0,0">VisibleChange</animation>
+            <animation effect="zoom" start="100" end="165" time="0" easing="inout" tween="circle" center="960,960" condition="Skin.HasSetting(showcasesquarezoom)">Conditional</animation>
+            <animation effect="slide" tween="cubic" time="0" start="0,806" end="0,0">VisibleChange</animation>
             <control type="group" id="7007">
                 <posy>580</posy>
                 <visible>Container.OnNext + !Skin.HasSetting(noflowalbum)</visible>
-                <animation effect="slide" end="-150,0" time="200" reversible="false">Hidden</animation>
+                <animation effect="slide" end="-150,0" time="0" reversible="false">Hidden</animation>
                 <control type="group">
                     <posx>75</posx>
                     <visible>Container.OnNext</visible>
-                    <animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+                    <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
                     <animation effect="rotatey" center="-75" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                     <include>MusicShowcaseItem-6</include>
                 </control>
@@ -117,7 +117,7 @@
                 <control type="group">
                     <posx>1590</posx>
                     <visible>!Container.OnNext</visible>
-                    <animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
+                    <animation effect="fade" end="100" time="0" reversible="false">Visible</animation>
                     <animation effect="rotatey" center="2145" start="65" end="65" time="0" condition="true">Conditional</animation>
                     <include>MusicShowcaseItem5</include>
                 </control>
@@ -143,18 +143,18 @@
                 </control>
                 <control type="group">
                     <visible>Container.OnNext</visible>
-                    <animation effect="slide" end="68,0" time="200" reversible="false">Hidden</animation>
+                    <animation effect="slide" end="68,0" time="0" reversible="false">Hidden</animation>
                     <control type="group">
                         <posx>840</posx>
                         <visible>Container.OnNext</visible>
-                        <animation effect="rotatey" center="1395" end="-65" time="200" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+                        <animation effect="rotatey" center="1395" end="-65" time="0" reversible="false" tween="quadratic" easing="in">Hidden</animation>
                         <animation effect="rotatey" center="1395" start="65" end="65" time="0" condition="true">Conditional</animation>
                         <include>MusicShowcaseItem0</include>
                     </control>
                     <control type="group">
                         <posx>758</posx>
                         <visible>Container.OnNext</visible>
-                        <animation effect="rotatey" center="608" end="-65" time="200" reversible="false" tween="quadratic">Hidden</animation>
+                        <animation effect="rotatey" center="608" end="-65" time="0" reversible="false" tween="quadratic">Hidden</animation>
                         <include>MusicShowcaseItem-1</include>
                     </control>
                 </control>
@@ -162,11 +162,11 @@
             <control type="group" id="7002">
                 <posy>580</posy>
                 <visible>Container.OnPrevious + !Skin.HasSetting(noflowalbum)</visible>
-                <animation effect="slide" end="150,0" time="200" reversible="false">Hidden</animation>
+                <animation effect="slide" end="150,0" time="0" reversible="false">Hidden</animation>
                 <control type="group">
                     <posx>1440</posx>
                     <visible>Container.OnPrevious</visible>
-                    <animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+                    <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
                     <animation effect="rotatey" center="1995" start="65" end="65" time="0" condition="true">Conditional</animation>
                     <include>MusicShowcaseItem6</include>
                 </control>
@@ -193,7 +193,7 @@
                 <control type="group">
                     <posx>-75</posx>
                     <visible>!Container.OnPrevious</visible>
-                    <animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
+                    <animation effect="fade" end="100" time="0" reversible="false">Visible</animation>
                     <animation effect="rotatey" center="-225" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                     <include>MusicShowcaseItem-5</include>
                 </control>
@@ -219,18 +219,18 @@
                 </control>
                 <control type="group">
                     <visible>Container.OnPrevious</visible>
-                    <animation effect="slide" end="-68,0" time="200" reversible="false">Hidden</animation>
+                    <animation effect="slide" end="-68,0" time="0" reversible="false">Hidden</animation>
                     <control type="group">
                         <posx>675</posx>
                         <visible>Container.OnPrevious</visible>
-                        <animation effect="rotatey" center="525" end="65" time="200" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+                        <animation effect="rotatey" center="525" end="65" time="0" reversible="false" tween="quadratic" easing="in">Hidden</animation>
                         <animation effect="rotatey" center="525" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                         <include>MusicShowcaseItem0</include>
                     </control>
                     <control type="group">
                         <posx>758</posx>
                         <visible>Container.OnPrevious</visible>
-                        <animation effect="rotatey" center="1312" end="65" time="200" reversible="false" tween="quadratic">Hidden</animation>
+                        <animation effect="rotatey" center="1312" end="65" time="0" reversible="false" tween="quadratic">Hidden</animation>
                         <include>MusicShowcaseItem1</include>
                     </control>
                 </control>
@@ -239,126 +239,126 @@
                 <texturefocus>-</texturefocus>
                 <texturenofocus>-</texturenofocus>
                 <visible>!Skin.HasSetting(noflowalbum)</visible>
-                <animation effect="fade" start="100" end="0" time="640">Hidden</animation>
+                <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
             </control>
             <control type="group" id="7003">
                 <posy>580</posy>
                 <animation type="WindowOpen" reversible="false">
-                    <effect type="zoom" start="150" end="100" center="960,540" time="240" tween="cubic" />
-                    <effect type="fade" end="100" time="240" />
+                    <effect type="zoom" start="150" end="100" center="960,540" time="0" tween="cubic" />
+                    <effect type="fade" end="100" time="0" />
                 </animation>
                 <animation type="WindowClose" reversible="false">
-                    <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
-                    <effect type="fade" start="100" end="0" time="240" delay="240" />
+                    <effect type="zoom" start="100" end="130" center="960,540" time="0" tween="cubic" easing="in" />
+                    <effect type="fade" start="100" end="0" time="0" delay="240" />
                 </animation>
                 <visible>!Control.IsVisible(7007) + !Control.IsVisible(7002) + Control.IsVisible(970)</visible>
                 <control type="group">
                     <posx>75</posx>
-                    <animation effect="slide" time="240" end="818" tween="cubic" easing="in">WindowClose</animation>
-                    <animation effect="slide" time="640" delay="240" end="0" start="818" tween="cubic">WindowOpen</animation>
+                    <animation effect="slide" time="0" end="818" tween="cubic" easing="in">WindowClose</animation>
+                    <animation effect="slide" time="0" delay="240" end="0" start="818" tween="cubic">WindowOpen</animation>
                     <animation effect="rotatey" center="-75" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                     <animation type="Conditional" condition="Skin.HasSetting(noflowalbum)">
-                        <effect type="rotatey" center="-75" end="65" time="640" tween="cubic" easing="inout" />
-                        <effect type="slide" end="-1192" time="640" tween="cubic" easing="inout" />
+                        <effect type="rotatey" center="-75" end="65" time="0" tween="cubic" easing="inout" />
+                        <effect type="slide" end="-1192" time="0" tween="cubic" easing="inout" />
                     </animation>
                     <include>MusicShowcaseItem-5</include>
                 </control>
                 <control type="group">
                     <posx>225</posx>
-                    <animation effect="slide" time="240" end="668" tween="cubic" easing="in">WindowClose</animation>
-                    <animation effect="slide" time="640" delay="240" end="0" start="668" tween="cubic">WindowOpen</animation>
+                    <animation effect="slide" time="0" end="668" tween="cubic" easing="in">WindowClose</animation>
+                    <animation effect="slide" time="0" delay="240" end="0" start="668" tween="cubic">WindowOpen</animation>
                     <animation effect="rotatey" center="75" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                     <animation type="Conditional" condition="Skin.HasSetting(noflowalbum)">
-                        <effect type="rotatey" center="75" end="65" time="640" tween="cubic" easing="inout" />
-                        <effect type="slide" end="-968" time="640" tween="cubic" easing="inout" />
+                        <effect type="rotatey" center="75" end="65" time="0" tween="cubic" easing="inout" />
+                        <effect type="slide" end="-968" time="0" tween="cubic" easing="inout" />
                     </animation>
                     <include>MusicShowcaseItem-4</include>
                 </control>
                 <control type="group">
                     <posx>375</posx>
-                    <animation effect="slide" time="240" end="518" tween="cubic" easing="in">WindowClose</animation>
-                    <animation effect="slide" time="640" delay="240" end="0" start="518" tween="cubic">WindowOpen</animation>
+                    <animation effect="slide" time="0" end="518" tween="cubic" easing="in">WindowClose</animation>
+                    <animation effect="slide" time="0" delay="240" end="0" start="518" tween="cubic">WindowOpen</animation>
                     <animation effect="rotatey" center="225" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                     <animation type="Conditional" condition="Skin.HasSetting(noflowalbum)">
-                        <effect type="rotatey" center="225" end="65" time="640" tween="cubic" easing="inout" />
-                        <effect type="slide" end="-742" time="640" tween="cubic" easing="inout" />
+                        <effect type="rotatey" center="225" end="65" time="0" tween="cubic" easing="inout" />
+                        <effect type="slide" end="-742" time="0" tween="cubic" easing="inout" />
                     </animation>
                     <include>MusicShowcaseItem-3</include>
                 </control>
                 <control type="group">
                     <posx>525</posx>
-                    <animation effect="slide" time="240" end="368" tween="cubic" easing="in">WindowClose</animation>
-                    <animation effect="slide" time="640" delay="240" end="0" start="368" tween="cubic">WindowOpen</animation>
+                    <animation effect="slide" time="0" end="368" tween="cubic" easing="in">WindowClose</animation>
+                    <animation effect="slide" time="0" delay="240" end="0" start="368" tween="cubic">WindowOpen</animation>
                     <animation effect="rotatey" center="375" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                     <animation type="Conditional" condition="Skin.HasSetting(noflowalbum)">
-                        <effect type="rotatey" center="375" end="65" time="640" tween="cubic" easing="inout" />
-                        <effect type="slide" end="-518" time="640" tween="cubic" easing="inout" />
+                        <effect type="rotatey" center="375" end="65" time="0" tween="cubic" easing="inout" />
+                        <effect type="slide" end="-518" time="0" tween="cubic" easing="inout" />
                     </animation>
                     <include>MusicShowcaseItem-2</include>
                 </control>
                 <control type="group">
                     <posx>675</posx>
-                    <animation effect="slide" time="240" end="218" tween="cubic" easing="in">WindowClose</animation>
-                    <animation effect="slide" time="640" delay="240" end="0" start="218" tween="cubic">WindowOpen</animation>
+                    <animation effect="slide" time="0" end="218" tween="cubic" easing="in">WindowClose</animation>
+                    <animation effect="slide" time="0" delay="240" end="0" start="218" tween="cubic">WindowOpen</animation>
                     <animation effect="rotatey" center="525" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                     <animation type="Conditional" condition="Skin.HasSetting(noflowalbum)">
-                        <effect type="rotatey" center="525" end="65" time="640" tween="cubic" easing="inout" />
-                        <effect type="slide" end="-292" time="640" tween="cubic" easing="inout" />
+                        <effect type="rotatey" center="525" end="65" time="0" tween="cubic" easing="inout" />
+                        <effect type="slide" end="-292" time="0" tween="cubic" easing="inout" />
                     </animation>
                     <include>MusicShowcaseItem-1</include>
                 </control>
                 <control type="group">
                     <posx>1440</posx>
-                    <animation effect="slide" time="240" end="-818" tween="cubic" easing="in">WindowClose</animation>
-                    <animation effect="slide" time="640" delay="240" end="0" start="-818" tween="cubic">WindowOpen</animation>
+                    <animation effect="slide" time="0" end="-818" tween="cubic" easing="in">WindowClose</animation>
+                    <animation effect="slide" time="0" delay="240" end="0" start="-818" tween="cubic">WindowOpen</animation>
                     <animation effect="rotatey" center="1995" start="65" end="65" time="0" condition="true">Conditional</animation>
                     <animation type="Conditional" condition="Skin.HasSetting(noflowalbum)">
-                        <effect type="rotatey" center="1995" end="-65" time="640" tween="cubic" easing="inout" />
-                        <effect type="slide" end="1192" time="640" tween="cubic" easing="inout" />
+                        <effect type="rotatey" center="1995" end="-65" time="0" tween="cubic" easing="inout" />
+                        <effect type="slide" end="1192" time="0" tween="cubic" easing="inout" />
                     </animation>
                     <include>MusicShowcaseItem5</include>
                 </control>
                 <control type="group">
                     <posx>1290</posx>
-                    <animation effect="slide" time="240" end="-668" tween="cubic" easing="in">WindowClose</animation>
-                    <animation effect="slide" time="640" delay="240" end="0" start="-668" tween="cubic">WindowOpen</animation>
+                    <animation effect="slide" time="0" end="-668" tween="cubic" easing="in">WindowClose</animation>
+                    <animation effect="slide" time="0" delay="240" end="0" start="-668" tween="cubic">WindowOpen</animation>
                     <animation effect="rotatey" center="1845" start="65" end="65" time="0" condition="true">Conditional</animation>
                     <animation type="Conditional" condition="Skin.HasSetting(noflowalbum)">
-                        <effect type="rotatey" center="1845" end="-65" time="640" tween="cubic" easing="inout" />
-                        <effect type="slide" end="968" time="640" tween="cubic" easing="inout" />
+                        <effect type="rotatey" center="1845" end="-65" time="0" tween="cubic" easing="inout" />
+                        <effect type="slide" end="968" time="0" tween="cubic" easing="inout" />
                     </animation>
                     <include>MusicShowcaseItem4</include>
                 </control>
                 <control type="group">
                     <posx>1140</posx>
-                    <animation effect="slide" time="240" end="-518" tween="cubic" easing="in">WindowClose</animation>
-                    <animation effect="slide" time="640" delay="240" end="0" start="-518" tween="cubic">WindowOpen</animation>
+                    <animation effect="slide" time="0" end="-518" tween="cubic" easing="in">WindowClose</animation>
+                    <animation effect="slide" time="0" delay="240" end="0" start="-518" tween="cubic">WindowOpen</animation>
                     <animation effect="rotatey" center="1695" start="65" end="65" time="0" condition="true">Conditional</animation>
                     <animation type="Conditional" condition="Skin.HasSetting(noflowalbum)">
-                        <effect type="rotatey" center="1695" end="-65" time="640" tween="cubic" easing="inout" />
-                        <effect type="slide" end="742" time="640" tween="cubic" easing="inout" />
+                        <effect type="rotatey" center="1695" end="-65" time="0" tween="cubic" easing="inout" />
+                        <effect type="slide" end="742" time="0" tween="cubic" easing="inout" />
                     </animation>
                     <include>MusicShowcaseItem3</include>
                 </control>
                 <control type="group">
                     <posx>990</posx>
-                    <animation effect="slide" time="240" end="-368" tween="cubic" easing="in">WindowClose</animation>
-                    <animation effect="slide" time="640" delay="240" end="0" start="-368" tween="cubic">WindowOpen</animation>
+                    <animation effect="slide" time="0" end="-368" tween="cubic" easing="in">WindowClose</animation>
+                    <animation effect="slide" time="0" delay="240" end="0" start="-368" tween="cubic">WindowOpen</animation>
                     <animation effect="rotatey" center="1545" start="65" end="65" time="0" condition="true">Conditional</animation>
                     <animation type="Conditional" condition="Skin.HasSetting(noflowalbum)">
-                        <effect type="rotatey" center="1545" end="-65" time="640" tween="cubic" easing="inout" />
-                        <effect type="slide" end="518" time="640" tween="cubic" easing="inout" />
+                        <effect type="rotatey" center="1545" end="-65" time="0" tween="cubic" easing="inout" />
+                        <effect type="slide" end="518" time="0" tween="cubic" easing="inout" />
                     </animation>
                     <include>MusicShowcaseItem2</include>
                 </control>
                 <control type="group">
                     <posx>840</posx>
-                    <animation effect="slide" time="240" end="-218" tween="cubic" easing="in">WindowClose</animation>
-                    <animation effect="slide" time="640" delay="240" end="0" start="-218" tween="cubic">WindowOpen</animation>
+                    <animation effect="slide" time="0" end="-218" tween="cubic" easing="in">WindowClose</animation>
+                    <animation effect="slide" time="0" delay="240" end="0" start="-218" tween="cubic">WindowOpen</animation>
                     <animation effect="rotatey" center="1395" start="65" end="65" time="0" condition="true">Conditional</animation>
                     <animation type="Conditional" condition="Skin.HasSetting(noflowalbum)">
-                        <effect type="rotatey" center="1395" end="-65" time="640" tween="cubic" easing="inout" />
-                        <effect type="slide" end="292" time="640" tween="cubic" easing="inout" />
+                        <effect type="rotatey" center="1395" end="-65" time="0" tween="cubic" easing="inout" />
+                        <effect type="slide" end="292" time="0" tween="cubic" easing="inout" />
                     </animation>
                     <include>MusicShowcaseItem1</include>
                 </control>
@@ -389,14 +389,14 @@
         <control type="button" id="1970">
             <include>HiddenObject</include>
             <visible>Control.IsVisible(509) + !Container.OnNext + !Container.OnPrevious</visible>
-            <animation effect="fade" end="100" time="120" delay="1600">Visible</animation>
+            <animation effect="fade" end="100" time="0" delay="1600">Visible</animation>
         </control>
         <control type="group">
             <visible>Skin.HasSetting(showcasecdartmusic) + Control.IsVisible(509)</visible>
             <include>Animation_VisibleChange400</include>
             <animation type="WindowClose" reversible="false">
-                <effect type="fade" start="100" end="0" time="240" />
-                <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
+                <effect type="fade" start="100" end="0" time="0" />
+                <effect type="zoom" start="100" end="130" center="960,540" time="0" tween="cubic" easing="in" />
             </animation>
             <control type="image">
                 <posx>2570</posx>
@@ -405,14 +405,14 @@
                 <height>280</height>
                 <aspectratio>keep</aspectratio>
                 <texture background="true">$VAR[cdARTVar]</texture>
-                <fadetime>3700</fadetime>
+                <fadetime>50</fadetime>
                 <animation type="Conditional" condition="Control.IsVisible(1970)" reversible="true">
-                    <effect type="slide" start="0,0" end="-1400,0" delay="1600" time="1840" tween="cubic" easing="inout" />
-                    <effect type="rotate" start="0" center="2710,832" end="720" delay="1600" time="1840" tween="cubic" easing="inout" />
+                    <effect type="slide" start="0,0" end="-1400,0" delay="1600" time="0" tween="cubic" easing="inout" />
+                    <effect type="rotate" start="0" center="2710,832" end="720" delay="1600" time="0" tween="cubic" easing="inout" />
                 </animation>
                 <animation type="WindowOpen" condition="Control.IsVisible(1970)" reversible="true">
-                    <effect type="slide" start="1400,0" end="0,0" delay="1600" time="1840" tween="cubic" easing="inout" />
-                    <effect type="rotate" start="0" center="2710,832" end="720" delay="1600" time="1840" tween="cubic" easing="inout" />
+                    <effect type="slide" start="1400,0" end="0,0" delay="1600" time="0" tween="cubic" easing="inout" />
+                    <effect type="rotate" start="0" center="2710,832" end="720" delay="1600" time="0" tween="cubic" easing="inout" />
                 </animation>
             </control>
             <control type="image">
@@ -422,15 +422,15 @@
                 <height>280</height>
                 <aspectratio>keep</aspectratio>
                 <texture background="true" flipy="true">$VAR[cdARTVar]</texture>
-                <fadetime>3700</fadetime>
+                <fadetime>50</fadetime>
                 <colordiffuse>22FFFFFF</colordiffuse>
                 <animation type="Conditional" condition="Control.IsVisible(1970)" reversible="true">
-                    <effect type="slide" start="0,0" end="-1400,0" delay="1600" time="1840" tween="cubic" easing="inout" />
-                    <effect type="rotate" start="0" center="2710,1112" end="-720" delay="1600" time="1840" tween="cubic" easing="inout" />
+                    <effect type="slide" start="0,0" end="-1400,0" delay="1600" time="0" tween="cubic" easing="inout" />
+                    <effect type="rotate" start="0" center="2710,1112" end="-720" delay="1600" time="0" tween="cubic" easing="inout" />
                 </animation>
                 <animation type="WindowOpen" condition="Control.IsVisible(1970)" reversible="true">
-                    <effect type="slide" start="1400,0" end="0,0" delay="1600" time="1840" tween="cubic" easing="inout" />
-                    <effect type="rotate" start="0" center="2710,1112" end="-720" delay="1600" time="1840" tween="cubic" easing="inout" />
+                    <effect type="slide" start="1400,0" end="0,0" delay="1600" time="0" tween="cubic" easing="inout" />
+                    <effect type="rotate" start="0" center="2710,1112" end="-720" delay="1600" time="0" tween="cubic" easing="inout" />
                 </animation>
             </control>
         </control>
@@ -694,7 +694,7 @@
         <height>342</height>
         <aspectratio scalediffuse="false">scale</aspectratio>
         <texture background="true">thumbs/boxes/cd_glass_reflect.png</texture>
-        <fadetime>0</fadetime>
+        <fadetime>50</fadetime>
         <colordiffuse>d1FFFFFF</colordiffuse>
         <bordertexture>thumbs/boxes/cd_shadow_reflect.png</bordertexture>
         <animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
@@ -722,7 +722,7 @@
         <width>383</width>
         <height>383</height>
         <aspectratio scalediffuse="false">scale</aspectratio>
-        <fadetime>0</fadetime>
+        <fadetime>50</fadetime>
         <bordersize>16</bordersize>
         <bordertexture border="16">thumbs/cd_shadow.png</bordertexture>
     </include>
@@ -741,7 +741,7 @@
     </include>
     <include name="MusicShowcaseThumbReflection">
         <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-        <fadetime>0</fadetime>
+        <fadetime>50</fadetime>
         <include>MusicShowcaseThumbReflectionDimensions</include>
         <colordiffuse>d1FFFFFF</colordiffuse>
         <animation effect="slide" start="0,00" end="0,10" time="0" condition="!Skin.HasSetting(usecasescd) + Container.Content(albums)">Conditional</animation>
@@ -749,7 +749,7 @@
     </include>
     <include name="MusicShowcaseThumbReflectionMain">
         <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-        <fadetime>0</fadetime>
+        <fadetime>50</fadetime>
         <include>MusicShowcaseThumbReflectionDimensions</include>
         <animation effect="slide" start="0,00" end="0,10" time="0" condition="!Skin.HasSetting(usecasescd) + Container.Content(albums)">Conditional</animation>
         <colordiffuse>52FFFFFF</colordiffuse>

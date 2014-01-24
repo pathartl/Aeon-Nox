@@ -62,7 +62,7 @@
         <width>40</width>
         <height>40</height>
         <aspectratio>keep</aspectratio>
-        <fadetime>200</fadetime>
+        <fadetime>50</fadetime>
     </include>
     <include name="WeatherWorldCityNameCommonValues">
         <posx>20</posx>

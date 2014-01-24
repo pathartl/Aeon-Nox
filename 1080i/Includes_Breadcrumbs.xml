@@ -45,9 +45,9 @@
             <colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
             <include>Animation_VisibleChange400</include>
             <visible>Skin.HasSetting(ClassicTopBar) + Skin.HasSetting(breadcrumbslabel)</visible>
-            <animation effect="slide" start="-750" end="0" time="240">VisibleChange</animation>
-            <animation effect="slide" end="140" time="240" condition="Container.Content(songs) + ![Player.HasMedia + Skin.HasSetting(GlobalNowPlaying)]">Conditional</animation>
-            <animation effect="slide" end="80" time="240" condition="Player.HasMedia + Skin.HasSetting(GlobalNowPlaying)">Conditional</animation>
+            <animation effect="slide" start="-750" end="0" time="0">VisibleChange</animation>
+            <animation effect="slide" end="140" time="0" condition="Container.Content(songs) + ![Player.HasMedia + Skin.HasSetting(GlobalNowPlaying)]">Conditional</animation>
+            <animation effect="slide" end="80" time="0" condition="Player.HasMedia + Skin.HasSetting(GlobalNowPlaying)">Conditional</animation>
         </control>
     </include>
     <include name="BreadcrumbsContent">
@@ -65,9 +65,9 @@
                 <posy>-2</posy>
                 <texture>defaulticons/DefaultFolderBack.png</texture>
                 <animation effect="slide" end="-9,4" center="auto" time="0" condition="true">Conditional</animation>
-                <animation effect="rotate" end="-90" center="auto" delay="240" time="640" condition="Window.IsActive(musicinformation) | Control.HasFocus(7000) | Control.IsVisible(508) | Control.IsVisible(501) | Control.IsVisible(503) | Control.IsVisible(510) | Control.IsVisible(57) | Control.IsVisible(516) | Control.IsVisible(509) | [Control.IsVisible(500) + !Skin.HasSetting(WallVertical)]">Conditional</animation>
-                <animation effect="rotate" end="-180" center="auto" delay="240" time="640" condition="ControlGroup(9000).HasFocus">Conditional</animation>
-                <animation effect="rotate" start="-90" end="180" center="auto" delay="240" time="640" condition="Control.IsVisible(503) + [Skin.HasSetting(landscapeonelogo) + Container.Content(movies)]">Conditional</animation>
+                <animation effect="rotate" end="-90" center="auto" delay="240" time="0" condition="Window.IsActive(musicinformation) | Control.HasFocus(7000) | Control.IsVisible(508) | Control.IsVisible(501) | Control.IsVisible(503) | Control.IsVisible(510) | Control.IsVisible(57) | Control.IsVisible(516) | Control.IsVisible(509) | [Control.IsVisible(500) + !Skin.HasSetting(WallVertical)]">Conditional</animation>
+                <animation effect="rotate" end="-180" center="auto" delay="240" time="0" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+                <animation effect="rotate" start="-90" end="180" center="auto" delay="240" time="0" condition="Control.IsVisible(503) + [Skin.HasSetting(landscapeonelogo) + Container.Content(movies)]">Conditional</animation>
                 <colordiffuse>$VAR[TitleColorVar]</colordiffuse>
                 <include>Animation_VisibleChange400</include>
                 <visible>Skin.HasSetting(TopBarToolTip)</visible>
@@ -107,7 +107,7 @@
                 <width>30</width>
                 <height>24</height>
                 <imagepath>VisualEqu/</imagepath>
-                <fadetime>10</fadetime>
+                <fadetime>50</fadetime>
                 <timeperimage>100</timeperimage>
                 <randomize>true</randomize>
                 <include condition="![Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(systeminfo) | Window.IsActive(settings)]">Animation_WindowFade200</include>
@@ -199,7 +199,7 @@
                 <include>HiddenObject</include>
                 <visible>![Container.Scrolling | Container.OnScrollNext | Container.OnScrollPrevious]</visible>
                 <animation effect="fade" end="100" time="0">Visible</animation>
-                <animation effect="fade" time="400">Hidden</animation>
+                <animation effect="fade" time="0">Hidden</animation>
             </control>
             <!--right widget -->
             <control type="image">
@@ -207,14 +207,14 @@
                 <width>794</width>
                 <height>87</height>
                 <texture flipy="true">home/timepanel_mid.png</texture>
-                <animation effect="slide" end="145" time="320" condition="!Skin.HasSetting(breadcrumbsweather)">Conditional</animation>
+                <animation effect="slide" end="145" time="0" condition="!Skin.HasSetting(breadcrumbsweather)">Conditional</animation>
                 <colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
                 <include>Animation_VisibleChange400</include>
                 <visible>Skin.HasSetting(ClassicTopBar)</visible>
-                <animation effect="slide" start="750" end="0" time="240">VisibleChange</animation>
+                <animation effect="slide" start="750" end="0" time="0">VisibleChange</animation>
             </control>
             <control type="group">
-                <animation effect="slide" start="0,-300" end="0" time="540" tween="cubic">VisibleChange</animation>
+                <animation effect="slide" start="0,-300" end="0" time="0" tween="cubic">VisibleChange</animation>
                 <visible>!IsEmpty(Container.NumItems)</visible>
                 <visible>Control.HasFocus(60) | Control.HasFocus(61) | Control.HasFocus(62) | Control.HasFocus(71) | Control.HasFocus(70) | !Control.IsVisible(4051) | [!Skin.HasSetting(FadedTopBar) + !Skin.HasSetting(ClassicTopBar)]</visible>
                 <control type="image">
@@ -268,7 +268,7 @@
                         <textcolor>time</textcolor>
                         <scroll>false</scroll>
                         <include condition="![Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(systeminfo) | Window.IsActive(settings)]">Animation_WindowFade200</include>
-                        <animation effect="fade" start="100" end="0" time="400" delay="400" condition="Control.IsVisible(4051) + !Skin.HasSetting(ClassicTopBar)">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="0" delay="400" condition="Control.IsVisible(4051) + !Skin.HasSetting(ClassicTopBar)">Conditional</animation>
                         <visible>[SubString(Container.SortMethod,$LOCALIZE[551]) | SubString(Container.SortMethod,$LOCALIZE[561]) | SubString(Container.SortMethod,$LOCALIZE[558]) | SubString(Container.SortMethod,$LOCALIZE[557]) | SubString(Container.SortMethod,$LOCALIZE[556])]</visible>
                     </control>
                 </control>

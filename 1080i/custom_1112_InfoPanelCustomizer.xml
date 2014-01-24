@@ -95,8 +95,8 @@
                 <ondown>451</ondown>
                 <onright>1100</onright>
                 <animation type="WindowClose">
-                    <effect type="fade" start="100" end="0" time="320" />
-                    <effect type="zoom" end="180,100" time="320" tween="cubic" />
+                    <effect type="fade" start="100" end="0" time="0" />
+                    <effect type="zoom" end="180,100" time="0" tween="cubic" />
                 </animation>
                 <itemlayout width="250" height="150">
                     <control type="image">

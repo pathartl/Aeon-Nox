@@ -6,14 +6,14 @@
             <posy>195</posy>
             <visible>!IsEmpty(ListItem.Artist)</visible>
             <visible>[Container.Content(songs) + !Skin.HasSetting(cdartfliplist)] | [Container.Content(albums) + !Skin.HasSetting(albumcdartfliplist)]</visible>
-            <animation effect="slide" time="560" start="0,225" end="0,0" tween="cubic">VisibleChange</animation>
-            <animation effect="slide" time="560" start="0,225" end="0,0" tween="cubic">WindowOpen</animation>
-            <animation effect="slide" time="240" end="0,225" tween="cubic">WindowClose</animation>
+            <animation effect="slide" time="0" start="0,225" end="0,0" tween="cubic">VisibleChange</animation>
+            <animation effect="slide" time="0" start="0,225" end="0,0" tween="cubic">WindowOpen</animation>
+            <animation effect="slide" time="0" end="0,225" tween="cubic">WindowClose</animation>
             <control type="image">
                 <width>495</width>
                 <height>495</height>
                 <aspectratio aligny="bottom" align="center">keep</aspectratio>
-                <fadetime>400</fadetime>
+                <fadetime>50</fadetime>
                 <include condition="!Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)">cdartlibrary</include>
                 <include condition="Skin.HasSetting(vinylart)">vinylartlibrary</include>
                 <include condition="Skin.HasSetting(blurayart)">blurayartlibrary</include>
@@ -25,18 +25,18 @@
         <control type="group" id="40002">
             <posx>1296</posx>
             <posy>165</posy>
-            <animation effect="slide" end="90,0" time="240" tween="cubic" easing="inout" condition="Skin.HasSetting(listcdart) + Container.Content(movies)">Conditional</animation>
+            <animation effect="slide" end="90,0" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(listcdart) + Container.Content(movies)">Conditional</animation>
             <animation type="Conditional" condition="Control.HasFocus(5001)" reversible="false">
-                <effect type="rotatey" center="1530" end="-90" time="360" tween="cubic" easing="in" />
+                <effect type="rotatey" center="1530" end="-90" time="0" tween="cubic" easing="in" />
                 <effect type="rotatey" center="1530" start="-90" end="90" time="0" delay="360" />
                 <effect type="fade" start="100" end="0" time="0" delay="360" />
-                <effect type="rotatey" center="1530" start="90" end="0" time="360" delay="360" tween="cubic" />
+                <effect type="rotatey" center="1530" start="90" end="0" time="0" delay="360" tween="cubic" />
             </animation>
             <animation type="Conditional" condition="!Control.HasFocus(5001)" reversible="false">
                 <effect type="rotatey" center="1530" end="90" time="0" tween="cubic" easing="in" delay="360" />
                 <effect type="rotatey" center="1530" start="90" end="-90" time="0" delay="360" />
-                <effect type="fade" end="100" time="160" delay="360" />
-                <effect type="rotatey" center="1530" start="-90" end="0" time="360" delay="360" tween="cubic" />
+                <effect type="fade" end="100" time="0" delay="360" />
+                <effect type="rotatey" center="1530" start="-90" end="0" time="0" delay="360" tween="cubic" />
             </animation>
             <include>Animation_ListSlideRight</include>
             <visible>[Skin.HasSetting(roundedcovers) + !Container.Content(episodes)] | [Skin.HasSetting(listshowposter) + Container.Content(episodes)]</visible>
@@ -49,7 +49,7 @@
                 <aspectratio align="right">keep</aspectratio>
                 <texture background="true">$VAR[cdArtVar]</texture>
                 <visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7/) + !Control.HasFocus(5001)</visible>
-                <animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
+                <animation effect="slide" end="0,0" start="210,0" time="0" tween="cubic" easing="inout">VisibleChange</animation>
                 <!--                             <animation effect="rotate" end="-360" center="auto" time="8000" delay="1000" loop="true" reversible="false" tween="cubic" easing="inout" condition="true">Conditional</animation>
  -->
                 <animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
@@ -60,7 +60,7 @@
             <control type="group">
                 <visible>skin.hassetting(backendmode)</visible>
                     <visible>Skin.HasSetting(listcdart) + [Container.Content(sets) | SubString(ListItem.Path,videodb://1/7/)] + !Control.HasFocus(5001)</visible>
-                    <animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
+                    <animation effect="slide" end="0,0" start="210,0" time="0" tween="cubic" easing="inout">VisibleChange</animation>
                 <control type="image">
                     <posx>-211</posx>
                     <posy>15</posy>
@@ -160,13 +160,13 @@
             <posx>1370</posx>
             <posy>220</posy>
             <animation type="Visible" reversible="false">
-                <effect type="rotatey" center="1548" end="-90" time="360" tween="cubic" easing="in" />
+                <effect type="rotatey" center="1548" end="-90" time="0" tween="cubic" easing="in" />
                 <effect type="rotatey" center="1548" start="-90" end="90" time="0" delay="360" />
                 <effect type="fade" end="100" time="0" delay="360" />
-                <effect type="rotatey" center="1548" start="90" end="0" time="360" delay="360" tween="cubic" />
+                <effect type="rotatey" center="1548" start="90" end="0" time="0" delay="360" tween="cubic" />
             </animation>
             <animation type="Hidden" reversible="false">
-                <effect type="rotatey" center="1548" end="90" time="360" tween="cubic" easing="in" />
+                <effect type="rotatey" center="1548" end="90" time="0" tween="cubic" easing="in" />
                 <effect type="rotatey" center="1548" start="90" end="-90" time="0" delay="360" />
                 <effect type="fade" start="100" end="0" time="0" delay="360" />
                 <effect type="rotatey" center="1548" start="-90" end="0" time="0" delay="360" tween="cubic" />
@@ -263,7 +263,7 @@
                     <height>780</height>
                     <aspectratio aligny="bottom">keep</aspectratio>
                     <texture background="true">$INFO[ListItem.Icon]</texture>
-                    <fadetime>0</fadetime>
+                    <fadetime>50</fadetime>
                     <colordiffuse>FF000000</colordiffuse>
                     <bordersize>7</bordersize>
                 </control>
@@ -310,7 +310,7 @@
                     <height>510</height>
                     <aspectratio scalediffuse="false">scale</aspectratio>
                     <texture background="true" diffuse="thumbs/cdcover_mask.png">common/bgcolor.png</texture>
-                    <fadetime>0</fadetime>
+                    <fadetime>50</fadetime>
                 </control>
                 <control type="image">
                     <posy>255</posy>
@@ -343,7 +343,7 @@
         </control>
         <control type="group">
             <posy>-20</posy>
-            <animation effect="slide" end="-40,0" time="240" tween="cubic" easing="inout" condition="Skin.HasSetting(listcdart) + Container.Content(movies)">Conditional</animation>
+            <animation effect="slide" end="-40,0" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(listcdart) + Container.Content(movies)">Conditional</animation>
             <visible>Control.IsVisible(50)</visible>
             <include>Animation_ListSlideLeft</include>
             <include>ListPanel</include>
@@ -431,7 +431,7 @@
                 <onright>5001</onright>
                 <viewtype label="535">list</viewtype>
                 <pagecontrol>62</pagecontrol>
-                <scrolltime tween="quadratic">200</scrolltime>
+                <scrolltime tween="quadratic">0</scrolltime>
                 <itemlayout height="100" condition="!Skin.HasSetting(slimlist) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]">
                     <control type="image">
                         <posy>40</posy>
@@ -541,7 +541,7 @@
                         <height>100</height>
                         <texture border="8">views/tripanel/listselect_fo.png</texture>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(50)">Conditional</animation>
+                        <animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="0" condition="!Control.HasFocus(50)">Conditional</animation>
                     </control>
                     <control type="image">
                         <posx>22</posx>
@@ -692,7 +692,7 @@
                         <height>100</height>
                         <texture border="8">views/tripanel/listselect_fo.png</texture>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(50)">Conditional</animation>
+                        <animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="0" condition="!Control.HasFocus(50)">Conditional</animation>
                     </control>
                     <control type="label">
                         <posx>158</posx>
@@ -805,7 +805,7 @@
                         <height>61.5</height>
                         <texture border="8">views/tripanel/listselect_fo.png</texture>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(50)">Conditional</animation>
+                        <animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="0" condition="!Control.HasFocus(50)">Conditional</animation>
                     </control>
                     <control type="label">
                         <posx>143</posx>

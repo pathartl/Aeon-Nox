@@ -13,7 +13,7 @@
             <control type="image">
                 <texture>common/bgcolor.png</texture>
                 <include>FullscreenDimensions</include>
-                <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+                <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
                 <visible>!Skin.HasSetting(altoverlayinfowall)</visible>
                 <include>Animation_WindowFade200</include>
             </control>
@@ -27,7 +27,7 @@
                 <width>1400</width>
                 <height>1080</height>
                 <viewtype label="20359">list</viewtype>
-                <scrolltime>100</scrolltime>
+                <scrolltime>0</scrolltime>
                 <orientation>vertical</orientation>
                 <movement>3</movement>
                 <focusposition>4</focusposition>
@@ -39,19 +39,19 @@
                 <pagecontrol>61</pagecontrol>
                 <visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Window.IsActive(musiclibrary)</visible>
                 <visible>![!IsEmpty(Skin.String(DisableEpisodeVL)) + Window.IsActive(videos)]</visible>
-                <animation effect="slide" end="-40,0" time="240" tween="cubic" easing="inout" condition="Control.HasFocus(61)">Conditional</animation>
-                <animation effect="slide" end="-40,0" time="240" tween="cubic" easing="inout" condition="Container.Content(episodes)">Conditional</animation>
+                <animation effect="slide" end="-40,0" time="0" tween="cubic" easing="inout" condition="Control.HasFocus(61)">Conditional</animation>
+                <animation effect="slide" end="-40,0" time="0" tween="cubic" easing="inout" condition="Container.Content(episodes)">Conditional</animation>
                 <animation effect="slide" end="0,65" time="0" condition="!Skin.HasSetting(ClassicTopBar) + !Skin.HasSetting(disabletopbar)">Conditional</animation>
-                <animation effect="slide" end="0,15" time="160" condition="Container(514).Row(0)">Conditional</animation>
-                <animation effect="slide" end="0,8" time="160" condition="Container(514).Row(1)">Conditional</animation>
-                <animation effect="slide" end="0,0" time="160" condition="Container(514).Row(2)">Conditional</animation>
-                <animation effect="slide" end="0,-8" time="160" condition="Container(514).Row(3)">Conditional</animation>
-                <animation effect="slide" end="0,-15" time="160" condition="Container(514).Row(4)">Conditional</animation>
-                <animation effect="slide" end="0,-22" time="160" condition="Container(514).Row(5)">Conditional</animation>
-                <animation effect="slide" end="0,-29" time="160" condition="Container(514).Row(6)">Conditional</animation>
-                <animation effect="slide" end="0,-29" time="160" condition="Container(514).Row(6) + [Skin.HasSetting(episodebanner) | Skin.HasSetting(episodelogo)] + Container.Content(tvshows)">Conditional</animation>
-                <animation effect="slide" end="0,-36" time="160" condition="Container(514).Row(7)">Conditional</animation>
-                <animation effect="slide" end="0,-43" time="160" condition="Container(514).Row(8)">Conditional</animation>
+                <animation effect="slide" end="0,15" time="0" condition="Container(514).Row(0)">Conditional</animation>
+                <animation effect="slide" end="0,8" time="0" condition="Container(514).Row(1)">Conditional</animation>
+                <animation effect="slide" end="0,0" time="0" condition="Container(514).Row(2)">Conditional</animation>
+                <animation effect="slide" end="0,-8" time="0" condition="Container(514).Row(3)">Conditional</animation>
+                <animation effect="slide" end="0,-15" time="0" condition="Container(514).Row(4)">Conditional</animation>
+                <animation effect="slide" end="0,-22" time="0" condition="Container(514).Row(5)">Conditional</animation>
+                <animation effect="slide" end="0,-29" time="0" condition="Container(514).Row(6)">Conditional</animation>
+                <animation effect="slide" end="0,-29" time="0" condition="Container(514).Row(6) + [Skin.HasSetting(episodebanner) | Skin.HasSetting(episodelogo)] + Container.Content(tvshows)">Conditional</animation>
+                <animation effect="slide" end="0,-36" time="0" condition="Container(514).Row(7)">Conditional</animation>
+                <animation effect="slide" end="0,-43" time="0" condition="Container(514).Row(8)">Conditional</animation>
                 <include condition="Window.IsActive(musiclibrary)">EpisodeViewtypeMusicLayouts</include>
                 <include condition="!Window.IsActive(musiclibrary)">EpisodeViewtypeVideoLayouts</include>
             </control>
@@ -60,8 +60,8 @@
                 <posy>100</posy>
                 <width>46</width>
                 <height>910</height>
-                <animation effect="zoom" start="70" end="100" center="auto" tween="back" time="320" condition="Control.HasFocus(61)">Conditional</animation>
-                <animation effect="fade" start="100" end="0" time="240" condition="!Control.HasFocus(61)">Conditional</animation>
+                <animation effect="zoom" start="70" end="100" center="auto" tween="back" time="0" condition="Control.HasFocus(61)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(61)">Conditional</animation>
                 <texturesliderbackground>views/scrollbarbacklist.png</texturesliderbackground>
                 <include>Animation_VerticalScrollBar</include>
                 <orientation>vertical</orientation>
@@ -75,10 +75,10 @@
                 <height>142</height>
                 <aspectratio>keep</aspectratio>
                 <texture background="true">$VAR[LogoVar]</texture>
-                <fadetime>400</fadetime>
+                <fadetime>50</fadetime>
                 <visible>![Skin.HasSetting(episodelogo) + Container.Content(tvshows)]</visible>
                 <animation type="Conditional" condition="Window.IsActive(musiclibrary)">
-                    <effect type="zoom" end="130" center="auto" time="320" tween="cubic" easing="inout" />
+                    <effect type="zoom" end="130" center="auto" time="0" tween="cubic" easing="inout" />
                     <effect type="slide" end="0,35" time="6000" />
                 </animation>
             </control>
@@ -160,7 +160,7 @@
             <control type="group">
                 <posx>150</posx>
                 <animation type="Conditional" reversible="false" condition="Control.HasFocus(514) + [!Container(514).OnNext + !Container(514).OnPrevious]">
-                    <effect type="fade" end="100" time="160" />
+                    <effect type="fade" end="100" time="0" />
                 </animation>
                 <control type="label">
                     <posx>1175</posx>
@@ -251,12 +251,12 @@
                 <height>42</height>
                 <texture>$VAR[WatchedIconVar]</texture>
                 <animation type="Conditional" condition="Container.Content(episodes)">
-                    <!--                     <effect type="fade" end="15" time="400" easing="in" tween="cubic" />
+                    <!--                     <effect type="fade" end="15" time="0" easing="in" tween="cubic" />
  -->
                     <effect type="slide" end="46,2" time="0" easing="in" tween="cubic" />
                 </animation>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                <animation effect="slide" end="0,-20" time="240" tween="cubic" easing="inout" condition="Container.Content(seasons)">Conditional</animation>
+                <animation effect="slide" end="0,-20" time="0" tween="cubic" easing="inout" condition="Container.Content(seasons)">Conditional</animation>
             </control>
             <control type="label">
                 <posx>1312</posx>
@@ -311,7 +311,7 @@
                     <height>105</height>
                     <aspectratio scalediffuse="false">scale</aspectratio>
                     <texture diffuse="thumbs/banner_mask.png">common/bgcolor.png</texture>
-                    <animation effect="fade" start="100" end="50" time="40" condition="true">Conditional</animation>
+                    <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                 </control>
                 <control type="image">
                     <posx>1255</posx>
@@ -337,7 +337,7 @@
                     <height>132</height>
                     <aspectratio>keep</aspectratio>
                     <texture background="true">$VAR[LogoVarList]</texture>
-                    <fadetime>400</fadetime>
+                    <fadetime>50</fadetime>
                 </control>
                 <control type="group">
                     <visible>IsEmpty(ListItem.Art(clearlogo))</visible>
@@ -378,7 +378,7 @@
                     <height>225</height>
                     <aspectratio scalediffuse="false">scale</aspectratio>
                     <texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="DefaultVideoBigPoster.png">$VAR[ListPosterVar]</texture>
-                    <fadetime>200</fadetime>
+                    <fadetime>50</fadetime>
                 </control>
                 <control type="image">
                     <posx>-11.5</posx>
@@ -408,7 +408,7 @@
                 <posy>-15</posy>
                 <animation effect="slide" end="220,0" time="0" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">Conditional</animation>
                 <animation type="Conditional" reversible="false" condition="Control.HasFocus(514) + [!Container(514).OnNext + !Container(514).OnPrevious]">
-                    <effect type="fade" end="100" time="160" />
+                    <effect type="fade" end="100" time="0" />
                 </animation>
                 <control type="label">
                     <posx>838</posx>
@@ -480,7 +480,7 @@
             <control type="group">
                 <posx>50</posx>
                 <animation type="Conditional" reversible="false" condition="Control.HasFocus(514) + [!Container(514).OnNext + !Container(514).OnPrevious]">
-                    <effect type="fade" end="100" time="160" />
+                    <effect type="fade" end="100" time="0" />
                 </animation>
                 <control type="label">
                     <posx>838</posx>

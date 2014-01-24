@@ -65,7 +65,7 @@
                 <onup>11</onup>
                 <ondown>11</ondown>
                 <pagecontrol>-</pagecontrol>
-                <scrolltime tween="quadratic">200</scrolltime>
+                <scrolltime tween="quadratic">0</scrolltime>
                 <itemlayout height="113" width="735">
                     <control type="image">
                         <posx>10</posx>
@@ -148,7 +148,7 @@
                         <width>35</width>
                         <height>35</height>
                         <texture>pvr/PVR-IsRecording.png</texture>
-                        <animation effect="fade" start="100" end="40" time="960" pulse="true" condition="true">conditional</animation>
+                        <animation effect="fade" start="100" end="40" time="0" pulse="true" condition="true">conditional</animation>
                         <visible>ListItem.IsRecording</visible>
                     </control>
                 </itemlayout>
@@ -234,7 +234,7 @@
                         <width>35</width>
                         <height>35</height>
                         <texture>pvr/PVR-IsRecording.png</texture>
-                        <animation effect="fade" start="100" end="40" time="960" pulse="true" condition="true">conditional</animation>
+                        <animation effect="fade" start="100" end="40" time="0" pulse="true" condition="true">conditional</animation>
                         <visible>ListItem.IsRecording</visible>
                     </control>
                 </focusedlayout>

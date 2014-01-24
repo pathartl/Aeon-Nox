@@ -3,13 +3,13 @@
     <allowoverlay>no</allowoverlay>
     <controls>
         <control type="group">
-            <animation effect="fade" time="200">WindowOpen</animation>
-            <animation effect="fade" time="200">WindowClose</animation>
+            <animation effect="fade" time="0">WindowOpen</animation>
+            <animation effect="fade" time="0">WindowClose</animation>
             <control type="group">
                 <control type="multiimage">
                     <aspectratio>scale</aspectratio>
                     <imagepath background="true" fallback="special://skin/backgrounds/tvguide/">$VAR[TVGuideInfoFanart]</imagepath>
-                    <fadetime>500</fadetime>
+                    <fadetime>50</fadetime>
                     <include>FullscreenDimensions</include>
                     <include>Animation_VisibleChange400</include>
                 </control>
@@ -30,9 +30,9 @@
                 <width>1920</width>
                 <height>1080</height>
                 <texture>common/bgcolor.png</texture>
-                <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
-                <animation effect="fade" end="100" time="440" delay="160">Visible</animation>
-                <animation effect="fade" start="100" end="0" time="80">Hidden</animation>
+                <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
+                <animation effect="fade" end="100" time="0" delay="160">Visible</animation>
+                <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
                 <visible>Skin.HasSetting(darkinfopane)</visible>
             </control>
             <control type="image">
@@ -71,8 +71,8 @@
                 <itemgap>10</itemgap>
                 <orientation>horizontal</orientation>
                 <visible>!Skin.HasSetting(ClassicTopBar)</visible>
-                <animation effect="fade" time="320" delay="320">Visible</animation>
-                <animation effect="fade" time="320">Hidden</animation>
+                <animation effect="fade" time="0" delay="320">Visible</animation>
+                <animation effect="fade" time="0">Hidden</animation>
                 <control type="image">
                     <width>34</width>
                     <height>42</height>
@@ -94,7 +94,7 @@
         <control type="group" id="9000">
             <visible>!Skin.HasSetting(kioskmode)</visible>
             <animation type="Conditional" condition="Window.IsActive(1128) | Window.IsActive(1127)">
-                <effect type="slide" end="-600" time="320" easing="in" tween="cubic" />
+                <effect type="slide" end="-600" time="0" easing="in" tween="cubic" />
             </animation>
             <include>Media_Menu_Furniture</include>
             <control type="group">

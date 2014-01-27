@@ -143,6 +143,18 @@
                         <onclick>Skin.ToggleSetting(effect_bg)</onclick>
                         <selected>Skin.HasSetting(effect_bg)</selected>
                     </control>
+                    <control type="radiobutton" id="292">
+                        <label>Disable EPG genre colors</label>
+                        <include>Default_SettingRadioButton</include>
+                        <onclick>Skin.ToggleSetting(epgcolors)</onclick>
+                        <selected>Skin.HasSetting(epgcolors)</selected>
+                    </control>
+                    <control type="radiobutton" id="293">
+                        <label>Show channel name and logo (OTA Support)</label>
+                        <include>Default_SettingRadioButton</include>
+                        <onclick>Skin.ToggleSetting(ChannelNameAndLogo)</onclick>
+                        <selected>Skin.HasSetting(ChannelNameAndLogo)</selected>
+                    </control>
                     <control type="radiobutton" id="107">
                         <label>21398</label>
                         <include>Default_SettingRadioButton</include>

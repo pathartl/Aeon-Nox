@@ -820,8 +820,9 @@
                         <font>Font_Reg29</font>
                     </control>
                 </rulerlayout>
+                <!-- EPG grid (not focused) -->
                 <channellayout height="80" width="320">
-                    <control type="label">
+                     <control type="label">
                         <posx>10</posx>
                         <posy>0</posy>
                         <width>70</width>
@@ -831,6 +832,8 @@
                         <font>Font_Reg32</font>
                         <textcolor>white6</textcolor>
                         <info>ListItem.ChannelNumber</info>
+                        <!-- Show channel number if we don't want channel name and logo -->
+                        <visible>!Skin.HasSetting(ChannelNameAndLogo)</visible>
                     </control>
                     <control type="label">
                         <posx>70</posx>
@@ -842,7 +845,21 @@
                         <label>$INFO[ListItem.ChannelName]</label>
                         <font>Font_Reg32</font>
                         <textcolor>white</textcolor>
-                        <visible>IsEmpty(ListItem.Icon)</visible>
+                        <!-- Show channel name in normal position if there is no logo and we don't want channel names and logos -->
+                        <visible>IsEmpty(ListItem.Icon) +! Skin.HasSetting(ChannelNameAndLogo)</visible>
+                    </control>
+                    <control type="label">
+                        <posx>10</posx>
+                        <posy>0</posy>
+                        <width>250</width>
+                        <height>80</height>
+                        <textoffsetx>10</textoffsetx>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.ChannelName]</label>
+                        <font>Font_Reg32</font>
+                        <textcolor>white6</textcolor>
+                        <!-- Show channel name on the left if we want channel names and logos -->
+                        <visible>Skin.HasSetting(ChannelNameAndLogo)</visible>
                     </control>
                     <control type="image">
                         <posx>120</posx>
@@ -854,8 +871,9 @@
                         <visible>!IsEmpty(ListItem.Icon)</visible>
                     </control>
                 </channellayout>
+                <!-- EPG item focused -->
                 <focusedchannellayout height="80" width="320">
-                    <control type="label">
+                     <control type="label">
                         <posx>10</posx>
                         <posy>0</posy>
                         <width>70</width>
@@ -863,8 +881,10 @@
                         <textoffsetx>10</textoffsetx>
                         <aligny>center</aligny>
                         <font>Font_Reg32</font>
-                        <textcolor>$VAR[FontColorVar]</textcolor>
+                        <textcolor>white6</textcolor>
                         <info>ListItem.ChannelNumber</info>
+                        <!-- Show channel number if we don't want channel name and logo -->
+                        <visible>!Skin.HasSetting(ChannelNameAndLogo)</visible>
                     </control>
                     <control type="label">
                         <posx>70</posx>
@@ -876,7 +896,21 @@
                         <label>$INFO[ListItem.ChannelName]</label>
                         <font>Font_Reg32</font>
                         <textcolor>white</textcolor>
-                        <visible>IsEmpty(ListItem.Icon)</visible>
+                        <!-- Show channel name in normal position if there is no logo and we don't want channel names and logos -->
+                        <visible>IsEmpty(ListItem.Icon) +! Skin.HasSetting(ChannelNameAndLogo)</visible>
+                    </control>
+                    <control type="label">
+                        <posx>10</posx>
+                        <posy>0</posy>
+                        <width>250</width>
+                        <height>80</height>
+                        <textoffsetx>10</textoffsetx>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.ChannelName]</label>
+                        <font>Font_Reg32</font>
+                        <textcolor>white6</textcolor>
+                        <!-- Show channel name on the left if we want channel names and logos -->
+                        <visible>Skin.HasSetting(ChannelNameAndLogo)</visible>
                     </control>
                     <control type="image">
                         <posx>120</posx>
@@ -893,11 +927,19 @@
                         <posy>1</posy>
                         <width>60</width>
                         <height>78</height>
+                        <texture border="4">epg-tile-bg.png</texture>
+                        <visible>!Skin.HasSetting(epgcolors)</visible>
+                    </control>
+                    <control type="image" id="2">
+                        <posy>1</posy>
+                        <width>60</width>
+                        <height>78</height>
                         <texture border="4">$INFO[ListItem.Property(GenreType),epg-genres/,.png]</texture>
+                        <visible>Skin.HasSetting(epgcolors)</visible>
                     </control>
                     <control type="label" id="1">
                         <posx>9</posx>
-                        <posy>25</posy>
+                        <posy>13</posy>
                         <width>45</width>
                         <height>38</height>
                         <font>Font_Reg32</font>
@@ -932,11 +974,19 @@
                         <posy>1</posy>
                         <width>60</width>
                         <height>78</height>
+                        <texture border="4">epg-tile-bg.png</texture>
+                        <visible>!Skin.HasSetting(epgcolors)</visible>
+                    </control>
+                    <control type="image" id="2">
+                        <posy>1</posy>
+                        <width>60</width>
+                        <height>78</height>
                         <texture border="4">$INFO[ListItem.Property(GenreType),epg-genres/,.png]</texture>
+                        <visible>Skin.HasSetting(epgcolors)</visible>
                     </control>
                     <control type="label" id="1">
                         <posx>9</posx>
-                        <posy>25</posy>
+                        <posy>13</posy>
                         <width>45</width>
                         <height>38</height>
                         <font>Font_Reg32</font>
@@ -979,67 +1029,67 @@
                     <texture>$INFO[ListItem.Icon]</texture>
                 </control>
                 <control type="group">
-                	<posx>378</posx>
-                	<control type="label">
-	                    <posx>0</posx>
-	                    <posy>-112</posy>
-	                    <width>1500</width>
-	                    <height>20</height>
-	                    <label> $INFO[ListItem.Title]</label>
-	                    <font>Font_Bold40</font>
-	                    <shadowcolor>black</shadowcolor>
-	                    <textcolor>white2</textcolor>
-	                    <scroll>true</scroll>
-	                </control>
-	                <control type="grouplist">
-	                    <posx>6</posx>
-	                    <posy>-85</posy>
-	                    <width>1400</width>
-	                    <orientation>horizontal</orientation>
-	                    <itemgap>10</itemgap>
-	                    <control type="label">
-	                        <width min="0" max="1000">auto</width>
-	                        <height>40</height>
-	                        <label>[COLOR $VAR[FontColorVar]]$LOCALIZE[31453][/COLOR] $INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
-	                        <font>Font_Reg32</font>
-	                        <textcolor>white4</textcolor>
-	                    </control>
-	                    <control type="label">
-	                        <width min="0" max="1000">auto</width>
-	                        <height>40</height>
-	                        <label>[COLOR $VAR[FontColorVar]]• $LOCALIZE[180]:[/COLOR] $INFO[ListItem.Duration]</label>
-	                        <font>Font_Reg32</font>
-	                        <textcolor>white4</textcolor>
-	                    </control>
-	                </control>
-	                <control type="grouplist">
-	                    <posx>6</posx>
-	                    <posy>-55</posy>
-	                    <width>1400</width>
-	                    <orientation>horizontal</orientation>
-	                    <control type="label">
-	                        <width min="0" max="1000">auto</width>
-	                        <height>40</height>
-	                        <label>[COLOR $VAR[FontColorVar]]$LOCALIZE[515]:[/COLOR] $INFO[ListItem.Genre]</label>
-	                        <font>Font_Reg32</font>
-	                        <textcolor>white4</textcolor>
-	                    </control>
-	                </control>
-	                <control type="textbox">
-	                    <description>Plot</description>
-	                    <posx>6</posx>
-	                    <posy>-10</posy>
-	                    <width>1430</width>
-	                    <height>135</height>
-	                    <align>justify</align>
-	                    <label>$INFO[ListItem.Plot]</label>
-	                    <font>Font_Reg29</font>
-	                    <shadowcolor>black</shadowcolor>
-	                    <textcolor>grey</textcolor>
-	                    <pagecontrol>-</pagecontrol>
-	                    <autoscroll time="4000" delay="5000" repeat="5000">true</autoscroll>
-	                </control>
-            	</control>
+                    <posx>378</posx>
+                    <control type="label">
+                        <posx>0</posx>
+                        <posy>-112</posy>
+                        <width>1500</width>
+                        <height>20</height>
+                        <label> $INFO[ListItem.Title]</label>
+                        <font>Font_Bold40</font>
+                        <shadowcolor>black</shadowcolor>
+                        <textcolor>white2</textcolor>
+                        <scroll>true</scroll>
+                    </control>
+                    <control type="grouplist">
+                        <posx>6</posx>
+                        <posy>-85</posy>
+                        <width>1400</width>
+                        <orientation>horizontal</orientation>
+                        <itemgap>10</itemgap>
+                        <control type="label">
+                            <width min="0" max="1000">auto</width>
+                            <height>40</height>
+                            <label>[COLOR $VAR[FontColorVar]]$LOCALIZE[31453][/COLOR] $INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
+                            <font>Font_Reg32</font>
+                            <textcolor>white4</textcolor>
+                        </control>
+                        <control type="label">
+                            <width min="0" max="1000">auto</width>
+                            <height>40</height>
+                            <label>[COLOR $VAR[FontColorVar]]• $LOCALIZE[180]:[/COLOR] $INFO[ListItem.Duration]</label>
+                            <font>Font_Reg32</font>
+                            <textcolor>white4</textcolor>
+                        </control>
+                    </control>
+                    <control type="grouplist">
+                        <posx>6</posx>
+                        <posy>-55</posy>
+                        <width>1400</width>
+                        <orientation>horizontal</orientation>
+                        <control type="label">
+                            <width min="0" max="1000">auto</width>
+                            <height>40</height>
+                            <label>[COLOR $VAR[FontColorVar]]$LOCALIZE[515]:[/COLOR] $INFO[ListItem.Genre]</label>
+                            <font>Font_Reg32</font>
+                            <textcolor>white4</textcolor>
+                        </control>
+                    </control>
+                    <control type="textbox">
+                        <description>Plot</description>
+                        <posx>6</posx>
+                        <posy>-10</posy>
+                        <width>1430</width>
+                        <height>135</height>
+                        <align>justify</align>
+                        <label>$INFO[ListItem.Plot]</label>
+                        <font>Font_Reg29</font>
+                        <shadowcolor>black</shadowcolor>
+                        <textcolor>grey</textcolor>
+                        <pagecontrol>-</pagecontrol>
+                        <autoscroll time="4000" delay="5000" repeat="5000">true</autoscroll>
+                    </control>
+                </control>
             </control>
         </control>
     </include>
